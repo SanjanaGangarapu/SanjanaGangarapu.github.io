@@ -414,15 +414,17 @@ body.nav-open .nav-toggle span:nth-child(2) { transform: translateY(-4px) rotate
 .series-head .idx { font-family: var(--sans); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.2em; color: var(--accent); }
 .series-head h2 { font-size: clamp(1.7rem, 4.5vw, 3rem); font-style: italic; }
 .series-head .count { margin-left: auto; font-size: 0.8rem; color: var(--ink-faint); letter-spacing: 0.04em; }
-.frames-masonry { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.9rem; }
-.frames-masonry img {
-  width: 100%; height: 100%; aspect-ratio: 1 / 1; object-fit: cover;
-  display: block; margin: 0; border-radius: 4px; border: 1px solid var(--line);
+/* natural aspect ratios; landscapes span full width, portraits sit in the grid */
+.frames-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.9rem; align-items: start; }
+.frames-grid img {
+  width: 100%; height: auto; display: block; margin: 0;
+  border-radius: 4px; border: 1px solid var(--line);
   transition: filter 0.3s ease, transform 0.3s ease;
 }
-.frames-masonry img:hover { filter: brightness(1.05); transform: translateY(-3px); }
-@media (max-width: 900px) { .frames-masonry { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 560px) { .frames-masonry { grid-template-columns: repeat(2, 1fr); gap: 0.6rem; } }
+.frames-grid img:hover { filter: brightness(1.04); transform: translateY(-3px); }
+.frames-grid img.wide { grid-column: 1 / -1; }
+@media (max-width: 900px) { .frames-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 560px) { .frames-grid { grid-template-columns: repeat(2, 1fr); gap: 0.6rem; } }
 
 /* Ekya digital: landing frame + reel */
 .ekya-digital { display: flex; flex-wrap: wrap; gap: 1.6rem; justify-content: center; align-items: flex-start; }
