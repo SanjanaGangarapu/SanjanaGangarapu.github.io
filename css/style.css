@@ -101,7 +101,9 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; line-height: 1.04;
   position: sticky;
   top: 0;
   z-index: 100;
-  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  background: var(--paper); /* solid fallback for browsers without color-mix */
+  background: color-mix(in srgb, var(--paper) 90%, transparent);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line-soft);
 }
@@ -469,6 +471,8 @@ body.nav-open .nav-toggle span:nth-child(2) { transform: translateY(-4px) rotate
 
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
+  /* solid, opaque header on mobile — avoids the iOS sticky + backdrop-filter glitch */
+  .site-header { background: var(--paper); -webkit-backdrop-filter: none; backdrop-filter: none; }
   .nav-toggle { display: block; }
   .nav-links {
     position: fixed; inset: 74px 0 auto 0;
