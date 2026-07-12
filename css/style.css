@@ -473,18 +473,28 @@ body.nav-open .nav-toggle span:nth-child(2) { transform: translateY(-4px) rotate
 @media (max-width: 860px) {
   /* solid, opaque header on mobile — avoids the iOS sticky + backdrop-filter glitch */
   .site-header { background: var(--paper); -webkit-backdrop-filter: none; backdrop-filter: none; }
-  .nav-toggle { display: block; }
+  /* clear, labelled menu button so the toggle is discoverable */
+  .nav-toggle { display: inline-flex; align-items: center; width: auto; height: 40px; padding-right: 30px; }
+  .nav-toggle::before {
+    content: "Menu"; font-family: var(--sans); font-size: 0.8rem; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink);
+  }
+  body.nav-open .nav-toggle::before { content: "Close"; }
+  .nav-toggle span { left: auto; right: 4px; width: 22px; height: 2px; }
+  .nav-toggle span:nth-child(1) { top: 14px; }
+  .nav-toggle span:nth-child(2) { bottom: 14px; }
   .nav-links {
     position: fixed; inset: 74px 0 auto 0;
     flex-direction: column; align-items: flex-start; gap: 0;
     background: var(--paper-2);
     border-bottom: 1px solid var(--line);
     padding: 1rem var(--gutter) 2rem;
-    transform: translateY(-120%);
-    transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+    opacity: 0; visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.28s ease, transform 0.32s ease, visibility 0.32s;
     box-shadow: 0 24px 40px -30px rgba(0,0,0,0.4);
   }
-  body.nav-open .nav-links { transform: translateY(0); }
+  body.nav-open .nav-links { opacity: 1; visibility: visible; transform: translateY(0); }
   .nav-links a { width: 100%; padding-block: 1rem; border-bottom: 1px solid var(--line-soft); font-size: 1.15rem; }
   .hero-sub { grid-template-columns: 1fr; align-items: start; }
   .about-grid { grid-template-columns: 1fr; }
