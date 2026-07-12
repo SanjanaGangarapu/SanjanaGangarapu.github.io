@@ -399,6 +399,9 @@ body.nav-open .nav-toggle span:nth-child(2) { transform: translateY(-4px) rotate
 .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
 .gallery.frames { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
 .gallery > img, .gallery .vid img { width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: 4px; background: var(--paper-2); }
+/* Centred carousel grid */
+.gallery.carousel { grid-template-columns: repeat(3, 1fr); max-width: 860px; margin-inline: auto; }
+@media (max-width: 560px) { .gallery.carousel { gap: 0.5rem; } }
 /* Even, uniform post grid (LinkedIn screenshots) */
 .gallery.posts { grid-template-columns: repeat(3, 1fr); }
 .gallery.posts > img { aspect-ratio: 3 / 4; object-fit: cover; object-position: top; }
