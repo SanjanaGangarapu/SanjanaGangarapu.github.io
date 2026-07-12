@@ -371,7 +371,18 @@ body.nav-open .nav-toggle span:nth-child(2) { transform: translateY(-4px) rotate
 
 /* Two-up compare */
 .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; align-items: start; }
+.compare.three { grid-template-columns: repeat(3, 1fr); }
 .compare img { width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: 4px; background: var(--paper-2); }
+.compare .lbl.step { color: var(--ink-soft); }
+
+/* Client logo strip */
+.client-logos { display: flex; flex-wrap: wrap; align-items: center; gap: 0.9rem; margin: 2.5rem 0 0.5rem; }
+.client-logos .chip {
+  background: #fff; border: 1px solid var(--line); border-radius: 8px;
+  height: 66px; padding: 0 1.2rem; display: inline-flex; align-items: center; justify-content: center;
+}
+.client-logos .chip img { max-height: 34px; max-width: 130px; width: auto; display: block; }
+.client-logo-inline { height: 30px; width: auto; vertical-align: middle; margin-left: 0.6rem; opacity: 0.85; }
 .compare .lbl { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; color: var(--ink-faint); margin-bottom: 0.6rem; }
 .compare .lbl.redesign { color: var(--accent); }
 
@@ -391,6 +402,15 @@ body.nav-open .nav-toggle span:nth-child(2) { transform: translateY(-4px) rotate
   pointer-events: none; transition: background 0.25s ease, transform 0.25s ease;
 }
 .vid:hover .play { background: var(--accent); transform: translate(-50%, -50%) scale(1.08); }
+
+/* Ekya digital: landing frame + reel */
+.ekya-digital { display: flex; flex-wrap: wrap; gap: 1.6rem; justify-content: center; align-items: flex-start; }
+.ekya-shot { text-align: center; }
+.ekya-shot figcaption { font-size: 0.8rem; color: var(--ink-faint); margin-top: 0.7rem; }
+.ekya-frame { width: 340px; max-width: 82vw; height: 560px; overflow-y: auto; border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 18px 40px -28px rgba(0,0,0,0.5); background: #fff; }
+.ekya-frame img { width: 100%; display: block; }
+.ekya-shot video { width: 320px; max-width: 82vw; border: 1px solid var(--line); border-radius: 10px; background: #000; display: block; box-shadow: 0 18px 40px -28px rgba(0,0,0,0.5); }
+.ekya-sub { font-family: var(--sans); font-weight: 700; font-size: 0.95rem; letter-spacing: 0.02em; margin: 2rem 0 0.4rem; }
 
 /* Saga magazine 4-up */
 .saga-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.8rem; }
