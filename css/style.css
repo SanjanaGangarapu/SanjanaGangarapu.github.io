@@ -383,10 +383,13 @@ body.nav-open .nav-toggle span:nth-child(2) { transform: translateY(-4px) rotate
 .client-logos { display: flex; flex-wrap: wrap; align-items: center; gap: 0.9rem; margin: 2.5rem 0 0.5rem; }
 .client-logos .chip {
   background: #fff; border: 1px solid var(--line); border-radius: 8px;
-  height: 66px; padding: 0 1.2rem; display: inline-flex; align-items: center; justify-content: center;
+  width: 150px; height: 78px; padding: 0.7rem 1rem; display: grid; place-items: center;
 }
-.client-logos .chip img { max-height: 34px; max-width: 130px; width: auto; display: block; }
-.client-logo-inline { height: 30px; width: auto; vertical-align: middle; margin-left: 0.6rem; opacity: 0.85; }
+.client-logos .chip img { max-height: 100%; max-width: 100%; width: auto; height: auto; object-fit: contain; display: block; }
+@media (max-width: 520px) { .client-logos .chip { width: calc(50% - 0.45rem); } }
+
+/* Client brandmark inside the article meta row (blends the logo into the page) */
+.article-meta .v .brandmark { height: 26px; width: auto; display: block; margin-top: 0.1rem; }
 .compare .lbl { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; color: var(--ink-faint); margin-bottom: 0.6rem; }
 .compare .lbl.redesign { color: var(--accent); }
 
@@ -394,6 +397,11 @@ body.nav-open .nav-toggle span:nth-child(2) { transform: translateY(-4px) rotate
 .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
 .gallery.frames { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
 .gallery > img, .gallery .vid img { width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: 4px; background: var(--paper-2); }
+/* Even, uniform post grid (LinkedIn screenshots) */
+.gallery.posts { grid-template-columns: repeat(3, 1fr); }
+.gallery.posts > img { aspect-ratio: 3 / 4; object-fit: cover; object-position: top; }
+@media (max-width: 760px) { .gallery.posts { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 440px) { .gallery.posts { grid-template-columns: 1fr; } }
 
 /* Video thumbnail with play badge */
 .vid { position: relative; display: block; }
