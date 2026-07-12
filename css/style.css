@@ -402,6 +402,15 @@ body.nav-open .nav-toggle span:nth-child(2) { transform: translateY(-4px) rotate
 /* Centred carousel grid */
 .gallery.carousel { grid-template-columns: repeat(3, 1fr); max-width: 860px; margin-inline: auto; }
 @media (max-width: 560px) { .gallery.carousel { gap: 0.5rem; } }
+/* Centred, fixed-column grids */
+.gallery.videos { grid-template-columns: repeat(3, 1fr); max-width: 760px; margin-inline: auto; }
+.gallery.g1 { grid-template-columns: 1fr; max-width: 430px; margin-inline: auto; }
+.gallery.g2 { grid-template-columns: repeat(2, 1fr); max-width: 640px; margin-inline: auto; }
+.gallery.g4 { grid-template-columns: repeat(4, 1fr); max-width: 920px; margin-inline: auto; }
+@media (max-width: 640px) { .gallery.g4 { grid-template-columns: repeat(2, 1fr); } }
+/* Centred label above a media group */
+.media-label { text-align: center; font-family: var(--sans); font-weight: 700; font-size: 0.9rem; letter-spacing: 0.03em; color: var(--ink); margin: clamp(2.2rem, 5vw, 3.4rem) 0 1rem; }
+.media-label + .figure, .media-label + figure { margin-top: 0; }
 /* Even, uniform post grid (LinkedIn screenshots) */
 .gallery.posts { grid-template-columns: repeat(3, 1fr); }
 .gallery.posts > img { aspect-ratio: 3 / 4; object-fit: cover; object-position: top; }
@@ -443,7 +452,7 @@ body.nav-open .nav-toggle span:nth-child(2) { transform: translateY(-4px) rotate
 @media (max-width: 560px) { .frames-grid { grid-template-columns: repeat(2, 1fr); gap: 0.6rem; } }
 
 /* Ekya digital: landing frame + reel */
-.ekya-digital { display: flex; flex-wrap: wrap; gap: 1.6rem; justify-content: center; align-items: flex-start; }
+.ekya-digital { display: flex; flex-direction: column; gap: 2.2rem; align-items: center; }
 .ekya-shot { text-align: center; }
 .ekya-shot figcaption { font-size: 0.8rem; color: var(--ink-faint); margin-top: 0.7rem; }
 .ekya-frame { width: 340px; max-width: 82vw; height: 560px; overflow-y: auto; border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 18px 40px -28px rgba(0,0,0,0.5); background: #fff; }
