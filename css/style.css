@@ -378,6 +378,24 @@ body.nav-open .nav-toggle span:nth-child(2) { transform: translateY(-4px) rotate
 /* Grid gallery */
 .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
 .gallery.frames { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.gallery > img, .gallery .vid img { width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: 4px; background: var(--paper-2); }
+
+/* Video thumbnail with play badge */
+.vid { position: relative; display: block; }
+.vid .play {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: 58px; height: 58px; border-radius: 50%;
+  background: rgba(22, 21, 16, 0.55); color: #fff;
+  display: grid; place-items: center; font-size: 1.2rem; padding-left: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.6); backdrop-filter: blur(2px);
+  pointer-events: none; transition: background 0.25s ease, transform 0.25s ease;
+}
+.vid:hover .play { background: var(--accent); transform: translate(-50%, -50%) scale(1.08); }
+
+/* Saga magazine 4-up */
+.saga-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.8rem; }
+.saga-grid img { width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: 3px; box-shadow: 0 12px 28px -20px rgba(0,0,0,0.5); }
+@media (max-width: 640px) { .saga-grid { grid-template-columns: repeat(2, 1fr); } }
 
 /* metrics band on project page */
 .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); margin: clamp(2rem,5vw,3rem) 0; }
