@@ -370,7 +370,8 @@ body.nav-open .nav-toggle span:nth-child(2) { transform: translateY(-4px) rotate
 .ph .ph-path { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.72rem; margin-top: 0.5rem; opacity: 0.75; }
 
 /* Two-up compare */
-.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; align-items: start; }
+.compare img { width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: 4px; background: var(--paper-2); }
 .compare .lbl { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; color: var(--ink-faint); margin-bottom: 0.6rem; }
 .compare .lbl.redesign { color: var(--accent); }
 
