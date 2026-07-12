@@ -387,7 +387,7 @@ body.nav-open .nav-toggle span:nth-child(2) { transform: translateY(-4px) rotate
   background: #fff; border: 1px solid var(--line); border-radius: 8px;
   width: 150px; height: 78px; padding: 0.7rem 1rem; display: grid; place-items: center;
 }
-.client-logos .chip img { max-height: 100%; max-width: 100%; width: auto; height: auto; object-fit: contain; display: block; }
+.client-logos .chip img { max-height: 46px; max-width: 100%; width: auto; height: auto; object-fit: contain; display: block; }
 @media (max-width: 520px) { .client-logos .chip { width: calc(50% - 0.45rem); } }
 
 /* Client brandmark inside the article meta row (blends the logo into the page) */
