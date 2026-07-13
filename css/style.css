@@ -300,7 +300,18 @@ body.nav-open .nav-toggle span:nth-child(2) { transform: translateY(-4px) rotate
 .cap { background: var(--paper-2); padding: 1.8rem; }
 .cap h4 { font-family: var(--sans); font-weight: 700; font-size: 0.95rem; letter-spacing: 0.02em; margin-bottom: 0.6rem; }
 .cap p { font-size: 0.92rem; color: var(--ink-soft); }
-.cap .i { color: var(--accent); font-size: 1.3rem; display: block; margin-bottom: 0.8rem; }
+.cap .i { color: var(--accent); display: block; margin-bottom: 0.9rem; line-height: 0; }
+.cap .i svg { width: 26px; height: 26px; transition: transform 0.35s ease; }
+.cap .i svg > * { stroke-dasharray: 90; stroke-dashoffset: 0; }
+/* draw the line-art in (staggered) when the block scrolls into view */
+.caps.in .cap .i svg > * { animation: iconDraw 0.9s ease both; }
+.caps.in .cap:nth-child(2) .i svg > * { animation-delay: 0.08s; }
+.caps.in .cap:nth-child(3) .i svg > * { animation-delay: 0.16s; }
+.caps.in .cap:nth-child(4) .i svg > * { animation-delay: 0.24s; }
+/* redraw + gentle lift on hover */
+.cap:hover .i svg { transform: translateY(-3px); }
+.cap:hover .i svg > * { animation: iconDraw 0.85s ease; }
+@keyframes iconDraw { from { stroke-dashoffset: 90; } to { stroke-dashoffset: 0; } }
 
 /* ---------- Contact ---------- */
 .contact { text-align: center; }
