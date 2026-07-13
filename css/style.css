@@ -332,7 +332,7 @@ body.nav-open .nav-toggle span:nth-child(2) { transform: translateY(-4px) rotate
    Project detail pages
    ============================================================ */
 .article-hero { padding-top: clamp(2.5rem, 6vw, 4.5rem); padding-bottom: clamp(2rem, 5vw, 3.5rem); border-bottom: 1px solid var(--line); }
-.back-link { font-size: 0.85rem; font-weight: 600; color: var(--ink-soft); display: inline-flex; gap: 0.5rem; align-items: center; margin-bottom: 2rem; }
+.back-link { font-size: 0.85rem; font-weight: 600; color: var(--ink-soft); display: flex; width: fit-content; gap: 0.5rem; align-items: center; margin-bottom: 1.5rem; }
 .back-link:hover { color: var(--accent); }
 .article-hero h1 { font-size: clamp(2.6rem, 8vw, 6rem); margin-block: 0.8rem 1.4rem; }
 .article-hero h1 em { color: var(--accent); }
