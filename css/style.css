@@ -519,6 +519,11 @@ body.nav-open .nav-toggle span:nth-child(2) { transform: translateY(-4px) rotate
   }
   body.nav-open .nav-links { opacity: 1; visibility: visible; transform: translateY(0); }
   .nav-links a { width: 100%; padding-block: 1rem; border-bottom: 1px solid var(--line-soft); font-size: 1.15rem; }
+  /* in the mobile menu, drop the sliding underline (it mis-renders / sticks on touch)
+     and show the current page with accent colour instead */
+  .nav-links a::after { display: none; }
+  .nav-links a:hover, .nav-links a:focus { color: var(--ink-soft); }
+  .nav-links a.active { color: var(--accent); }
   .hero-sub { grid-template-columns: 1fr; align-items: start; }
   .about-grid { grid-template-columns: 1fr; }
   .about-portrait { max-width: 380px; }
