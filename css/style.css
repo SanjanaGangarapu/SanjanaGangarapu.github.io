@@ -498,7 +498,20 @@ body.nav-open .nav-toggle span:nth-child(2) { transform: translateY(-4px) rotate
   .strategy-map { grid-template-columns: repeat(2, 1fr); }
   .strategy-map .stage:not(:last-child)::after { display: none; }
 }
-@media (max-width: 520px) { .strategy-map { grid-template-columns: 1fr; } }
+/* phones: a sleek vertical timeline instead of stacked cards */
+@media (max-width: 600px) {
+  .strategy-map { grid-template-columns: 1fr; gap: 0; margin-left: 0.9rem; padding-left: 1.7rem; border-left: 1.5px solid var(--line); }
+  .strategy-map .stage { border: none; border-radius: 0; background: transparent; padding: 0 0 1.5rem 0; }
+  .strategy-map .stage:last-child { padding-bottom: 0; }
+  .strategy-map .s-num {
+    position: absolute; left: -2.55rem; top: -0.15rem; margin: 0;
+    width: 1.75rem; height: 1.75rem; display: grid; place-items: center;
+    background: var(--paper); border: 1.5px solid var(--accent); border-radius: 50%;
+    font-size: 0.76rem;
+  }
+  .strategy-map h4 { font-size: 1rem; }
+  .strategy-map p { font-size: 0.92rem; }
+}
 
 /* Next project */
 .next-proj { border-top: 1px solid var(--line); padding-block: clamp(3rem,7vw,5rem); text-align: center; }
