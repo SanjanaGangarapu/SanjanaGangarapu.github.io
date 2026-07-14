@@ -412,7 +412,10 @@ body.nav-open .nav-toggle span:nth-child(2) { transform: translateY(-4px) rotate
 .gallery > img, .gallery .vid img { width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: 4px; background: var(--paper-2); }
 /* Centred carousel grid */
 .gallery.carousel { grid-template-columns: repeat(3, 1fr); max-width: 860px; margin-inline: auto; }
-@media (max-width: 560px) { .gallery.carousel { gap: 0.5rem; } }
+.gallery.carousel.c4 { grid-template-columns: repeat(4, 1fr); max-width: 1040px; }
+.gallery.carousel.c5 { grid-template-columns: repeat(5, 1fr); max-width: 1180px; }
+@media (max-width: 900px) { .gallery.carousel.c4, .gallery.carousel.c5 { grid-template-columns: repeat(3, 1fr); max-width: 860px; } }
+@media (max-width: 560px) { .gallery.carousel { gap: 0.5rem; } .gallery.carousel.c4, .gallery.carousel.c5 { grid-template-columns: repeat(2, 1fr); } }
 /* Centred, fixed-column grids */
 .gallery.videos { grid-template-columns: repeat(3, 1fr); max-width: 760px; margin-inline: auto; }
 .gallery.g1 { grid-template-columns: 1fr; max-width: 430px; margin-inline: auto; }
