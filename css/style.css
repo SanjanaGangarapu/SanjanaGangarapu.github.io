@@ -17,12 +17,12 @@
   --accent:     #c9122e;   /* crimson */
   --accent-2:   #a30e25;
   /* dark surfaces — hero, chrome, feature bands */
-  --dark:          #030303;
-  --dark-2:        #3c3a3b;
+  --dark:          #3c3a3b;   /* dark grey chrome */
+  --dark-2:        #2a2829;
   --on-dark:       #d5d5d5;
-  --on-dark-soft:  #a7a5a6;
-  --on-dark-faint: #6e6c6d;
-  --line-on-dark:  rgba(213, 213, 213, 0.18);
+  --on-dark-soft:  #b3b1b2;
+  --on-dark-faint: #918f90;
+  --line-on-dark:  rgba(213, 213, 213, 0.20);
 
   /* Type */
   --serif: "Fraunces", Georgia, "Times New Roman", serif;
