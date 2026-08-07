@@ -609,3 +609,49 @@ body.nav-open .nav-toggle span:nth-child(2) { transform: translateY(-4px) rotate
   * { animation: none !important; scroll-behavior: auto; }
   [data-reveal] { opacity: 1; transform: none; transition: none; }
 }
+
+/* ============ Client testimonials ============ */
+.testimonials {
+  background: var(--paper-2);
+  border-top: 1px solid var(--line-soft);
+  border-bottom: 1px solid var(--line-soft);
+  padding-block: var(--section-y);
+  margin-top: var(--section-y);
+}
+.tst-head { text-align: center; margin-bottom: clamp(2.4rem, 5vw, 3.6rem); }
+.tst-mark {
+  display: block; font-family: var(--serif); font-weight: 600;
+  font-size: clamp(4.5rem, 11vw, 7.5rem); line-height: 0.5;
+  color: var(--accent); opacity: 0.16;
+}
+.tst-head h2 { margin-top: 0.8rem; }
+.tst-rule { display: block; width: 68px; height: 3px; border-radius: 2px; background: var(--accent); margin: 1.3rem auto 0; }
+.tst-grid {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.1rem, 2.5vw, 1.8rem);
+  max-width: 940px; margin-inline: auto;
+}
+.tst-card {
+  background: var(--card);
+  border: 1px solid var(--line-soft);
+  border-radius: 16px;
+  padding: clamp(1.6rem, 3.2vw, 2.4rem);
+  display: flex; flex-direction: column;
+}
+.tst-logo { height: 32px; margin-bottom: 1.5rem; }
+.tst-logo img { height: 100%; width: auto; max-width: 160px; object-fit: contain; object-position: left center; display: block; }
+.tst-card blockquote {
+  font-family: var(--serif);
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  line-height: 1.55; color: var(--ink-soft);
+  margin: 0 0 1.8rem;
+}
+.tst-card figcaption {
+  margin-top: auto; padding-top: 1.2rem; border-top: 1px solid var(--line-soft);
+  display: flex; flex-direction: column; gap: 0.2rem;
+}
+.tst-card figcaption .n { font-family: var(--serif); font-weight: 500; color: var(--ink); font-size: 1.02rem; }
+.tst-card figcaption .r { font-family: var(--sans); font-size: 0.82rem; color: var(--ink-faint); letter-spacing: 0.02em; }
+@media (max-width: 720px) {
+  .tst-grid { grid-template-columns: 1fr; }
+}
