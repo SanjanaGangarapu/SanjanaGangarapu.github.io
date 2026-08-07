@@ -645,14 +645,23 @@ body.nav-open .nav-toggle span:nth-child(2) { transform: translateY(-4px) rotate
   font-size: clamp(1.05rem, 1.5vw, 1.2rem);
   line-height: 1.55; color: var(--ink-soft);
   margin: 0 0 1.8rem;
+  position: relative;
 }
 .tst-card blockquote::before {
   content: "\201C";
-  display: block;
   font-family: var(--serif); font-weight: 600;
-  font-size: 3rem; line-height: 0.55;
-  color: var(--accent);
-  margin-bottom: 0.4rem;
+  font-size: 1.7rem; line-height: 1;
+  color: rgba(22, 21, 16, 0.18);
+  margin-right: 0.15rem;
+  vertical-align: -0.35rem;
+}
+.tst-card blockquote::after {
+  content: "\201D";
+  font-family: var(--serif); font-weight: 600;
+  font-size: 1.7rem; line-height: 1;
+  color: rgba(22, 21, 16, 0.18);
+  margin-left: 0.1rem;
+  vertical-align: -0.45rem;
 }
 .tst-card figcaption {
   margin-top: auto; padding-top: 1.2rem; border-top: 1px solid var(--line-soft);
