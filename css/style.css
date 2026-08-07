@@ -641,9 +641,9 @@ body.nav-open .nav-toggle span:nth-child(2) { transform: translateY(-4px) rotate
 .tst-logo { height: 32px; margin-bottom: 1.1rem; }
 .tst-logo img { height: 100%; width: auto; max-width: 160px; object-fit: contain; object-position: left center; display: block; }
 .tst-card blockquote {
-  font-family: var(--serif);
-  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
-  line-height: 1.55; color: var(--ink-soft);
+  font-family: var(--sans);
+  font-size: 1.05rem;
+  line-height: 1.6; color: var(--ink-soft);
   margin: 0 0 1.8rem;
   position: relative;
 }
