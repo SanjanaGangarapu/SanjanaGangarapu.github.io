@@ -1,0 +1,5 @@
+# Local AI tooling (Impeccable, agent harnesses) — not part of the site
+.claude/
+.agents/
+.codex/
+.DS_Store
