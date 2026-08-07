@@ -1,0 +1,55 @@
+{
+  "detector": {
+    "ignoreRules": [
+      "cream-palette",
+      "marquee",
+      "all-caps-body",
+      "flat-type-hierarchy",
+      "tight-leading",
+      "clipped-overflow-container",
+      "cramped-padding"
+    ],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "inter",
+        "createdAt": "2026-08-07T20:36:40.456Z",
+        "reason": "Brand typeface"
+      },
+      {
+        "rule": "overused-font",
+        "value": "fraunces",
+        "createdAt": "2026-08-07T20:36:40.960Z",
+        "reason": "Brand display typeface"
+      },
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "frames.html"
+        ],
+        "createdAt": "2026-08-07T20:38:36.966Z",
+        "reason": "Captions sit on dark photo scrims; detector reads page bg, not the gradient/image"
+      },
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "**/ekya-schools.html"
+        ],
+        "createdAt": "2026-08-07T20:38:37.494Z",
+        "reason": "Text sampled over embedded imagery, not a real on-page pairing"
+      },
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "**/the-autonomous.html"
+        ],
+        "createdAt": "2026-08-07T20:38:38.042Z",
+        "reason": "Play-button/overlay over video thumbnails; readable in situ"
+      }
+    ]
+  }
+}

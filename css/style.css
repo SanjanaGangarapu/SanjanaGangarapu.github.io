@@ -242,10 +242,10 @@ body.nav-open .nav-toggle span:nth-child(2) { transform: translateY(-4px) rotate
   padding-block: clamp(1.8rem, 4vw, 2.8rem);
   border-bottom: 1px solid var(--line);
   position: relative;
-  transition: padding-inline 0.35s ease;
+  transition: transform 0.35s ease;
 }
 .work-item:first-child { border-top: 1px solid var(--line); }
-.work-item:hover { padding-inline: 1.2rem; }
+.work-item:hover { transform: translateX(0.5rem); }
 .work-item .num { font-family: var(--serif); font-size: 1rem; color: var(--ink-faint); }
 .work-item .title {
   font-family: var(--serif);
