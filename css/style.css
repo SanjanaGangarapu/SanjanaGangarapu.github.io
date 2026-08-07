@@ -14,8 +14,8 @@
   --ink-faint:  #6e6c6d;
   --line:       rgba(3, 3, 3, 0.18);
   --line-soft:  rgba(3, 3, 3, 0.10);
-  --accent:     #c9122e;   /* crimson */
-  --accent-2:   #a30e25;
+  --accent:     #bd3c1c;   /* orangish red / burnt sienna */
+  --accent-2:   #93301a;
   /* dark surfaces — hero, chrome, feature bands */
   --dark:          #3c3a3b;   /* dark grey chrome */
   --dark-2:        #2a2829;
