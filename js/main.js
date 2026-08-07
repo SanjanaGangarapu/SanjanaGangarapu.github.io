@@ -41,4 +41,30 @@
   document.querySelectorAll("[data-year]").forEach(function (el) {
     el.textContent = new Date().getFullYear();
   });
+
+  /* On-page contents rail: highlight the section in view (scrollspy) */
+  var toc = document.querySelector(".page-toc");
+  if (toc && "IntersectionObserver" in window) {
+    var links = {};
+    var targets = [];
+    toc.querySelectorAll('a[href^="#"]').forEach(function (a) {
+      var id = a.getAttribute("href").slice(1);
+      var el = document.getElementById(id);
+      if (el) { links[id] = a; targets.push(el); }
+    });
+    if (targets.length) {
+      var spy = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              Object.keys(links).forEach(function (k) { links[k].classList.remove("active"); });
+              if (links[entry.target.id]) links[entry.target.id].classList.add("active");
+            }
+          });
+        },
+        { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
+      );
+      targets.forEach(function (t) { spy.observe(t); });
+    }
+  }
 })();

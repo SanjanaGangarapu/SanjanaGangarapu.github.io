@@ -695,3 +695,36 @@ body.nav-open .nav-toggle span:nth-child(2) { transform: translateY(-4px) rotate
   .tst-card { flex: 0 0 84%; scroll-snap-align: start; }
   .tst-hint { display: flex; }
 }
+
+/* ============ On-page contents rail ============ */
+main [id] { scroll-margin-top: 96px; }
+.page-toc {
+  display: none;
+  position: fixed; top: 50%; right: 1.4rem; transform: translateY(-50%);
+  z-index: 40; max-width: 190px;
+  padding: 1rem 1.1rem;
+  background: color-mix(in srgb, var(--paper) 85%, transparent);
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--line-soft); border-radius: 14px;
+}
+.page-toc .toc-title {
+  display: block; font-family: var(--sans); font-size: 0.66rem;
+  letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-faint);
+  margin-bottom: 0.7rem;
+}
+.page-toc ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.05rem; }
+.page-toc a {
+  display: flex; align-items: center; gap: 0.6rem;
+  font-family: var(--sans); font-size: 0.8rem; line-height: 1.2; white-space: nowrap;
+  color: var(--ink-faint); text-decoration: none; padding: 0.32rem 0;
+  transition: color 0.15s ease;
+}
+.page-toc a::before {
+  content: ""; width: 14px; height: 2px; flex: none;
+  background: currentColor; opacity: 0.45;
+  transition: width 0.18s ease, opacity 0.18s ease;
+}
+.page-toc a:hover { color: var(--ink-soft); }
+.page-toc a.active { color: var(--accent); font-weight: 500; }
+.page-toc a.active::before { width: 24px; opacity: 1; }
+@media (min-width: 1200px) { .page-toc { display: block; } }
