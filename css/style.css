@@ -6,23 +6,23 @@
 /* ---------- Design tokens ---------- */
 :root {
   /* Palette */
-  --paper:      #ece6d9;   /* bone — light reading surface */
-  --paper-2:    #f1ebe0;
-  --card:       #f7f3ea;
-  --ink:        #17151b;   /* near-black on bone */
-  --ink-soft:   #45413a;
-  --ink-faint:  #6c6656;
-  --line:       rgba(23, 21, 27, 0.16);
-  --line-soft:  rgba(23, 21, 27, 0.08);
-  --accent:     #cf1f2d;   /* crimson */
-  --accent-2:   #a5121f;
+  --paper:      #d5d5d5;   /* light grey — reading surface */
+  --paper-2:    #cdcdcd;
+  --card:       #e2e2e2;
+  --ink:        #030303;   /* near-black text */
+  --ink-soft:   #3c3a3b;
+  --ink-faint:  #6e6c6d;
+  --line:       rgba(3, 3, 3, 0.18);
+  --line-soft:  rgba(3, 3, 3, 0.10);
+  --accent:     #c9122e;   /* crimson */
+  --accent-2:   #a30e25;
   /* dark surfaces — hero, chrome, feature bands */
-  --dark:          #121016;
-  --dark-2:        #1c1a22;
-  --on-dark:       #ece6d9;
-  --on-dark-soft:  #b7b1a3;
-  --on-dark-faint: #8b857a;
-  --line-on-dark:  rgba(236, 230, 217, 0.16);
+  --dark:          #030303;
+  --dark-2:        #3c3a3b;
+  --on-dark:       #d5d5d5;
+  --on-dark-soft:  #a7a5a6;
+  --on-dark-faint: #6e6c6d;
+  --line-on-dark:  rgba(213, 213, 213, 0.18);
 
   /* Type */
   --serif: "Fraunces", Georgia, "Times New Roman", serif;
@@ -771,9 +771,7 @@ main [id] { scroll-margin-top: 96px; }
 .btn--ghost { background: transparent; color: inherit; border-color: currentColor; }
 .btn--ghost:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
 
-/* Portrait — literary black & white */
-.about-portrait { background: var(--dark); }
-.about-portrait img { filter: grayscale(1) contrast(1.12) brightness(0.9); }
+/* Portrait — original colour */
 
 /* Mobile: keep chrome dark */
 @media (max-width: 860px) {
