@@ -124,6 +124,12 @@
     .dpdp-lb-close:hover, .dpdp-lb-nav:hover { background:rgba(255,255,255,.2); }
     @media (max-width:560px){ .dpdp-lb { padding:1rem; } .dpdp-lb-nav { display:none; } .dpdp-lb-cap { white-space:normal; width:90vw; } }
     body.dpdp-lb-open { overflow:hidden; }
+    /* wall collapsed by default: 2 rows of partners, 1 row of speakers */
+    .dpdp-wall-grid.is-collapsed .dpdp-tiles.partners .dpdp-tile:nth-child(n+11) { display:none; }
+    .dpdp-wall-grid.is-collapsed .dpdp-tiles.speakers .dpdp-tile:nth-child(n+5) { display:none; }
+    .dpdp-wall-more-wrap { margin-top:1.2rem; }
+    .dpdp-wall-more { font-family:var(--sans); font-size:.82rem; font-weight:600; letter-spacing:.02em; padding:.7rem 1.3rem; border-radius:100px; border:1px solid var(--ink); background:transparent; color:var(--ink); cursor:pointer; transition:background .2s, color .2s; }
+    .dpdp-wall-more:hover { background:var(--ink); color:var(--paper); }
   </style>
 </head>
 <body>
@@ -326,7 +332,7 @@
           <h2 style="margin-top:1rem;">Every partner, every speaker</h2>
           <p>45 partner posts and 16 speaker announcement films, each one researched and written individually. Tap any tile to see it full size.</p>
         </div>
-        <div class="dpdp-wall-grid">
+        <div class="dpdp-wall-grid is-collapsed" id="wallgrid">
           <div class="dpdp-wall-col">
             <div class="dpdp-wall-head"><span>Partners</span><small>45 posts</small></div>
             <div class="dpdp-tiles partners">
@@ -399,6 +405,7 @@
             </div>
           </div>
         </div>
+        <div class="dpdp-wall-more-wrap"><button class="dpdp-wall-more" type="button" aria-expanded="false" aria-controls="wallgrid">Show all 45 posts and 16 films</button></div>
       </div>
 
       <div class="dpdp-lb" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Preview">
@@ -533,6 +540,19 @@
         if (e.key === 'Escape') close();
         if (e.key === 'ArrowRight') step(1);
         if (e.key === 'ArrowLeft') step(-1);
+      });
+    })();
+  </script>
+  <script>
+    /* Wall: collapsed preview by default, one button expands to the full roster */
+    (function () {
+      var grid = document.getElementById('wallgrid'), more = document.querySelector('.dpdp-wall-more');
+      if (!grid || !more) return;
+      more.addEventListener('click', function () {
+        var expanded = !grid.classList.toggle('is-collapsed');
+        more.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+        more.textContent = expanded ? 'Show less' : 'Show all 45 posts and 16 films';
+        if (!expanded) document.getElementById('wall').scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     })();
   </script>
