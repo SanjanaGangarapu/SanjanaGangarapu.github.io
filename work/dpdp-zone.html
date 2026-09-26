@@ -59,6 +59,20 @@
     .tst-person { display:flex; align-items:center; gap:.9rem; }
     .tst-avatar { width:54px; height:54px; border-radius:50%; object-fit:cover; flex:none; border:1px solid var(--line); }
     .tst-meta { display:flex; flex-direction:column; gap:.15rem; }
+    /* design audit: tighter gaps after the hero and around the testimonial */
+    .article-hero + .section { padding-top:clamp(3rem,5vw,4.2rem); padding-bottom:clamp(3rem,6vw,4.5rem); }
+    .testimonials { margin-top:0; padding-top:clamp(3rem,6vw,4.5rem); }
+    .testimonials + .section { padding-top:clamp(3rem,6vw,4.5rem); }
+    /* design audit: drop the step arrows, numbering carries the sequence */
+    .strategy-map .stage::after { display:none; }
+    /* design audit: one box language for steps, metrics, panels and comparison */
+    .strategy-map .stage { border-radius:14px; background:var(--card); border:1px solid var(--line); }
+    .metrics { background:transparent; border:0; gap:clamp(.8rem,2vw,1.2rem); }
+    .metric { background:var(--card); border:1px solid var(--line); border-radius:14px; text-align:left; padding:1.5rem 1.6rem; }
+    .metric .n { font-size:clamp(2.2rem,5.5vw,3rem); }
+    .dpdp-cmp { border:1px solid var(--line); border-radius:14px; background:var(--card); padding:.3rem 1.6rem; }
+    .dpdp-cmp .r:last-child { border-bottom:0; }
+    .dpdp-marquee { margin-bottom:clamp(2rem,4.5vw,3rem); }
   </style>
 </head>
 <body>
@@ -78,15 +92,15 @@
 
   <main>
     <!-- POSTER -->
-    <section class="article-hero wrap photo" style="--hero-img:url('../assets/images/work/dpdp-hero.jpg');--hero-pos:center 42%">
+    <section class="article-hero wrap photo" style="--hero-img:url('../assets/images/work/dpdp-hero.jpg');--hero-pos:center 42%;--hero-op:0.32">
       <nav class="crumb" aria-label="Breadcrumb"><a href="../index.html#work">Work</a><span class="sep">/</span><span>Case Study</span></nav>
       <h1>Filling a room for <em>Privacy by Design</em></h1>
       <p class="lead" style="max-width:60ch;">
         A brand-new LinkedIn page. A ticketed, application-only summit on India's DPDP Act. Two months to
-        make it land. Here is how it went.
+        fill it. Here is how it went.
       </p>
       <div class="dpdp-herostats">
-        <div class="s"><div class="n">112,163</div><div class="l">Impressions in two months</div></div>
+        <div class="s"><div class="n">112,163</div><div class="l">Impressions</div></div>
         <div class="s"><div class="n"><em>+1,625%</em></div><div class="l">Follower growth</div></div>
         <div class="s"><div class="n">19%</div><div class="l">Organic engagement</div></div>
       </div>
@@ -99,9 +113,9 @@
         <h2 style="margin-top:1rem;">The challenge</h2>
         <p>
           <span class="drop">F</span>ill a room, not with a general conference crowd, but with founders who
-          will have to comply with India's DPDP Act, and the investors and buyers who will start asking them
-          about it. The page was new, the price was real, the date was fixed, and the partner roster kept
-          growing while the campaign was already live.
+          will have to comply with India's DPDP Act, and the investors and enterprise leaders who will start
+          asking them about it. The page was new, the ticket was paid, the date was fixed, and the partner
+          roster kept growing while the campaign was already live.
         </p>
       </div>
       <div class="article-meta" style="border-top:1px solid var(--line);padding-top:1.8rem;">
@@ -116,14 +130,14 @@
         <span class="eyebrow">The work</span>
         <h2 style="margin-top:1rem;">One system, every format</h2>
         <p>
-          I owned the campaign end to end and ran all 78 posts on a single system, so every format stayed
-          consistent and fast to produce even as the agenda and the roster moved.
+          I owned the campaign end to end and built all 78 posts on one system, so every format stayed
+          consistent and fast to produce even as the agenda and roster moved.
         </p>
       </div>
       <ol class="strategy-map">
         <li class="stage"><span class="s-num">01</span><h3>One content calendar</h3><p>Phased across awareness, agenda, speaker, partner and conversion posts.</p></li>
         <li class="stage"><span class="s-num">02</span><h3>Verify every source</h3><p>Nothing about a partner, speaker or sponsor published without reading their own page first.</p></li>
-        <li class="stage"><span class="s-num">03</span><h3>Repeatable structures</h3><p>Caption templates that kept 78 posts distinct, never reusing an opening line.</p></li>
+        <li class="stage"><span class="s-num">03</span><h3>Repeatable structures</h3><p>Caption templates that kept every post distinct, never reusing an opening line.</p></li>
         <li class="stage"><span class="s-num">04</span><h3>Format to intent</h3><p>Static to announce, carousel to explain, video for energy, ads for reach.</p></li>
         <li class="stage"><span class="s-num">05</span><h3>One living document</h3><p>Every caption, note and house rule in a single shared reference.</p></li>
       </ol>
@@ -155,7 +169,7 @@
           <div class="dpdp-slide" aria-hidden="true"><img src="../assets/images/work/dpdp-cr-newsletter2.jpg" alt="" loading="lazy" /></div>
         </div>
       </div>
-      <p class="dpdp-note">Selected campaign creative. Hover to pause.</p>
+      <p class="dpdp-note">Selected campaign creative.</p>
 
       <div class="prose" style="margin-top:clamp(2.5rem,6vw,4rem);">
         <h3>What the content showed</h3>
@@ -170,6 +184,11 @@
       <div class="prose" id="results" style="margin-top:clamp(2.5rem,6vw,4rem);">
         <span class="eyebrow">The results</span>
         <h2 style="margin-top:1rem;">What two months delivered</h2>
+        <p>
+          The room filled. On 18 September, 350 people came to the Radisson Blu Atria: 250 founders,
+          35 investors, and an ecosystem of more than 40 partners. My work was the LinkedIn layer that built
+          the event's audience and kept the right people paying attention. Here is what that delivered.
+        </p>
       </div>
       <div class="metrics">
         <div class="metric"><div class="n">+272</div><div class="l">New followers</div></div>
@@ -180,7 +199,7 @@
       <p class="dpdp-note">All figures cover the two-month campaign, 29 July to 22 September 2026.</p>
 
       <div class="dpdp-split">
-        <div class="dpdp-panel hi"><div class="lbl">Organic</div><div class="big">19.0%</div><div class="sub">engagement</div></div>
+        <div class="dpdp-panel hi"><div class="lbl">Organic</div><div class="big">19%</div><div class="sub">engagement</div></div>
         <div class="dpdp-panel"><div class="lbl">Boosted</div><div class="big">0.38%</div><div class="sub">engagement</div></div>
       </div>
       <p class="dpdp-note">Paid bought reach. Organic bought engagement.</p>
@@ -225,7 +244,7 @@
     <section class="section wrap">
       <div class="prose">
         <span class="eyebrow">End credits</span>
-        <h3 style="margin-top:1rem;">Read more</h3>
+        <h3 style="margin-top:1rem;">Where to go next</h3>
         <p><a class="inline" href="https://www.linkedin.com/pulse/why-were-building-room-just-hosting-event-dpdp-zone-mjvff" target="_blank" rel="noopener">Read the bylined article I wrote for the host ↗</a></p>
         <div style="margin-top:1.6rem;"><a class="btn" href="../index.html#contact">Start a project <span class="arrow">↗</span></a></div>
       </div>
