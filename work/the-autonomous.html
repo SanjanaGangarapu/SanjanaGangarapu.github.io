@@ -127,6 +127,13 @@
     .tst-person { display:flex; align-items:center; gap:.9rem; }
     .tst-avatar { width:54px; height:54px; border-radius:50%; object-fit:cover; flex:none; border:1px solid var(--line); }
     .tst-meta { display:flex; flex-direction:column; gap:.15rem; }
+    /* align the three name bars to one line: the quote row and the name row share heights across cards,
+       so a shorter role leaves space below its name rather than sitting lower */
+    @media (min-width:721px){
+      .tst-grid.three { grid-template-rows:auto auto; }
+      .tst-card { display:grid; grid-template-rows:subgrid; grid-row:span 2; align-content:start; }
+      .tst-card figcaption { margin-top:0; align-self:start; }
+    }
   </style>
 </head>
 <body>

@@ -736,7 +736,9 @@ main [id] { scroll-margin-top: 96px; }
 .nav-toggle span { background: var(--ink); }
 
 /* Hero — near-white with a faint full-bleed monochrome photo */
-.hero { padding-top: clamp(6rem, 11vw, 8.5rem); color: var(--ink); }
+.hero { padding-top: clamp(6rem, 11vw, 8.5rem); padding-bottom: clamp(2rem, 4vw, 2.75rem); color: var(--ink); }
+/* the work list follows the hero closely instead of leaving a full section gap */
+.hero + .section { padding-top: clamp(2.5rem, 5vw, 3.5rem); }
 .hero::before {
   content: ""; position: absolute; inset: 0 calc(50% - 50vw);
   background: url('../assets/images/frames/silence-in-two-tones/01.jpg') center 28% / cover no-repeat;
