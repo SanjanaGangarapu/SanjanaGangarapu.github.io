@@ -58,7 +58,23 @@
     .dpdp-marquee:hover .dpdp-track { animation-play-state:paused; }
     .dpdp-slide { flex:0 0 auto; width:clamp(200px,25vw,290px); border:1px solid var(--line); border-radius:12px; overflow:hidden; background:var(--card); }
     .dpdp-slide img { display:block; width:100%; aspect-ratio:4/5; object-fit:cover; transition:transform .5s ease; }
-    .dpdp-marquee.nl .dpdp-slide img { aspect-ratio:900/987; }
+    /* newsletter: one card per issue; hover scrolls the whole issue, click opens it in the lightbox */
+    .nl-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.4rem; margin-top:clamp(1.4rem,3vw,2rem); }
+    @media (max-width:820px){ .nl-grid { grid-template-columns:repeat(2,1fr); } }
+    @media (max-width:520px){ .nl-grid { grid-template-columns:1fr; gap:1rem; } }
+    .nl-card { position:relative; display:block; width:100%; height:440px; padding:0; margin:0; border:1px solid var(--line); border-radius:14px; overflow:hidden; background:#fff; cursor:zoom-in; text-align:left; box-shadow:0 12px 32px -22px rgba(0,0,0,.4); transition:box-shadow .3s ease; }
+    @media (max-width:520px){ .nl-card { height:380px; } }
+    .nl-card:hover { box-shadow:0 18px 40px -22px rgba(0,0,0,.5); }
+    .nl-card img { display:block; width:100%; height:auto; transition:transform 12s linear; }
+    .nl-card:hover img { transform:translateY(calc(-100% + 440px)); }
+    @media (max-width:520px){ .nl-card:hover img { transform:translateY(calc(-100% + 380px)); } }
+    @media (prefers-reduced-motion:reduce){ .nl-card:hover img { transform:none; } }
+    .nl-card .lbl { position:absolute; left:0; right:0; bottom:0; padding:2rem 1rem .85rem; background:linear-gradient(to top, rgba(255,255,255,.97) 40%, rgba(255,255,255,0)); font-family:var(--sans); pointer-events:none; }
+    .nl-card .lbl b { display:block; font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); font-weight:700; }
+    .nl-card .lbl span { display:block; font-family:var(--serif); font-size:1.05rem; color:var(--ink); margin-top:.2rem; }
+    /* tall issues scroll inside the lightbox instead of being shrunk to fit */
+    .dpdp-lb-stage.tall { max-height:88vh; overflow-y:auto; overscroll-behavior:contain; align-items:flex-start; border-radius:12px; scrollbar-width:thin; }
+    .dpdp-lb-stage.tall img { max-height:none; width:min(92vw,640px); border-radius:0; background:#fff; }
     .dpdp-slide:hover img { transform:scale(1.06); }
     @keyframes dpdp-scroll { from { transform:translateX(0); } to { transform:translateX(-50%); } }
     @media (prefers-reduced-motion:reduce) { .dpdp-track { animation:none; } .dpdp-marquee { overflow-x:auto; } }
@@ -293,29 +309,18 @@
         <h2>The newsletter</h2>
         <p>Nine issues from January to September: keynotes, the agenda, new speakers, workshops and the final call, each one written and designed to a single template.</p>
       </div>
-      <div class="dpdp-marquee nl" aria-label="Newsletter covers">
-        <div class="dpdp-track">
-          <div class="dpdp-slide"><img src="../assets/images/work/autonomous/newsletters/01-jan.jpg" alt="January newsletter, Super Early Bird and the motto" loading="lazy" /></div>
-          <div class="dpdp-slide"><img src="../assets/images/work/autonomous/newsletters/02-mar.jpg" alt="March newsletter, first keynote speakers and the Disruptors' Track" loading="lazy" /></div>
-          <div class="dpdp-slide"><img src="../assets/images/work/autonomous/newsletters/03-mar.jpg" alt="March newsletter, preliminary agenda" loading="lazy" /></div>
-          <div class="dpdp-slide"><img src="../assets/images/work/autonomous/newsletters/04-may.jpg" alt="May newsletter, new speaker line-up" loading="lazy" /></div>
-          <div class="dpdp-slide"><img src="../assets/images/work/autonomous/newsletters/05-jun.jpg" alt="June newsletter, McKinsey survey, panel and fireside chat" loading="lazy" /></div>
-          <div class="dpdp-slide"><img src="../assets/images/work/autonomous/newsletters/06-jul.jpg" alt="July newsletter, in-person workshops" loading="lazy" /></div>
-          <div class="dpdp-slide"><img src="../assets/images/work/autonomous/newsletters/07-aug.jpg" alt="August newsletter, only one month left" loading="lazy" /></div>
-          <div class="dpdp-slide"><img src="../assets/images/work/autonomous/newsletters/08-aug.jpg" alt="August newsletter, SDV and robotics panels" loading="lazy" /></div>
-          <div class="dpdp-slide"><img src="../assets/images/work/autonomous/newsletters/09-sep.jpg" alt="September newsletter, final call" loading="lazy" /></div>
-          <div class="dpdp-slide" aria-hidden="true"><img src="../assets/images/work/autonomous/newsletters/01-jan.jpg" alt="" loading="lazy" /></div>
-          <div class="dpdp-slide" aria-hidden="true"><img src="../assets/images/work/autonomous/newsletters/02-mar.jpg" alt="" loading="lazy" /></div>
-          <div class="dpdp-slide" aria-hidden="true"><img src="../assets/images/work/autonomous/newsletters/03-mar.jpg" alt="" loading="lazy" /></div>
-          <div class="dpdp-slide" aria-hidden="true"><img src="../assets/images/work/autonomous/newsletters/04-may.jpg" alt="" loading="lazy" /></div>
-          <div class="dpdp-slide" aria-hidden="true"><img src="../assets/images/work/autonomous/newsletters/05-jun.jpg" alt="" loading="lazy" /></div>
-          <div class="dpdp-slide" aria-hidden="true"><img src="../assets/images/work/autonomous/newsletters/06-jul.jpg" alt="" loading="lazy" /></div>
-          <div class="dpdp-slide" aria-hidden="true"><img src="../assets/images/work/autonomous/newsletters/07-aug.jpg" alt="" loading="lazy" /></div>
-          <div class="dpdp-slide" aria-hidden="true"><img src="../assets/images/work/autonomous/newsletters/08-aug.jpg" alt="" loading="lazy" /></div>
-          <div class="dpdp-slide" aria-hidden="true"><img src="../assets/images/work/autonomous/newsletters/09-sep.jpg" alt="" loading="lazy" /></div>
-        </div>
+      <div class="nl-grid" aria-label="Newsletter issues">
+        <button class="nl-card" type="button" data-group="newsletter" data-type="tall" data-src="../assets/images/work/autonomous/newsletters/full/01-jan.jpg" data-cap="January 2025, Super Early Bird and the motto"><img src="../assets/images/work/autonomous/newsletters/full/01-jan.jpg" alt="January newsletter, Super Early Bird and the motto" loading="lazy" /><span class="lbl"><b>January</b><span>Super Early Bird &amp; the motto</span></span></button>
+        <button class="nl-card" type="button" data-group="newsletter" data-type="tall" data-src="../assets/images/work/autonomous/newsletters/full/02-mar.jpg" data-cap="March 2025, first keynote speakers"><img src="../assets/images/work/autonomous/newsletters/full/02-mar.jpg" alt="March newsletter, first keynote speakers and the Disruptors' Track" loading="lazy" /><span class="lbl"><b>March</b><span>First keynote speakers</span></span></button>
+        <button class="nl-card" type="button" data-group="newsletter" data-type="tall" data-src="../assets/images/work/autonomous/newsletters/full/03-mar.jpg" data-cap="March 2025, preliminary agenda"><img src="../assets/images/work/autonomous/newsletters/full/03-mar.jpg" alt="March newsletter, preliminary agenda" loading="lazy" /><span class="lbl"><b>March</b><span>Preliminary agenda</span></span></button>
+        <button class="nl-card" type="button" data-group="newsletter" data-type="tall" data-src="../assets/images/work/autonomous/newsletters/full/04-may.jpg" data-cap="May 2025, new speaker line-up"><img src="../assets/images/work/autonomous/newsletters/full/04-may.jpg" alt="May newsletter, new speaker line-up" loading="lazy" /><span class="lbl"><b>May</b><span>New speaker line-up</span></span></button>
+        <button class="nl-card" type="button" data-group="newsletter" data-type="tall" data-src="../assets/images/work/autonomous/newsletters/full/05-jun.jpg" data-cap="June 2025, McKinsey survey and fireside chat"><img src="../assets/images/work/autonomous/newsletters/full/05-jun.jpg" alt="June newsletter, McKinsey survey, panel and fireside chat" loading="lazy" /><span class="lbl"><b>June</b><span>McKinsey survey &amp; fireside chat</span></span></button>
+        <button class="nl-card" type="button" data-group="newsletter" data-type="tall" data-src="../assets/images/work/autonomous/newsletters/full/06-jul.jpg" data-cap="July 2025, in-person workshops"><img src="../assets/images/work/autonomous/newsletters/full/06-jul.jpg" alt="July newsletter, in-person workshops" loading="lazy" /><span class="lbl"><b>July</b><span>In-person workshops</span></span></button>
+        <button class="nl-card" type="button" data-group="newsletter" data-type="tall" data-src="../assets/images/work/autonomous/newsletters/full/07-aug.jpg" data-cap="August 2025, one month left"><img src="../assets/images/work/autonomous/newsletters/full/07-aug.jpg" alt="August newsletter, only one month left" loading="lazy" /><span class="lbl"><b>August</b><span>One month left</span></span></button>
+        <button class="nl-card" type="button" data-group="newsletter" data-type="tall" data-src="../assets/images/work/autonomous/newsletters/full/08-aug.jpg" data-cap="August 2025, SDV and robotics panels"><img src="../assets/images/work/autonomous/newsletters/full/08-aug.jpg" alt="August newsletter, SDV and robotics panels" loading="lazy" /><span class="lbl"><b>August</b><span>SDV &amp; robotics panels</span></span></button>
+        <button class="nl-card" type="button" data-group="newsletter" data-type="tall" data-src="../assets/images/work/autonomous/newsletters/full/09-sep.jpg" data-cap="September 2025, final call"><img src="../assets/images/work/autonomous/newsletters/full/09-sep.jpg" alt="September newsletter, final call" loading="lazy" /><span class="lbl"><b>September</b><span>Final call</span></span></button>
       </div>
-      <p class="dpdp-note">Nine newsletter issues, January to September 2025.</p>
+      <p class="dpdp-note">Nine issues, January to September 2025. Hover a card to scroll through the issue, click to read it in full.</p>
 
       <div class="prose" id="insights" style="margin-top:clamp(2.5rem,6vw,4rem);">
         <span class="eyebrow">The insights</span>
@@ -461,11 +466,13 @@
       if (!lb) return;
       var stage = lb.querySelector('.dpdp-lb-stage'), cap = lb.querySelector('.dpdp-lb-cap');
       var groups = {};
-      document.querySelectorAll('.dpdp-tile').forEach(function (t) { (groups[t.dataset.group] = groups[t.dataset.group] || []).push(t); });
+      document.querySelectorAll('.dpdp-tile, .nl-card').forEach(function (t) { (groups[t.dataset.group] = groups[t.dataset.group] || []).push(t); });
       var cur = { g: null, i: 0 };
       function render() {
         var t = groups[cur.g][cur.i], el;
         stage.innerHTML = '';
+        stage.classList.toggle('tall', t.dataset.type === 'tall');
+        stage.scrollTop = 0;
         if (t.dataset.type === 'video') {
           el = document.createElement('video');
           el.src = t.dataset.src; el.controls = true; el.autoplay = true; el.playsInline = true; el.preload = 'metadata';
