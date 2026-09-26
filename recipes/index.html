@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Family Recipe Book</title>
+<meta name="description" content="A private collection of family recipes." />
+<meta name="robots" content="noindex, nofollow, noarchive" />
+<meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#14130f" media="(prefers-color-scheme: dark)" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="Recipes" />
+<link rel="manifest" href="manifest.webmanifest" />
+<link rel="apple-touch-icon" href="icons/icon-180.png" />
+<link rel="icon" type="image/svg+xml" href="icons/icon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <div class="header-row">
+      <a class="brand" href="#/" aria-label="Family Recipe Book, home">
+        <span class="brand-mark" aria-hidden="true">◍</span>
+        <span>Family Recipes</span>
+      </a>
+      <div class="header-actions">
+        <button class="icon-btn" id="navFav" aria-label="Favourites" title="Favourites">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.3l-6.2 3.6 1.6-7L2 9.2l7.1-.6L12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7z"/></svg>
+        </button>
+        <button class="icon-btn" id="navAdd" aria-label="Add a recipe from a link" title="Add from a link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+        <button class="icon-btn" id="navRef" aria-label="Kitchen reference" title="Kitchen reference">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V5a2 2 0 0 1 2-2h13v18H6a2 2 0 0 1-2-2z"/><path d="M8 7h7M8 11h7"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="browseControls">
+      <div class="search-row">
+        <div class="search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          <input id="search" type="search" placeholder="Search rasam, ridge gourd, pudina…" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Search recipes" />
+          <button class="search-clear" id="searchClear" aria-label="Clear search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap" id="main"></main>
+
+<footer class="site-foot wrap" id="foot" hidden>
+  <span id="footCount"></span>
+  <a href="/" >Back to sanjanagangarapu.com</a>
+</footer>
+
+<!-- Cook mode -->
+<section class="cook" id="cook" hidden aria-label="Cook mode">
+  <div class="cook-bar">
+    <button class="icon-btn" id="cookClose" aria-label="Close cook mode">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <h2 id="cookTitle"></h2>
+    <span class="cook-wake caps" id="cookWake"></span>
+  </div>
+  <div class="cook-body">
+    <div class="cook-inner">
+      <p class="cook-sub caps">Ingredients</p>
+      <div id="cookIng"></div>
+      <div class="cook-steps">
+        <p class="cook-sub caps">Method</p>
+        <div id="cookSteps"></div>
+      </div>
+    </div>
+  </div>
+  <div class="cook-foot">
+    <div class="cook-progress"><span id="cookBar"></span></div>
+    <span class="cook-count" id="cookCount"></span>
+    <button class="btn btn--ghost" id="cookReset" style="padding:.5rem 1rem;font-size:.82rem">Reset</button>
+  </div>
+</section>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/capture.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

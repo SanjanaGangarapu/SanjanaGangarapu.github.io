@@ -1,0 +1,233 @@
+{
+ "corn-pulav": {
+  "file": "assets/photos/corn-pulav.jpg",
+  "license": "CC BY-SA 2.0",
+  "author": "Alpha from Melbourne, Australia",
+  "source": "https://commons.wikimedia.org/wiki/File:Chicken_Soup_and_Papadom_-_Chennai_Banana_Leaf_(2067781471).jpg",
+  "title": "File:Chicken Soup and Papadom - Chennai Banana Leaf (2067781471).jpg"
+ },
+ "ghee-rice": {
+  "file": "assets/photos/ghee-rice.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Ayshamarjana",
+  "source": "https://commons.wikimedia.org/wiki/File:Ghee_Rice_and_Beef_Kondattam.jpg",
+  "title": "File:Ghee Rice and Beef Kondattam.jpg"
+ },
+ "veg-pulav": {
+  "file": "assets/photos/veg-pulav.jpg",
+  "license": "CC BY 2.0",
+  "author": "Divya Kudua",
+  "source": "https://commons.wikimedia.org/wiki/File:Pulao_Vegetable_Methi_India.jpg",
+  "title": "File:Pulao Vegetable Methi India.jpg"
+ },
+ "rava-pulav": {
+  "file": "assets/photos/rava-pulav.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Intodustin",
+  "source": "https://commons.wikimedia.org/wiki/File:Upma_South_India.JPG",
+  "title": "File:Upma South India.JPG"
+ },
+ "poppu": {
+  "file": "assets/photos/poppu.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Wind Hashira",
+  "source": "https://commons.wikimedia.org/wiki/File:Dal_tadka_and_naan.jpg",
+  "title": "File:Dal tadka and naan.jpg"
+ },
+ "pulusu": {
+  "file": "assets/photos/pulusu.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Museum of Veterinary Anatomy FMVZ USP / Wagner Souza e Silva, edited by Rodrigo Tetsuo Arg",
+  "source": "https://commons.wikimedia.org/wiki/File:Sambar_deer_skeleton_at_MAV-USP.jpg",
+  "title": "File:Sambar deer skeleton at MAV-USP.jpg"
+ },
+ "beerkaya-nichadkaya": {
+  "file": "assets/photos/beerkaya-nichadkaya.jpg",
+  "license": "CC BY-SA 3.0",
+  "author": "‘Uncle Carl’ (カールおじさん).",
+  "source": "https://commons.wikimedia.org/wiki/File:Luffa_aegyptica.jpg",
+  "title": "File:Luffa aegyptica.jpg"
+ },
+ "vegetable-fry": {
+  "file": "assets/photos/vegetable-fry.jpg",
+  "license": "CC BY 2.0",
+  "author": "Jeremy Keith",
+  "source": "https://commons.wikimedia.org/wiki/File:Grilled_zucchini.jpg",
+  "title": "File:Grilled zucchini.jpg"
+ },
+ "ragi-dosa": {
+  "file": "assets/photos/ragi-dosa.jpg",
+  "license": "CC BY-SA 3.0",
+  "author": "MichaelMaggs",
+  "source": "https://commons.wikimedia.org/wiki/File:Colouring_pencils.jpg",
+  "title": "File:Colouring pencils.jpg"
+ },
+ "ujjo-rotti": {
+  "file": "assets/photos/ujjo-rotti.jpg",
+  "license": "CC0",
+  "author": "Evan-Amos",
+  "source": "https://commons.wikimedia.org/wiki/File:Big_Mac_hamburger.jpg",
+  "title": "File:Big Mac hamburger.jpg"
+ },
+ "pudina-chutney": {
+  "file": "assets/photos/pudina-chutney.jpg",
+  "license": "CC BY-SA 2.0",
+  "author": "Charles Haynes",
+  "source": "https://commons.wikimedia.org/wiki/File:Chutneykarnataka.jpg",
+  "title": "File:Chutneykarnataka.jpg"
+ },
+ "dosakayi-sasuva": {
+  "file": "assets/photos/dosakayi-sasuva.jpg",
+  "license": "CC BY-SA 3.0",
+  "author": "Elisabeth Nara at English Wikipedia",
+  "source": "https://commons.wikimedia.org/wiki/File:Raita_with_cucumber_and_mint.jpg",
+  "title": "File:Raita with cucumber and mint.jpg"
+ },
+ "bisi-bele-bath-powder": {
+  "file": "assets/photos/bisi-bele-bath-powder.jpg",
+  "license": "Public domain",
+  "author": "w:en:User:Leadehua",
+  "source": "https://commons.wikimedia.org/wiki/File:Five_spice_powder.jpg",
+  "title": "File:Five spice powder.jpg"
+ },
+ "chirmuri": {
+  "file": "assets/photos/chirmuri.jpg",
+  "license": "CC BY-SA 3.0",
+  "author": "Evan-Amos",
+  "source": "https://commons.wikimedia.org/wiki/File:Quaker-Popped-Rice-Snacks.jpg",
+  "title": "File:Quaker-Popped-Rice-Snacks.jpg"
+ },
+ "bean-corn-tacos": {
+  "file": "assets/photos/bean-corn-tacos.jpg",
+  "license": "CC BY-SA 2.0",
+  "author": "Larry Miller",
+  "source": "https://commons.wikimedia.org/wiki/File:001_Tacos_de_carnitas,_carne_asada_y_al_pastor.jpg",
+  "title": "File:001 Tacos de carnitas, carne asada y al pastor.jpg"
+ },
+ "overnight-oats": {
+  "file": "assets/photos/overnight-oats.jpg",
+  "license": "CC BY-SA 2.5",
+  "author": "Original description was: I, VirtualSteve took this photograph on February 19, 2006.",
+  "source": "https://commons.wikimedia.org/wiki/File:Muesli.jpg",
+  "title": "File:Muesli.jpg"
+ },
+ "fried-rice": {
+  "file": "assets/photos/fried-rice.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Ganesh Mohan T",
+  "source": "https://commons.wikimedia.org/wiki/File:Vegetable_fried_rice_from_Kerala.jpg",
+  "title": "File:Vegetable fried rice from Kerala.jpg"
+ },
+ "sabakki-uppittu": {
+  "file": "assets/photos/sabakki-uppittu.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Dheerajk88",
+  "source": "https://commons.wikimedia.org/wiki/File:Sabudana_Khichdi_with_Sweet_curd.JPG",
+  "title": "File:Sabudana Khichdi with Sweet curd.JPG"
+ },
+ "dal-and-rice": {
+  "file": "assets/photos/dal-and-rice.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Gaurav Dhwaj Khadka",
+  "source": "https://commons.wikimedia.org/wiki/File:Dal_Bhat_Tarkari_2.jpg",
+  "title": "File:Dal Bhat Tarkari 2.jpg"
+ },
+ "rasam": {
+  "file": "assets/photos/rasam.jpg",
+  "license": "Public domain",
+  "author": "Miansari66",
+  "source": "https://commons.wikimedia.org/wiki/File:Rasam.JPG",
+  "title": "File:Rasam.JPG"
+ },
+ "pesarubal-pappu-rice": {
+  "file": "assets/photos/pesarubal-pappu-rice.jpg",
+  "license": "CC BY 2.0",
+  "author": "Leslie Seaton from Seattle, WA, USA",
+  "source": "https://commons.wikimedia.org/wiki/File:Moong_Dal_(5194456370).jpg",
+  "title": "File:Moong Dal (5194456370).jpg"
+ },
+ "pitaka-pappu": {
+  "file": "assets/photos/pitaka-pappu.jpg",
+  "license": "CC BY-SA 3.0",
+  "author": "Roger Culos",
+  "source": "https://commons.wikimedia.org/wiki/File:Vigna_radiata_MHNT.BOT.2009.17.4.jpg",
+  "title": "File:Vigna radiata MHNT.BOT.2009.17.4.jpg"
+ },
+ "potato-palya": {
+  "file": "assets/photos/potato-palya.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Ravi Dwivedi",
+  "source": "https://commons.wikimedia.org/wiki/File:Aloo_sabzi_at_Mughalsarai_Junction.jpg",
+  "title": "File:Aloo sabzi at Mughalsarai Junction.jpg"
+ },
+ "potato-vapudu": {
+  "file": "assets/photos/potato-vapudu.jpg",
+  "license": "CC BY-SA 3.0",
+  "author": "Sangram Keshari Senapati",
+  "source": "https://commons.wikimedia.org/wiki/File:Alu_Bhaja.jpg",
+  "title": "File:Alu Bhaja.jpg"
+ },
+ "dhokla": {
+  "file": "assets/photos/dhokla.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Yakshitha",
+  "source": "https://commons.wikimedia.org/wiki/File:Dhokla_2.jpg",
+  "title": "File:Dhokla 2.jpg"
+ },
+ "pesarubal-pappu-dry": {
+  "file": "assets/photos/pesarubal-pappu-dry.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Dr Suryakanta Acharya",
+  "source": "https://commons.wikimedia.org/wiki/File:Chapati_rice_fry_moong_dal_fry_fruit_salad-Masai_mara-Kenya-14.jpg",
+  "title": "File:Chapati rice fry moong dal fry fruit salad-Masai mara-Kenya-14.jpg"
+ },
+ "sorekay-chapatti": {
+  "file": "assets/photos/sorekay-chapatti.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Gaurav Dhwaj Khadka",
+  "source": "https://commons.wikimedia.org/wiki/File:Bottle_Gourd_Curry.jpg",
+  "title": "File:Bottle Gourd Curry.jpg"
+ },
+ "akki-rotti": {
+  "file": "assets/photos/akki-rotti.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Lakshmi Vijayadas",
+  "source": "https://commons.wikimedia.org/wiki/File:%E0%B2%85%E0%B2%95%E0%B3%8D%E0%B2%95%E0%B2%BF_%E0%B2%B0%E0%B3%8A%E0%B2%9F%E0%B3%8D%E0%B2%9F%E0%B2%BF_.jpg",
+  "title": "File:ಅಕ್ಕಿ ರೊಟ್ಟಿ .jpg"
+ },
+ "palak-pappu": {
+  "file": "assets/photos/palak-pappu.jpg",
+  "license": "CC BY 4.0",
+  "author": "P1898",
+  "source": "https://commons.wikimedia.org/wiki/File:Dal_palak_casserole.jpg",
+  "title": "File:Dal palak casserole.jpg"
+ },
+ "idli-sambar": {
+  "file": "assets/photos/idli-sambar.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Sutapa Pal",
+  "source": "https://commons.wikimedia.org/wiki/File:Idli_Sambar-Noida-UP-SP004.jpg",
+  "title": "File:Idli Sambar-Noida-UP-SP004.jpg"
+ },
+ "atta-masala-dosa-batter": {
+  "file": "assets/photos/atta-masala-dosa-batter.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Marajozkee",
+  "source": "https://commons.wikimedia.org/wiki/File:Masala_dosa_01.jpg",
+  "title": "File:Masala dosa 01.jpg"
+ },
+ "pesarattu": {
+  "file": "assets/photos/pesarattu.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Estelleoup",
+  "source": "https://commons.wikimedia.org/wiki/File:Chilla,_festival_Holoc%C3%A8ne_2019.jpg",
+  "title": "File:Chilla, festival Holocène 2019.jpg"
+ },
+ "rava-dosa": {
+  "file": "assets/photos/rava-dosa.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Oleg Yunakov",
+  "source": "https://commons.wikimedia.org/wiki/File:Rava_Mysore_Dosa.jpg",
+  "title": "File:Rava Mysore Dosa.jpg"
+ }
+}

@@ -1,0 +1,3586 @@
+{
+ "version": 1,
+ "categories": [
+  {
+   "id": "rice",
+   "name": "Rice & Mains"
+  },
+  {
+   "id": "dal",
+   "name": "Dal & Lentils"
+  },
+  {
+   "id": "curries",
+   "name": "Curries & Sabzi"
+  },
+  {
+   "id": "breads",
+   "name": "Dosas, Idlis & Breads"
+  },
+  {
+   "id": "chutneys",
+   "name": "Chutneys & Podis"
+  },
+  {
+   "id": "snacks",
+   "name": "Snacks"
+  },
+  {
+   "id": "sweets",
+   "name": "Sweets"
+  },
+  {
+   "id": "keepers",
+   "name": "Keepers"
+  }
+ ],
+ "reference": {
+  "tadka": "Oil or ghee, then mustard seeds (sasuve), then jeera, then curry leaves, then hing, then garlic or onion.",
+  "cooker": [
+   {
+    "what": "Dal on its own",
+    "whistles": "3 whistles"
+   },
+   {
+    "what": "Dal with vegetables",
+    "whistles": "3 whistles"
+   },
+   {
+    "what": "Toor and masoor dal for rice",
+    "whistles": "5 whistles"
+   },
+   {
+    "what": "Black channa",
+    "whistles": "4 whistles"
+   },
+   {
+    "what": "Kabuli channa",
+    "whistles": "10 whistles"
+   },
+   {
+    "what": "Potato",
+    "whistles": "1 to 3 whistles"
+   },
+   {
+    "what": "Green grams",
+    "whistles": "2 whistles"
+   },
+   {
+    "what": "Idli",
+    "whistles": "steam 10 to 12 minutes"
+   }
+  ],
+  "links": [
+   {
+    "label": "The Global Vegetarian",
+    "url": "https://theglobalvegetarian.com/"
+   }
+  ]
+ },
+ "recipes": [
+  {
+   "id": "corn-pulav",
+   "title": "Corn Pulav",
+   "alt": [
+    "Sweet corn rice",
+    "Mokkajonna pulav"
+   ],
+   "category": "rice",
+   "source": "family",
+   "cooker": "1 whistle",
+   "ingredients": [
+    {
+     "item": "Rice",
+     "qty": "1 glass, half basmati half regular"
+    },
+    {
+     "item": "Corn",
+     "qty": "½ glass"
+    },
+    {
+     "item": "Onion",
+     "qty": "2, sliced long"
+    },
+    {
+     "item": "Ginger, garlic and green chilli",
+     "qty": "blended to a paste"
+    },
+    {
+     "item": "Methi leaves",
+     "qty": "1 handful"
+    },
+    {
+     "item": "Coriander leaves",
+     "qty": "1 handful"
+    },
+    {
+     "item": "Chakka, elachi, lavanga",
+     "qty": "whole spices"
+    },
+    {
+     "item": "Oil and ghee",
+     "qty": ""
+    },
+    {
+     "item": "Water",
+     "qty": "2 glasses per glass of rice"
+    },
+    {
+     "item": "Crystal salt",
+     "qty": "to taste"
+    }
+   ],
+   "steps": [
+    "Blend the ginger, garlic and green chillies into a paste.",
+    "Heat oil and ghee in a pressure cooker and add the whole spices: chakka, elachi, lavanga.",
+    "Fry the sliced onions just once, until they turn.",
+    "Add the ginger-garlic-chilli paste, then the corn.",
+    "Add the methi and coriander leaves.",
+    "Add the washed rice and fry for 3 minutes.",
+    "Pour in water at 2:1 to the rice and add crystal salt.",
+    "Pressure cook for 1 whistle."
+   ],
+   "notes": [],
+   "variants": [
+    {
+     "label": "Whistle count",
+     "text": "The tidied book says 1 whistle, the older phone note says 2. Worth settling with whoever wrote them. Start at 1."
+    }
+   ],
+   "link": null
+  },
+  {
+   "id": "ghee-rice",
+   "title": "Ghee Rice",
+   "alt": [
+    "Neychoru",
+    "Ney rice"
+   ],
+   "category": "rice",
+   "source": "family",
+   "cooker": "1 whistle",
+   "ingredients": [
+    {
+     "item": "Rice",
+     "qty": "washed"
+    },
+    {
+     "item": "Ghee and oil",
+     "qty": ""
+    },
+    {
+     "item": "Yelakki (cardamom)",
+     "qty": "3"
+    },
+    {
+     "item": "Chakka",
+     "qty": "1.5 inches"
+    },
+    {
+     "item": "Lavanga (cloves)",
+     "qty": "3"
+    },
+    {
+     "item": "Pepper corns",
+     "qty": "6"
+    },
+    {
+     "item": "Garlic cloves",
+     "qty": "10"
+    },
+    {
+     "item": "Green chillies",
+     "qty": "5"
+    },
+    {
+     "item": "Green peas",
+     "qty": "small bowl"
+    },
+    {
+     "item": "Jeera",
+     "qty": "1 tsp"
+    },
+    {
+     "item": "Coconut milk",
+     "qty": ""
+    },
+    {
+     "item": "Water",
+     "qty": ""
+    },
+    {
+     "item": "Salt",
+     "qty": "2 tsp"
+    }
+   ],
+   "steps": [
+    "Make the mirim: blend coconut, chillies, salt, ginger, garlic and garam masala into a paste.",
+    "Heat ghee and oil in a pressure cooker.",
+    "Fry all the whole spices together: yelakki, chakka, lavanga, pepper corns, garlic, green chillies and jeera.",
+    "Add the green peas and fry.",
+    "Add the mirim paste and fry it off.",
+    "Add the washed rice and fry for 3 to 4 minutes.",
+    "Add coconut milk and water at 1:1.5:1, rice to coconut milk to water.",
+    "Add 2 tsp salt.",
+    "Cook until the water has almost reduced, then close the lid and cook for 1 whistle."
+   ],
+   "notes": [
+    "The mirim is what separates this from a plain ghee rice. Blend it before you start so it is ready when the peas go in."
+   ],
+   "variants": [
+    {
+     "label": "Whistle count",
+     "text": "The tidied book says 1 whistle, the older phone note says 2. Start at 1 and check."
+    }
+   ],
+   "link": null
+  },
+  {
+   "id": "veg-pulav",
+   "title": "Veg Pulav",
+   "alt": [
+    "Vegetable pulav",
+    "Pudina pulav"
+   ],
+   "category": "rice",
+   "source": "family",
+   "cooker": null,
+   "ingredients": [
+    {
+     "item": "Mixed vegetables",
+     "qty": "fried"
+    },
+    {
+     "item": "Ghee and oil",
+     "qty": ""
+    },
+    {
+     "item": "Ginger",
+     "qty": "1½ inches"
+    },
+    {
+     "item": "Garlic",
+     "qty": "7 to 8 cloves"
+    },
+    {
+     "item": "Coriander leaves",
+     "qty": ""
+    },
+    {
+     "item": "Pudina (mint)",
+     "qty": ""
+    },
+    {
+     "item": "Coconut",
+     "qty": "lemon sized"
+    },
+    {
+     "item": "Tomato",
+     "qty": "1 small"
+    },
+    {
+     "item": "Pulav powder",
+     "qty": ""
+    },
+    {
+     "item": "Green chillies",
+     "qty": "7 to 8"
+    },
+    {
+     "item": "Salt",
+     "qty": "to taste"
+    },
+    {
+     "item": "Lemon",
+     "qty": "added in the cooker"
+    }
+   ],
+   "steps": [
+    "Blend the ginger, garlic, coriander, pudina, coconut, tomato and green chillies into a masala paste.",
+    "Heat ghee and oil and fry the vegetables.",
+    "Add the blended masala and the pulav powder, and fry until the raw smell goes.",
+    "Add the rice and water, and salt.",
+    "Add lemon juice into the cooker before closing it.",
+    "Pressure cook until done."
+   ],
+   "notes": [
+    "This is the rice pulav from the older notes, different from Corn Pulav and from Rava Pulav. The masala is pudina and coconut led."
+   ],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "rava-pulav",
+   "title": "Rava Pulav",
+   "alt": [
+    "Semolina pulav",
+    "Sooji pulav"
+   ],
+   "category": "rice",
+   "source": "family",
+   "cooker": null,
+   "ingredients": [
+    {
+     "item": "Rava",
+     "qty": "1.5 glasses and a little more"
+    },
+    {
+     "item": "Pulav powder",
+     "qty": "2 tsp"
+    },
+    {
+     "item": "Mint leaves",
+     "qty": ""
+    },
+    {
+     "item": "Tomato",
+     "qty": "Roma"
+    },
+    {
+     "item": "Green chillies",
+     "qty": "10 plus 2"
+    },
+    {
+     "item": "Garlic",
+     "qty": "6 pods"
+    },
+    {
+     "item": "Ginger",
+     "qty": "2 inches"
+    },
+    {
+     "item": "Coriander leaves",
+     "qty": ""
+    },
+    {
+     "item": "Raw coconut",
+     "qty": "1 cup"
+    },
+    {
+     "item": "Sweetcorn",
+     "qty": "a handful"
+    },
+    {
+     "item": "Salt and lemon",
+     "qty": "to finish"
+    }
+   ],
+   "steps": [
+    "Put the mint, tomato, green chillies, garlic, ginger, coriander and raw coconut in a mixer and blend together.",
+    "Sauté the vegetables in oil.",
+    "Add the blended mixture and the sweetcorn, and fry for 2 minutes.",
+    "Add water at 3 glasses per glass of rava.",
+    "Add salt and a little lemon, and cook until the rava has absorbed the water."
+   ],
+   "notes": [],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "fried-rice",
+   "title": "Fried Rice",
+   "alt": [],
+   "category": "rice",
+   "source": "family",
+   "cooker": null,
+   "ingredients": [
+    {
+     "item": "Cooked rice",
+     "qty": ""
+    },
+    {
+     "item": "Ghee and oil",
+     "qty": ""
+    },
+    {
+     "item": "Chakka, lavanga, yelakki",
+     "qty": "whole spices"
+    },
+    {
+     "item": "Onion",
+     "qty": ""
+    },
+    {
+     "item": "Green chillies",
+     "qty": ""
+    },
+    {
+     "item": "Beans, carrot, tomato",
+     "qty": "chopped"
+    },
+    {
+     "item": "Garam masala",
+     "qty": ""
+    },
+    {
+     "item": "Garlic",
+     "qty": ""
+    },
+    {
+     "item": "Salt",
+     "qty": "to taste"
+    }
+   ],
+   "steps": [
+    "Heat ghee and oil and add the whole spices.",
+    "Add garlic, onion and chillies and fry well.",
+    "Add the chopped beans, carrot and tomato and fry.",
+    "Add garam masala and salt.",
+    "Add the cooked rice and toss on high heat."
+   ],
+   "notes": [],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "sabakki-uppittu",
+   "title": "Sabakki Uppittu",
+   "alt": [
+    "Sago upma",
+    "Sabudana",
+    "Javvarisi"
+   ],
+   "category": "rice",
+   "source": "family",
+   "cooker": null,
+   "ingredients": [
+    {
+     "item": "Sago (sabakki)",
+     "qty": "1 glass, soaked"
+    },
+    {
+     "item": "Moong dal",
+     "qty": "just under ½ glass, soaked"
+    },
+    {
+     "item": "Oil",
+     "qty": ""
+    },
+    {
+     "item": "Mustard seeds, urad dal, curry leaves",
+     "qty": "for tadka"
+    },
+    {
+     "item": "Onion",
+     "qty": "half, julienned"
+    },
+    {
+     "item": "Turmeric",
+     "qty": "very little"
+    },
+    {
+     "item": "Green chillies",
+     "qty": ""
+    },
+    {
+     "item": "Salt",
+     "qty": "to taste"
+    },
+    {
+     "item": "Lemon",
+     "qty": "to finish"
+    }
+   ],
+   "steps": [
+    "Soak the sago overnight, or for several hours.",
+    "Soak the moong dal and boil it in the morning until 45 percent cooked.",
+    "Heat oil and add mustard seeds, urad dal and curry leaves.",
+    "Add the julienned onion and green chillies and fry with a little turmeric and salt.",
+    "Add the boiled moong dal and fry briefly.",
+    "Drain all the water from the sago and add it to the pan.",
+    "Once the sago turns transparent, add salt and lemon juice."
+   ],
+   "notes": [
+    "Drain the sago properly. Any water left in it turns the upma to paste."
+   ],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "dal-and-rice",
+   "title": "Dal and Rice",
+   "alt": [
+    "Everyday dal",
+    "Toor masoor dal"
+   ],
+   "category": "dal",
+   "source": "family",
+   "cooker": "5 whistles",
+   "ingredients": [
+    {
+     "item": "Toor dal",
+     "qty": "¾ part"
+    },
+    {
+     "item": "Masoor dal",
+     "qty": "¼ part"
+    },
+    {
+     "item": "Water",
+     "qty": "3 glasses per ¾ cup dal"
+    },
+    {
+     "item": "Turmeric",
+     "qty": "a pinch"
+    }
+   ],
+   "steps": [
+    "Wash the lentils together.",
+    "Add 3 glasses of water per ¾ cup of dal.",
+    "Add turmeric.",
+    "Pressure cook for 5 whistles.",
+    "Season with salt and a tempering of your choice."
+   ],
+   "notes": [],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "rasam",
+   "title": "Rasam",
+   "alt": [
+    "Chaaru",
+    "Saaru"
+   ],
+   "category": "dal",
+   "source": "family",
+   "cooker": "3 whistles",
+   "ingredients": [
+    {
+     "item": "Toor dal",
+     "qty": "½ glass"
+    },
+    {
+     "item": "Turmeric",
+     "qty": "a pinch"
+    },
+    {
+     "item": "Tamarind paste",
+     "qty": "to taste"
+    },
+    {
+     "item": "Jaggery",
+     "qty": "a small piece"
+    },
+    {
+     "item": "Tomatoes",
+     "qty": "small, chopped"
+    },
+    {
+     "item": "Rasam powder",
+     "qty": ""
+    },
+    {
+     "item": "Fresh coriander",
+     "qty": ""
+    },
+    {
+     "item": "Salt",
+     "qty": "to taste"
+    },
+    {
+     "item": "Tadka",
+     "qty": "mustard seeds, jeera, fried garlic, curry leaves, ghee"
+    }
+   ],
+   "steps": [
+    "Pressure cook the toor dal with turmeric.",
+    "Pour off the excess water and keep it, mash the dal, then add the water back.",
+    "Add tamarind paste, salt, jaggery, chopped tomatoes and rasam powder.",
+    "Heat it through and add the coriander leaves.",
+    "Make the tadka: fry mustard seeds, jeera, garlic and curry leaves in ghee.",
+    "Pour the tadka over the rasam and serve."
+   ],
+   "notes": [
+    "Keep the water you pour off before mashing. It goes back in and it is what makes the rasam thin rather than a dal."
+   ],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "pesarubal-pappu-rice",
+   "title": "Pesarubal Pappu",
+   "alt": [
+    "Moong dal for rice",
+    "Pesarapappu"
+   ],
+   "category": "dal",
+   "source": "family",
+   "cooker": "3 whistles",
+   "ingredients": [
+    {
+     "item": "Moong dal",
+     "qty": "½ glass"
+    },
+    {
+     "item": "Green chillies",
+     "qty": "5"
+    },
+    {
+     "item": "Garlic",
+     "qty": "½ pod, plus ½ pod for the tadka"
+    },
+    {
+     "item": "Tomatoes",
+     "qty": "2"
+    },
+    {
+     "item": "Turmeric",
+     "qty": "a pinch"
+    },
+    {
+     "item": "Tamarind sauce",
+     "qty": "to taste"
+    },
+    {
+     "item": "Salt",
+     "qty": "to taste"
+    },
+    {
+     "item": "Tadka",
+     "qty": "ghee, mustard seeds, jeera, curry leaves"
+    }
+   ],
+   "steps": [
+    "Dry fry the moong dal until lightly golden, then wash it.",
+    "Put it in a bowl with the tomatoes, half a pod of garlic and the chillies.",
+    "Add a pinch of turmeric and water just to submerge.",
+    "Pressure cook for 3 whistles.",
+    "Add salt and tamarind sauce and heat through.",
+    "Make the tadka: fry mustard seeds, jeera, curry leaves and the remaining garlic in ghee.",
+    "Mix the tadka into the cooked dal."
+   ],
+   "notes": [
+    "This is the version for eating with rice. There is a drier fried version too."
+   ],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "pesarubal-pappu-dry",
+   "title": "Pesarubal Pappu, Dry Fry",
+   "alt": [
+    "Moong dal fry",
+    "Pesarapappu fry"
+   ],
+   "category": "dal",
+   "source": "family",
+   "cooker": null,
+   "ingredients": [
+    {
+     "item": "Moong dal",
+     "qty": "fried first"
+    },
+    {
+     "item": "Ghee",
+     "qty": ""
+    },
+    {
+     "item": "Mustard seeds, jeera, curry leaves, garlic",
+     "qty": "for tadka"
+    },
+    {
+     "item": "Onion",
+     "qty": "julienned"
+    },
+    {
+     "item": "Green chillies",
+     "qty": ""
+    },
+    {
+     "item": "Ginger",
+     "qty": ""
+    },
+    {
+     "item": "Tomato",
+     "qty": "1"
+    },
+    {
+     "item": "Turmeric",
+     "qty": ""
+    },
+    {
+     "item": "Salt and water",
+     "qty": ""
+    },
+    {
+     "item": "Coriander and lemon",
+     "qty": "to finish"
+    }
+   ],
+   "steps": [
+    "Fry the moong dal until lightly golden and set it aside.",
+    "Heat ghee and add mustard seeds, jeera, curry leaves and garlic.",
+    "Add the julienned onion and green chillies and fry well.",
+    "Add ginger, tomato and turmeric.",
+    "Add the roasted moong dal and water.",
+    "Add salt and cook until tender.",
+    "Finish with fresh coriander and lemon juice."
+   ],
+   "notes": [],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "palak-pappu",
+   "title": "Palak Pappu",
+   "alt": [
+    "Spinach dal",
+    "Palakura pappu"
+   ],
+   "category": "dal",
+   "source": "family",
+   "cooker": "3 whistles",
+   "ingredients": [
+    {
+     "item": "Palak (spinach)",
+     "qty": "chopped small"
+    },
+    {
+     "item": "Toor dal",
+     "qty": "½ cup"
+    },
+    {
+     "item": "Tomato",
+     "qty": "1"
+    },
+    {
+     "item": "Green chillies",
+     "qty": "8 to 10"
+    },
+    {
+     "item": "Cooking soda",
+     "qty": "a pinch"
+    },
+    {
+     "item": "Tamarind juice",
+     "qty": "2 to 3 tsp"
+    },
+    {
+     "item": "Salt",
+     "qty": "to taste"
+    },
+    {
+     "item": "Tadka",
+     "qty": "oil and garlic"
+    }
+   ],
+   "steps": [
+    "Put the chopped palak, toor dal, tomato and chillies together in a pressure cooker.",
+    "Add a pinch of soda and water just to submerge.",
+    "Cook for 3 whistles.",
+    "Add tamarind juice, starting with 2 tsp, taste, and add the third if it needs it.",
+    "Add salt.",
+    "Make a tadka with garlic in oil and mix it in."
+   ],
+   "notes": [],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "bele-saaru",
+   "title": "Bele Saaru",
+   "alt": [
+    "Toor dal saaru",
+    "Dal rasam"
+   ],
+   "category": "dal",
+   "source": "family",
+   "cooker": "3 whistles",
+   "ingredients": [
+    {
+     "item": "Toor dal",
+     "qty": "½ glass"
+    },
+    {
+     "item": "Cooking soda",
+     "qty": "a pinch"
+    },
+    {
+     "item": "Tamarind",
+     "qty": ""
+    },
+    {
+     "item": "Jaggery",
+     "qty": ""
+    },
+    {
+     "item": "Rasam powder",
+     "qty": "as needed"
+    },
+    {
+     "item": "Tomato",
+     "qty": ""
+    },
+    {
+     "item": "Fresh coriander",
+     "qty": ""
+    },
+    {
+     "item": "Salt",
+     "qty": "to taste"
+    },
+    {
+     "item": "Tadka",
+     "qty": "mustard seeds, jeera, curry leaves"
+    }
+   ],
+   "steps": [
+    "Pressure cook the toor dal with a pinch of soda for 3 whistles.",
+    "Add tamarind water, salt, jaggery, rasam powder and tomato.",
+    "Simmer and adjust the seasoning.",
+    "Add the coriander leaves.",
+    "Temper with mustard seeds, jeera and curry leaves in oil."
+   ],
+   "notes": [
+    "Add water to whatever thinness you want the saaru. It should pour, not spoon."
+   ],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "idli-sambar",
+   "title": "Idli Sambar",
+   "alt": [
+    "Sambar",
+    "Tiffin sambar"
+   ],
+   "category": "dal",
+   "source": "family",
+   "cooker": "3 whistles",
+   "ingredients": [
+    {
+     "item": "Toor dal",
+     "qty": "½ glass"
+    },
+    {
+     "item": "Onion",
+     "qty": "2"
+    },
+    {
+     "item": "Tomato",
+     "qty": "1 small"
+    },
+    {
+     "item": "Tamarind",
+     "qty": "1 tbsp"
+    },
+    {
+     "item": "Salt",
+     "qty": "1.5 tsp"
+    },
+    {
+     "item": "Jaggery",
+     "qty": "3 tsp"
+    },
+    {
+     "item": "Rasam powder",
+     "qty": "1.5 to 2 tsp"
+    },
+    {
+     "item": "Tadka",
+     "qty": "oil, mustard seeds, jeera, curry leaves"
+    }
+   ],
+   "steps": [
+    "Pressure cook the toor dal for 3 whistles.",
+    "Heat oil and make the tadka: mustard seeds, jeera, curry leaves.",
+    "Fry the onions until 95 percent done.",
+    "Add the small chopped tomato.",
+    "Add tamarind water, salt, jaggery and rasam powder.",
+    "Add the cooked dal, mix, and simmer until the flavours come together."
+   ],
+   "notes": [],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "poppu",
+   "title": "Poppu",
+   "alt": [
+    "Tamarind dal",
+    "Pappu"
+   ],
+   "category": "dal",
+   "source": "family",
+   "cooker": "4 whistles",
+   "ingredients": [
+    {
+     "item": "Toor dal",
+     "qty": ""
+    },
+    {
+     "item": "Ghee",
+     "qty": ""
+    },
+    {
+     "item": "Mustard seeds, jeera, menthya, dried chilli, curry leaves",
+     "qty": "for oggarane"
+    },
+    {
+     "item": "Onion",
+     "qty": "thick julienne"
+    },
+    {
+     "item": "Cooking soda",
+     "qty": "a pinch"
+    },
+    {
+     "item": "Tamarind",
+     "qty": "a 1 to 2 inch piece, squeezed fresh"
+    },
+    {
+     "item": "Jaggery",
+     "qty": ""
+    },
+    {
+     "item": "Salt",
+     "qty": "to taste"
+    }
+   ],
+   "steps": [
+    "Heat ghee and add mustard seeds, jeera, menthya, dried chilli and curry leaves.",
+    "Add the thick julienned onion and the toor dal.",
+    "Add soda and water.",
+    "Pressure cook for 4 whistles.",
+    "Add the freshly squeezed tamarind, salt and jaggery.",
+    "Simmer until the sour, salt and sweet are balanced."
+   ],
+   "notes": [
+    "The dal goes into the oggarane raw here, it is not cooked separately first."
+   ],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "pulusu",
+   "title": "Pulusu",
+   "alt": [
+    "Tamarind stew",
+    "Sambar style pulusu"
+   ],
+   "category": "dal",
+   "source": "family",
+   "cooker": "3 whistles",
+   "ingredients": [
+    {
+     "item": "Sambar pudi",
+     "qty": "1.5 to 2 tsp"
+    },
+    {
+     "item": "Raw coconut",
+     "qty": "lemon sized"
+    },
+    {
+     "item": "Onion",
+     "qty": "½ for the paste"
+    },
+    {
+     "item": "Black pepper",
+     "qty": ""
+    },
+    {
+     "item": "Toor dal",
+     "qty": ""
+    },
+    {
+     "item": "Beans, carrot, potato",
+     "qty": "chopped"
+    },
+    {
+     "item": "Tamarind water",
+     "qty": ""
+    },
+    {
+     "item": "Jaggery",
+     "qty": ""
+    },
+    {
+     "item": "Rubbinde pulusu pudi",
+     "qty": ""
+    },
+    {
+     "item": "Tomato",
+     "qty": "½"
+    },
+    {
+     "item": "Salt",
+     "qty": "to taste"
+    }
+   ],
+   "steps": [
+    "Grind the sambar pudi, raw coconut, half onion and black pepper into a paste.",
+    "Pressure cook the dal with the beans, carrot and potato for 3 whistles.",
+    "Combine the tamarind water, salt, jaggery, pulusu pudi and tomato.",
+    "Add the cooked vegetables and the masala paste.",
+    "Simmer, then add the tempering."
+   ],
+   "notes": [],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "miriyal-chaaru",
+   "title": "Miriyal Chaaru",
+   "alt": [
+    "Pepper rasam",
+    "Milagu rasam",
+    "Menasina saaru"
+   ],
+   "category": "dal",
+   "source": "needs-checking",
+   "cooker": "3 whistles",
+   "ingredients": [
+    {
+     "item": "Toor dal",
+     "qty": "¼ cup"
+    },
+    {
+     "item": "Black peppercorns",
+     "qty": "1½ tsp"
+    },
+    {
+     "item": "Jeera",
+     "qty": "1 tsp"
+    },
+    {
+     "item": "Garlic",
+     "qty": "4 cloves"
+    },
+    {
+     "item": "Dry red chillies",
+     "qty": "2"
+    },
+    {
+     "item": "Tamarind",
+     "qty": "small lemon sized ball"
+    },
+    {
+     "item": "Tomato",
+     "qty": "1, chopped"
+    },
+    {
+     "item": "Turmeric",
+     "qty": "¼ tsp"
+    },
+    {
+     "item": "Jaggery",
+     "qty": "a small piece"
+    },
+    {
+     "item": "Curry leaves and coriander",
+     "qty": ""
+    },
+    {
+     "item": "Salt",
+     "qty": "to taste"
+    },
+    {
+     "item": "Tadka",
+     "qty": "ghee, mustard seeds, jeera, curry leaves"
+    }
+   ],
+   "steps": [
+    "Pressure cook the toor dal with turmeric for 3 whistles and mash it.",
+    "Coarsely crush the peppercorns, jeera, garlic and dry red chillies together. Leave it rough, not a powder.",
+    "Soak the tamarind and extract the juice into about 2 cups of water.",
+    "Boil the tamarind water with the chopped tomato, salt and jaggery until the raw tamarind smell goes, around 5 minutes.",
+    "Add the crushed pepper mixture and boil for 2 minutes more.",
+    "Add the mashed dal with enough water to thin it, and heat until it just froths. Do not let it boil hard after the dal goes in.",
+    "Temper with mustard seeds, jeera and curry leaves in ghee, and finish with coriander."
+   ],
+   "notes": [
+    "This one was only a heading in the notes with nothing under it. This is a standard pepper rasam, not the family version. Check it against whoever wrote the list.",
+    "Good when someone has a cold, which is usually why it gets made."
+   ],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "palak-paneer",
+   "title": "Palak Paneer",
+   "alt": [
+    "Spinach paneer",
+    "Palak aloo"
+   ],
+   "category": "curries",
+   "source": "family",
+   "cooker": "3 whistles",
+   "ingredients": [
+    {
+     "item": "Palak (spinach)",
+     "qty": "6 to 7 leaves"
+    },
+    {
+     "item": "Onion",
+     "qty": "2 to 3"
+    },
+    {
+     "item": "Green chillies",
+     "qty": "6 to 7"
+    },
+    {
+     "item": "Tomato",
+     "qty": "1.5, puréed"
+    },
+    {
+     "item": "Ginger garlic paste",
+     "qty": "½ tsp"
+    },
+    {
+     "item": "Garam masala",
+     "qty": "½ tsp"
+    },
+    {
+     "item": "Oil and a little ghee",
+     "qty": ""
+    },
+    {
+     "item": "Paneer or potato",
+     "qty": ""
+    },
+    {
+     "item": "Salt",
+     "qty": "to taste"
+    }
+   ],
+   "steps": [
+    "Pressure cook the spinach, onion and green chillies together for 3 whistles.",
+    "Blend the cooked spinach, onion and chillies with salt and garam masala into a smooth purée.",
+    "Make a tomato purée from the 1.5 tomatoes.",
+    "Heat oil and ghee in a pan and fry the ginger garlic paste until light brown.",
+    "Add the tomato purée and cook until it thickens.",
+    "Pour in the spinach purée and bring it to a boil.",
+    "Add the paneer or boiled potato and simmer briefly."
+   ],
+   "notes": [
+    "The salt and garam masala go into the mixer with the spinach, not into the pan later."
+   ],
+   "variants": [
+    {
+     "label": "Palak aloo",
+     "text": "Boiled potato instead of paneer, same method throughout."
+    }
+   ],
+   "link": null
+  },
+  {
+   "id": "beerkaya-nichadkaya",
+   "title": "Beerkaya Nichadkaya",
+   "alt": [
+    "Ridge gourd",
+    "Beerakaya",
+    "Heerekayi"
+   ],
+   "category": "curries",
+   "source": "family",
+   "cooker": null,
+   "ingredients": [
+    {
+     "item": "Ridge gourd",
+     "qty": "peeled, cut into 1 inch pieces"
+    },
+    {
+     "item": "Oil",
+     "qty": ""
+    },
+    {
+     "item": "Mustard seeds, jeera, curry leaves",
+     "qty": "for tadka"
+    },
+    {
+     "item": "Milk",
+     "qty": "½ glass"
+    },
+    {
+     "item": "Water",
+     "qty": "½ glass"
+    },
+    {
+     "item": "Green chillies",
+     "qty": "6"
+    },
+    {
+     "item": "Fresh coconut (hasi kobbari)",
+     "qty": ""
+    },
+    {
+     "item": "Onion",
+     "qty": "1 small"
+    },
+    {
+     "item": "Salt",
+     "qty": "to taste"
+    }
+   ],
+   "steps": [
+    "Heat oil and add mustard seeds, jeera and curry leaves.",
+    "Add the chopped ridge gourd and fry it once.",
+    "Add ½ glass milk and ½ glass water, close the lid and cook.",
+    "Blend the chillies, salt, coconut and onion into a rough paste. Chop the onion roughly rather than grinding it smooth.",
+    "Add the ground paste to the cooked gourd.",
+    "Check the salt and water, adjust, and simmer until done."
+   ],
+   "notes": [
+    "The milk is not optional, it is what makes this one different from a plain ridge gourd palya."
+   ],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "vankayya-nichadkaya",
+   "title": "Vankayya Nichadkaya",
+   "alt": [
+    "Brinjal",
+    "Eggplant",
+    "Badanekayi",
+    "Aubergine"
+   ],
+   "category": "curries",
+   "source": "family",
+   "cooker": null,
+   "ingredients": [
+    {
+     "item": "Brinjal",
+     "qty": ""
+    },
+    {
+     "item": "Dry red chillies",
+     "qty": ""
+    },
+    {
+     "item": "Dry coconut",
+     "qty": ""
+    },
+    {
+     "item": "Dhaniyalu (coriander seeds)",
+     "qty": ""
+    },
+    {
+     "item": "White sesame seeds",
+     "qty": ""
+    },
+    {
+     "item": "Groundnuts",
+     "qty": "fried"
+    },
+    {
+     "item": "Jaggery",
+     "qty": ""
+    },
+    {
+     "item": "Tamarind juice",
+     "qty": ""
+    },
+    {
+     "item": "Onion",
+     "qty": ""
+    },
+    {
+     "item": "Salt",
+     "qty": "to taste"
+    }
+   ],
+   "steps": [
+    "Dry fry the red chillies, dry coconut and coriander seeds together.",
+    "Add the sesame seeds and groundnuts and fry again.",
+    "Let it all cool, then grind with salt.",
+    "Add the jaggery, tamarind juice and onion to the mixer at the end and grind to a paste.",
+    "Cook the brinjal and combine it with the masala paste."
+   ],
+   "notes": [
+    "Order matters in the mixer. The onion and tamarind go in last, after everything else is already ground."
+   ],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "channa-curry",
+   "title": "Channa Curry",
+   "alt": [
+    "Chole",
+    "Kabuli channa",
+    "Chickpea curry"
+   ],
+   "category": "curries",
+   "source": "family",
+   "cooker": "10 whistles",
+   "ingredients": [
+    {
+     "item": "Kabuli channa",
+     "qty": "soaked"
+    },
+    {
+     "item": "Onion and tomato",
+     "qty": "for frying, plus more for the paste"
+    },
+    {
+     "item": "Dry red chillies",
+     "qty": "8"
+    },
+    {
+     "item": "Dry coconut",
+     "qty": "small piece"
+    },
+    {
+     "item": "Dhaniya (coriander seeds)",
+     "qty": "2 tsp"
+    },
+    {
+     "item": "Chakka",
+     "qty": "1 inch"
+    },
+    {
+     "item": "Cashew",
+     "qty": "a few"
+    },
+    {
+     "item": "Channa masala powder",
+     "qty": ""
+    },
+    {
+     "item": "Sugar",
+     "qty": "a little"
+    },
+    {
+     "item": "Lemon",
+     "qty": "to finish"
+    },
+    {
+     "item": "Salt",
+     "qty": "to taste"
+    }
+   ],
+   "steps": [
+    "Pressure cook the channa with salt for 10 whistles.",
+    "Fry the onion and tomato in oil until soft.",
+    "Blend the dry chillies, coconut, coriander seeds, chakka, onion, tomato and cashew into a paste.",
+    "Add the boiled channa along with its cooking water to the fried onion and tomato base.",
+    "Add the blended paste, channa masala, sugar, and more salt if it needs it.",
+    "Simmer until thick and finish with lemon juice."
+   ],
+   "notes": [
+    "Keep the channa cooking water, it goes into the curry and thickens it."
+   ],
+   "variants": [
+    {
+     "label": "Black channa",
+     "text": "Black channa needs only 4 whistles, not 10."
+    }
+   ],
+   "link": null
+  },
+  {
+   "id": "moong-dal-curry",
+   "title": "Moong Dal Curry",
+   "alt": [
+    "Pesarapappu curry"
+   ],
+   "category": "curries",
+   "source": "family",
+   "cooker": "1 whistle",
+   "ingredients": [
+    {
+     "item": "Moong dal",
+     "qty": "fried"
+    },
+    {
+     "item": "Oil",
+     "qty": "1 tsp for cooking the dal"
+    },
+    {
+     "item": "Ginger garlic paste",
+     "qty": "½ tsp"
+    },
+    {
+     "item": "Onion",
+     "qty": "julienned"
+    },
+    {
+     "item": "Green chillies",
+     "qty": "4"
+    },
+    {
+     "item": "Tomato",
+     "qty": "small, chopped"
+    },
+    {
+     "item": "Dhaniya powder",
+     "qty": "1 tbsp"
+    },
+    {
+     "item": "Garam masala",
+     "qty": "½ tsp"
+    },
+    {
+     "item": "Red chilli powder",
+     "qty": ""
+    },
+    {
+     "item": "Lemon",
+     "qty": "to finish"
+    },
+    {
+     "item": "Salt",
+     "qty": "to taste"
+    }
+   ],
+   "steps": [
+    "Fry the moong dal until golden.",
+    "Cook it with 1 tsp oil, salt and water just to submerge, for 1 whistle.",
+    "In a pan, fry the julienned onion and green chillies.",
+    "Add the ginger garlic paste and fry for 1 minute.",
+    "Add the tomato, dhaniya powder, garam masala, red chilli powder and salt.",
+    "Fry the masala for 1 minute.",
+    "Add the boiled dal, stir and simmer.",
+    "Finish with lemon juice."
+   ],
+   "notes": [],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "green-gram-curry",
+   "title": "Green Gram Curry",
+   "alt": [
+    "Whole moong",
+    "Pesalu",
+    "Hesarukalu"
+   ],
+   "category": "curries",
+   "source": "family",
+   "cooker": "2 whistles",
+   "ingredients": [
+    {
+     "item": "Green grams",
+     "qty": "dry fried without oil"
+    },
+    {
+     "item": "Onion",
+     "qty": "1 large or 2 small, julienned"
+    },
+    {
+     "item": "Tomato",
+     "qty": "1, diced"
+    },
+    {
+     "item": "Ginger garlic paste",
+     "qty": "½ tsp"
+    },
+    {
+     "item": "Coriander powder",
+     "qty": "1 tsp"
+    },
+    {
+     "item": "Jeera powder",
+     "qty": "¼ tsp"
+    },
+    {
+     "item": "Garam masala",
+     "qty": "¾ tsp"
+    },
+    {
+     "item": "Red chilli powder",
+     "qty": ""
+    },
+    {
+     "item": "Green chillies",
+     "qty": ""
+    },
+    {
+     "item": "Salt and oil",
+     "qty": ""
+    }
+   ],
+   "steps": [
+    "Dry fry the green grams without oil, then cook with water for 2 whistles. Use about 1 cup of dal with water fully submerging it.",
+    "Heat oil and fry the julienned onions and green chillies until 90 percent done.",
+    "Add the ginger garlic paste and fry.",
+    "Add the diced tomato and all the spice powders.",
+    "Add the cooked dal along with its water.",
+    "Simmer until it comes together."
+   ],
+   "notes": [
+    "Dry frying the grams first, with no oil, is what gives this its smell."
+   ],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "pitaka-pappu",
+   "title": "Pitaka Pappu",
+   "alt": [
+    "Green gram dry",
+    "Dry moong"
+   ],
+   "category": "curries",
+   "source": "family",
+   "cooker": "2 whistles",
+   "ingredients": [
+    {
+     "item": "Green grams",
+     "qty": ""
+    },
+    {
+     "item": "Garlic",
+     "qty": "2 full heads, plus 2 cloves for the mixer"
+    },
+    {
+     "item": "Onion",
+     "qty": "2 julienned, plus 1 for the masala"
+    },
+    {
+     "item": "Mustard seeds and curry leaves",
+     "qty": "for tadka"
+    },
+    {
+     "item": "Poppy seeds",
+     "qty": "2 to 3 tbsp, to dry fry"
+    },
+    {
+     "item": "Dhaniya",
+     "qty": "1 tsp, to dry fry"
+    },
+    {
+     "item": "Dry chillies",
+     "qty": "10, to dry fry"
+    },
+    {
+     "item": "Coconut",
+     "qty": "big lemon sized"
+    },
+    {
+     "item": "Coriander leaves",
+     "qty": ""
+    },
+    {
+     "item": "Salt",
+     "qty": "to taste"
+    }
+   ],
+   "steps": [
+    "Dry fry the poppy seeds, coriander seeds and dry chillies. Let them cool and grind to a powder.",
+    "Add the onion, coriander, 2 garlic cloves and coconut to that powder in the mixer and grind well.",
+    "In a pan make the tadka: mustard seeds, curry leaves, garlic and the julienned onion, and fry well.",
+    "Add the green grams with water just to submerge and a little salt, and cook for 2 whistles.",
+    "Add the ground masala and more salt, and boil well until it all comes together."
+   ],
+   "notes": [
+    "The masala is built in two stages. Dry fry and powder first, then wet grind with the onion and coconut."
+   ],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "potato-palya",
+   "title": "Potato Palya",
+   "alt": [
+    "Aloo palya",
+    "Potato for paratha"
+   ],
+   "category": "curries",
+   "source": "family",
+   "cooker": "1 whistle",
+   "ingredients": [
+    {
+     "item": "Potato",
+     "qty": "3 medium or 2 large"
+    },
+    {
+     "item": "Onion",
+     "qty": "5"
+    },
+    {
+     "item": "Mustard seeds",
+     "qty": ""
+    },
+    {
+     "item": "Turmeric",
+     "qty": ""
+    },
+    {
+     "item": "Thokku",
+     "qty": "green chilli paste"
+    },
+    {
+     "item": "Coriander leaves",
+     "qty": ""
+    },
+    {
+     "item": "Oil and salt",
+     "qty": ""
+    }
+   ],
+   "steps": [
+    "Pressure cook the potatoes with salt for 1 whistle.",
+    "Fry the onions in oil with mustard seeds and turmeric until soft.",
+    "Add the thokku paste and fry.",
+    "Add the boiled potato and a little more salt.",
+    "Mix in the fresh coriander leaves."
+   ],
+   "notes": [],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "potato-vapudu",
+   "title": "Potato Vapudu",
+   "alt": [
+    "Potato fry",
+    "Aloo fry",
+    "Pudina potato"
+   ],
+   "category": "curries",
+   "source": "family",
+   "cooker": "3 whistles",
+   "ingredients": [
+    {
+     "item": "Potato",
+     "qty": "boiled with salt"
+    },
+    {
+     "item": "Pudina (mint)",
+     "qty": "1 cup"
+    },
+    {
+     "item": "Coriander",
+     "qty": "¾ cup"
+    },
+    {
+     "item": "Green chillies",
+     "qty": "4"
+    },
+    {
+     "item": "Garlic",
+     "qty": "2 cloves"
+    },
+    {
+     "item": "Salt",
+     "qty": "less than you think"
+    }
+   ],
+   "steps": [
+    "Pressure cook the potatoes with salt for 3 whistles and remove the skins.",
+    "Blend the pudina, coriander, green chillies, salt and garlic into a paste. Run the mixer for 2 seconds only, it should stay rough.",
+    "Shallow fry the potatoes on all sides until golden.",
+    "Toss with the herb paste and serve."
+   ],
+   "notes": [
+    "More pudina than coriander, that is the whole point of it. Go easy on the salt, the potatoes were already boiled in salted water."
+   ],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "sorekay-chapatti",
+   "title": "Sorekay for Chapatti",
+   "alt": [
+    "Bottle gourd",
+    "Lauki",
+    "Sorekayi"
+   ],
+   "category": "curries",
+   "source": "family",
+   "cooker": null,
+   "ingredients": [
+    {
+     "item": "Bottle gourd (sorekay)",
+     "qty": ""
+    },
+    {
+     "item": "Gasagase (poppy seeds)",
+     "qty": ""
+    },
+    {
+     "item": "Dry chillies",
+     "qty": ""
+    },
+    {
+     "item": "Dry coconut",
+     "qty": ""
+    },
+    {
+     "item": "Salt",
+     "qty": "to taste"
+    }
+   ],
+   "steps": [
+    "Grind the gasagase, dry chillies and dry coconut into a masala.",
+    "Cook the bottle gourd until tender.",
+    "Combine with the masala and salt.",
+    "Serve as a side with chapatti."
+   ],
+   "notes": [],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "vegetable-fry",
+   "title": "Vegetable Fry",
+   "alt": [
+    "Grilled vegetables",
+    "Paneer veg fry"
+   ],
+   "category": "curries",
+   "source": "family",
+   "cooker": null,
+   "ingredients": [
+    {
+     "item": "Zucchini",
+     "qty": ""
+    },
+    {
+     "item": "Bell peppers",
+     "qty": ""
+    },
+    {
+     "item": "Corn",
+     "qty": ""
+    },
+    {
+     "item": "Onion",
+     "qty": ""
+    },
+    {
+     "item": "Carrot",
+     "qty": ""
+    },
+    {
+     "item": "Paneer",
+     "qty": ""
+    },
+    {
+     "item": "Lemon",
+     "qty": ""
+    },
+    {
+     "item": "Salt and pepper",
+     "qty": ""
+    },
+    {
+     "item": "Oregano",
+     "qty": ""
+    },
+    {
+     "item": "Chilli flakes",
+     "qty": ""
+    }
+   ],
+   "steps": [
+    "Chop the zucchini, peppers, onion and carrot into even pieces and cube the paneer.",
+    "Fry everything on high heat so it colours rather than steams. Keep the paneer for last.",
+    "Season with salt, pepper, oregano and chilli flakes.",
+    "Finish with lemon juice."
+   ],
+   "notes": [
+    "From the newer notes rather than the old book. Quick weeknight thing, not a family recipe."
+   ],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "akki-rotti",
+   "title": "Akki Rotti",
+   "alt": [
+    "Rice flour rotti"
+   ],
+   "category": "breads",
+   "source": "family",
+   "cooker": null,
+   "ingredients": [
+    {
+     "item": "Rice flour",
+     "qty": "1 glass"
+    },
+    {
+     "item": "Jeera",
+     "qty": ""
+    },
+    {
+     "item": "Onion",
+     "qty": "finely chopped"
+    },
+    {
+     "item": "Carrot",
+     "qty": "grated"
+    },
+    {
+     "item": "Fresh coriander",
+     "qty": ""
+    },
+    {
+     "item": "Curry leaves",
+     "qty": "chopped"
+    },
+    {
+     "item": "Green chilli thokku",
+     "qty": ""
+    },
+    {
+     "item": "Salt",
+     "qty": "to taste"
+    }
+   ],
+   "steps": [
+    "Mix all the ingredients together.",
+    "Add water gradually and mix into a dough.",
+    "Rest for 1 hour.",
+    "Shape and cook the rottis on a hot pan."
+   ],
+   "notes": [
+    "1 glass of rice flour gives four rottis."
+   ],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "goliche-rotti",
+   "title": "Goliche Rotti",
+   "alt": [
+    "Gollicche rotti",
+    "Groundnut rotti"
+   ],
+   "category": "breads",
+   "source": "family",
+   "cooker": null,
+   "ingredients": [
+    {
+     "item": "Rice flour",
+     "qty": ""
+    },
+    {
+     "item": "Jeera",
+     "qty": ""
+    },
+    {
+     "item": "Groundnuts",
+     "qty": "fried and powdered"
+    },
+    {
+     "item": "Thokku, onion, coriander, curry leaves",
+     "qty": "for the morning version"
+    },
+    {
+     "item": "Salt",
+     "qty": "to taste"
+    }
+   ],
+   "steps": [
+    "Mix the rice flour with salt, jeera and the powdered groundnuts.",
+    "For the morning version, also add thokku, onion, coriander and curry leaves.",
+    "Add water and mix into a soft dough.",
+    "Shape and cook on a hot tawa."
+   ],
+   "notes": [],
+   "variants": [
+    {
+     "label": "Morning version",
+     "text": "Add thokku, onion, coriander and curry leaves. Plain otherwise."
+    }
+   ],
+   "link": null
+  },
+  {
+   "id": "atta-masala-dosa-batter",
+   "title": "Atta Masala Dosa Batter",
+   "alt": [
+    "Dosa batter",
+    "Masala dosa"
+   ],
+   "category": "breads",
+   "source": "family",
+   "cooker": null,
+   "ingredients": [
+    {
+     "item": "Rice",
+     "qty": "2.5 glasses"
+    },
+    {
+     "item": "Avalakki (poha)",
+     "qty": "1 glass"
+    },
+    {
+     "item": "Uddinabele (urad dal)",
+     "qty": "½ glass"
+    },
+    {
+     "item": "Menthye (fenugreek seeds)",
+     "qty": "1 tsp"
+    },
+    {
+     "item": "Cooking soda",
+     "qty": "¼ tsp"
+    },
+    {
+     "item": "Salt",
+     "qty": "as required"
+    }
+   ],
+   "steps": [
+    "Wash everything thoroughly.",
+    "Soak in water, fully submerged, for at least 7 hours.",
+    "Grind it all together until smooth, at night.",
+    "Add the cooking soda and salt.",
+    "Leave to ferment overnight before using."
+   ],
+   "notes": [
+    "Soak in the morning, grind at night, use the next day. Seven hours soaking is the minimum, not the target."
+   ],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "pesarattu",
+   "title": "Pesarattu",
+   "alt": [
+    "Green gram dosa",
+    "Moong dosa"
+   ],
+   "category": "breads",
+   "source": "family",
+   "cooker": null,
+   "ingredients": [
+    {
+     "item": "Green grams",
+     "qty": "1 glass"
+    },
+    {
+     "item": "Rice",
+     "qty": "½ glass"
+    },
+    {
+     "item": "Ginger",
+     "qty": ""
+    },
+    {
+     "item": "Green chillies",
+     "qty": "2"
+    },
+    {
+     "item": "Salt",
+     "qty": "added just before making"
+    }
+   ],
+   "steps": [
+    "Soak the green grams and the rice in separate containers, at around 6pm, and leave overnight.",
+    "Grind them the next day around noon. Grind the green grams first, then the rice with the ginger and 2 green chillies added to it.",
+    "At the end, add one scoop of the green gram batter to the rice batter and grind it well together.",
+    "Keep the batter in the fridge until night, then leave it out overnight to ferment.",
+    "Next morning, add salt before making the dosas."
+   ],
+   "notes": [
+    "The timing is the recipe here. Soak 6pm, grind next noon, ferment that night, cook the following morning.",
+    "Goes with the red chutney."
+   ],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "ragi-dosa",
+   "title": "Ragi Dosa",
+   "alt": [
+    "Finger millet dosa",
+    "Nachni dosa"
+   ],
+   "category": "breads",
+   "source": "family",
+   "cooker": null,
+   "ingredients": [
+    {
+     "item": "Ragi flour",
+     "qty": "1 cup"
+    },
+    {
+     "item": "Rice flour",
+     "qty": "1 cup"
+    },
+    {
+     "item": "Sooji (semolina)",
+     "qty": "½ cup"
+    },
+    {
+     "item": "Urad dal, channa dal, moong dal",
+     "qty": "soaked separately for 2 hours"
+    },
+    {
+     "item": "Curd",
+     "qty": "2 to 3 tsp"
+    },
+    {
+     "item": "Onion",
+     "qty": "chopped"
+    },
+    {
+     "item": "Chilli paste",
+     "qty": ""
+    },
+    {
+     "item": "Carrot",
+     "qty": "grated"
+    },
+    {
+     "item": "Coriander and tomato",
+     "qty": ""
+    },
+    {
+     "item": "Salt",
+     "qty": "to taste"
+    }
+   ],
+   "steps": [
+    "Soak the urad dal, channa dal and moong dal for 2 hours and blend into a batter.",
+    "Mix in the ragi flour, rice flour, sooji, curd, onion, chilli paste, carrot, coriander, tomato and salt.",
+    "Rest the batter for 15 to 20 minutes.",
+    "Make thin dosas on a hot tawa."
+   ],
+   "notes": [],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "rava-dosa",
+   "title": "Rava Dosa",
+   "alt": [
+    "Semolina dosa",
+    "Sooji dosa"
+   ],
+   "category": "breads",
+   "source": "family",
+   "cooker": null,
+   "ingredients": [
+    {
+     "item": "Rice flour",
+     "qty": "1 cup"
+    },
+    {
+     "item": "Semolina (sooji)",
+     "qty": "1 cup"
+    },
+    {
+     "item": "Curd",
+     "qty": "3 tsp"
+    },
+    {
+     "item": "Salt",
+     "qty": "to taste"
+    }
+   ],
+   "steps": [
+    "Mix the rice flour and semolina, then add the curd and salt.",
+    "Add enough water to get a thin, flowing batter.",
+    "Rest for 10 to 15 minutes.",
+    "Pour onto a hot tawa and cook into thin, lacy dosas."
+   ],
+   "notes": [
+    "The batter should be thin enough to pour, not spread. If you can spread it with a ladle it is too thick."
+   ],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "rava-idli",
+   "title": "Rava Idli",
+   "alt": [
+    "Semolina idli"
+   ],
+   "category": "breads",
+   "source": "family",
+   "cooker": "steam 10 to 12 minutes",
+   "ingredients": [
+    {
+     "item": "Krishna rava or chiroti rava",
+     "qty": "fried"
+    },
+    {
+     "item": "Curd",
+     "qty": "medium thick"
+    },
+    {
+     "item": "Baking powder",
+     "qty": "¼ tsp"
+    },
+    {
+     "item": "Capsicum",
+     "qty": "chopped"
+    },
+    {
+     "item": "Kadlebele",
+     "qty": "1 tsp"
+    },
+    {
+     "item": "Mustard seeds and jeera",
+     "qty": ""
+    },
+    {
+     "item": "Carrot",
+     "qty": "grated"
+    },
+    {
+     "item": "Coriander and curry leaves",
+     "qty": ""
+    },
+    {
+     "item": "Tomato",
+     "qty": "small, chopped"
+    },
+    {
+     "item": "Green chilli paste",
+     "qty": ""
+    },
+    {
+     "item": "Oil and salt",
+     "qty": ""
+    }
+   ],
+   "steps": [
+    "Fry the rava until lightly golden and set it aside.",
+    "Heat oil and add mustard seeds, jeera and kadlebele.",
+    "Fry the carrot, coriander, curry leaves, tomato and chilli paste with salt.",
+    "In a separate bowl, mix the curd with the baking powder.",
+    "Add the fried rava to the curd and mix.",
+    "Combine with the fried vegetables and rest for 10 minutes.",
+    "Steam the idlis for 10 to 12 minutes."
+   ],
+   "notes": [],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "poha-idli",
+   "title": "Poha Idli",
+   "alt": [
+    "Avalakki idli",
+    "Instant idli"
+   ],
+   "category": "breads",
+   "source": "family",
+   "cooker": "steam 10 to 12 minutes",
+   "ingredients": [
+    {
+     "item": "Chiroti rava (semolina)",
+     "qty": "1 part"
+    },
+    {
+     "item": "Avalakki (poha)",
+     "qty": "1 part"
+    },
+    {
+     "item": "Curd",
+     "qty": "enough to soak the poha"
+    },
+    {
+     "item": "Salt",
+     "qty": "1.5 tbsp"
+    },
+    {
+     "item": "Baking powder",
+     "qty": "1 tbsp"
+    }
+   ],
+   "steps": [
+    "Soak the rava in water for 15 minutes.",
+    "Blend the avalakki into a powder in a mixer.",
+    "Soak the powdered avalakki in curd for 5 minutes, adding water if it is too thick.",
+    "Drain the excess water from the rava and add it to the curd and poha mix.",
+    "Combine everything, then add the salt and baking powder.",
+    "Adjust the water if needed and steam the idlis."
+   ],
+   "notes": [],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "ujjo-rotti",
+   "title": "Ujjo Rotti",
+   "alt": [
+    "Boiled water rotti"
+   ],
+   "category": "breads",
+   "source": "family",
+   "cooker": null,
+   "ingredients": [
+    {
+     "item": "Rice flour",
+     "qty": "2 parts"
+    },
+    {
+     "item": "Maida",
+     "qty": "½ part"
+    },
+    {
+     "item": "Rava",
+     "qty": "½ part"
+    },
+    {
+     "item": "Water",
+     "qty": "5 glasses"
+    },
+    {
+     "item": "Salt and oil",
+     "qty": ""
+    }
+   ],
+   "steps": [
+    "Add salt and oil to the water in a pot.",
+    "Bring it to a boil, stop, and start again, boiling for 15 minutes in total.",
+    "Add the mixed flours to the boiling water and stir quickly into a dough.",
+    "Let it cool slightly, then knead into smooth rottis.",
+    "Cook on a tawa."
+   ],
+   "notes": [
+    "The flour goes into boiling water, not the other way round."
+   ],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "aloo-paratha-mix",
+   "title": "Aloo Paratha Mix",
+   "alt": [
+    "Potato paratha stuffing"
+   ],
+   "category": "breads",
+   "source": "family",
+   "cooker": null,
+   "ingredients": [
+    {
+     "item": "Potato",
+     "qty": "boiled"
+    },
+    {
+     "item": "Onion",
+     "qty": "small, chopped"
+    },
+    {
+     "item": "Mustard seeds and turmeric",
+     "qty": ""
+    },
+    {
+     "item": "Garlic",
+     "qty": "2 cloves, for the spice powder"
+    },
+    {
+     "item": "Coriander seeds",
+     "qty": "½ tsp, for the spice powder"
+    },
+    {
+     "item": "Chakka",
+     "qty": "1 inch, for the spice powder"
+    },
+    {
+     "item": "Green chilli paste",
+     "qty": ""
+    },
+    {
+     "item": "Salt",
+     "qty": "to taste"
+    }
+   ],
+   "steps": [
+    "Boil the potato until soft.",
+    "Grind the garlic, coriander seeds and chakka into a spice powder.",
+    "Fry the chopped onion with mustard seeds and turmeric.",
+    "Add the ground spice powder.",
+    "Mix in the boiled potato, green chilli paste and salt.",
+    "Stuff into atta dough, roll out, and cook on a tawa with ghee."
+   ],
+   "notes": [],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "huli-mosarina-kodbele",
+   "title": "Huli Mosarina Kodbele",
+   "alt": [
+    "Sour curd rotti",
+    "Curd kodbele"
+   ],
+   "category": "breads",
+   "source": "family",
+   "cooker": null,
+   "ingredients": [
+    {
+     "item": "Rice flour",
+     "qty": "1 part"
+    },
+    {
+     "item": "Curd",
+     "qty": "1 part, sour"
+    },
+    {
+     "item": "Chilli paste",
+     "qty": ""
+    },
+    {
+     "item": "Jeera",
+     "qty": ""
+    },
+    {
+     "item": "Crystal salt",
+     "qty": ""
+    },
+    {
+     "item": "Coriander and curry leaves",
+     "qty": ""
+    },
+    {
+     "item": "Onion",
+     "qty": "very thinly chopped"
+    },
+    {
+     "item": "Oil",
+     "qty": "for frying"
+    }
+   ],
+   "steps": [
+    "Mix the curd with the chilli paste, jeera, crystal salt, coriander, curry leaves and onion.",
+    "Whisk it all together and heat it.",
+    "Once it starts boiling, add the rice flour.",
+    "Stir, then leave it for 10 minutes until it sets into a thick mass.",
+    "Knead the cooked dough after those 10 minutes.",
+    "Shape into flat rottis and shallow fry in oil."
+   ],
+   "notes": [
+    "The curd needs to be sour. Fresh curd will not give the same taste."
+   ],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "thaplent",
+   "title": "Thaplent",
+   "alt": [
+    "Peanut rotti",
+    "Thalipeeth"
+   ],
+   "category": "breads",
+   "source": "family",
+   "cooker": null,
+   "ingredients": [
+    {
+     "item": "Rice flour",
+     "qty": ""
+    },
+    {
+     "item": "Jeera",
+     "qty": ""
+    },
+    {
+     "item": "Roasted peanuts",
+     "qty": "roughly crushed"
+    },
+    {
+     "item": "Onion",
+     "qty": ""
+    },
+    {
+     "item": "Coriander and curry leaves",
+     "qty": ""
+    },
+    {
+     "item": "Chilli paste",
+     "qty": ""
+    },
+    {
+     "item": "Salt",
+     "qty": "to taste"
+    }
+   ],
+   "steps": [
+    "Mix all the ingredients together.",
+    "Add water and mix into a soft dough.",
+    "Shape into thin flat rottis.",
+    "Cook on a hot tawa with oil on both sides."
+   ],
+   "notes": [
+    "Crush the peanuts rough, not to a powder. The pieces are the point."
+   ],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "pudina-chutney",
+   "title": "Pudina Chutney",
+   "alt": [
+    "Mint chutney"
+   ],
+   "category": "chutneys",
+   "source": "family",
+   "cooker": null,
+   "ingredients": [
+    {
+     "item": "Pudina (mint)",
+     "qty": "fried in a little oil"
+    },
+    {
+     "item": "Green chillies",
+     "qty": "fried"
+    },
+    {
+     "item": "Popplu (seeds)",
+     "qty": "fried"
+    },
+    {
+     "item": "Coconut",
+     "qty": "fried"
+    },
+    {
+     "item": "Jaggery",
+     "qty": ""
+    },
+    {
+     "item": "Tamarind",
+     "qty": ""
+    },
+    {
+     "item": "Salt",
+     "qty": "to taste"
+    }
+   ],
+   "steps": [
+    "Fry the pudina, green chillies, seeds and coconut separately.",
+    "Let everything cool.",
+    "Blend it all together with jaggery, tamarind and salt into a smooth chutney."
+   ],
+   "notes": [
+    "Fry each thing separately, not all in one go. They cook at different speeds."
+   ],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "dosakayi-sasuva",
+   "title": "Dosakayi Sasuva",
+   "alt": [
+    "Cucumber chutney",
+    "Dosakaya"
+   ],
+   "category": "chutneys",
+   "source": "family",
+   "cooker": null,
+   "ingredients": [
+    {
+     "item": "Popplu (peanuts or sesame)",
+     "qty": ""
+    },
+    {
+     "item": "Green chillies",
+     "qty": ""
+    },
+    {
+     "item": "Raw coconut",
+     "qty": ""
+    },
+    {
+     "item": "Garlic",
+     "qty": "1 clove"
+    },
+    {
+     "item": "Coriander",
+     "qty": "a little"
+    },
+    {
+     "item": "Cucumber",
+     "qty": "½"
+    },
+    {
+     "item": "Curd",
+     "qty": ""
+    },
+    {
+     "item": "Salt",
+     "qty": "to taste"
+    },
+    {
+     "item": "Tadka",
+     "qty": "mustard seeds, jeera, curry leaves, hing"
+    }
+   ],
+   "steps": [
+    "Grind the popplu, chillies, salt, coconut, garlic and coriander into a thick paste with a spoon of water.",
+    "Make the tadka: fry mustard seeds, jeera, curry leaves and hing in oil.",
+    "Let the tadka cool, then mix it with the ground paste and the cucumber.",
+    "Add the curd and mix gently."
+   ],
+   "notes": [
+    "Let the tadka cool before it meets the curd, or the curd splits."
+   ],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "doskaya-sasuva",
+   "title": "Doskaya Sasuva",
+   "alt": [
+    "Peanut cucumber chutney",
+    "Kadle sasuva"
+   ],
+   "category": "chutneys",
+   "source": "family",
+   "cooker": null,
+   "ingredients": [
+    {
+     "item": "Kadle (peanuts)",
+     "qty": "1 cup"
+    },
+    {
+     "item": "Coconut",
+     "qty": "½ cup"
+    },
+    {
+     "item": "Chillies",
+     "qty": "7"
+    },
+    {
+     "item": "Coriander",
+     "qty": "some"
+    },
+    {
+     "item": "Garlic",
+     "qty": "1 clove"
+    },
+    {
+     "item": "Cucumber",
+     "qty": ""
+    },
+    {
+     "item": "Curd",
+     "qty": ""
+    },
+    {
+     "item": "Tadka",
+     "qty": "mustard seeds, jeera, hing, curry leaves"
+    }
+   ],
+   "steps": [
+    "Grind the kadle, coconut, chillies, coriander and garlic in that order into a thick paste with a little water.",
+    "Make the tadka: fry mustard seeds, jeera, hing and curry leaves in oil.",
+    "Mix the ground paste with the cooled tadka and the cucumber.",
+    "Add the curd last and combine gently."
+   ],
+   "notes": [
+    "Nearly the same as Dosakayi Sasuva but peanut heavy, 1 cup to ½ cup coconut. Both were in the notes so both are here."
+   ],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "bombai-chutney",
+   "title": "Bombai Chutney",
+   "alt": [
+    "Besan chutney",
+    "Bombay chutney"
+   ],
+   "category": "chutneys",
+   "source": "family",
+   "cooker": null,
+   "ingredients": [
+    {
+     "item": "Besan (chickpea flour)",
+     "qty": ""
+    },
+    {
+     "item": "Turmeric",
+     "qty": ""
+    },
+    {
+     "item": "Onion",
+     "qty": "2"
+    },
+    {
+     "item": "Tomato",
+     "qty": "1"
+    },
+    {
+     "item": "Green chillies",
+     "qty": "8 to 10"
+    },
+    {
+     "item": "Lemon",
+     "qty": ""
+    },
+    {
+     "item": "Fresh coriander",
+     "qty": ""
+    },
+    {
+     "item": "Salt",
+     "qty": "to taste"
+    },
+    {
+     "item": "Tadka",
+     "qty": "mustard seeds, jeera, urad dal, curry leaves"
+    }
+   ],
+   "steps": [
+    "Make the tadka: fry mustard seeds, jeera, urad dal, chillies and curry leaves.",
+    "Add the chopped onion and tomato and fry well.",
+    "Mix the besan with turmeric, salt and water into a smooth paste with no lumps.",
+    "Once the onion and tomato are cooked, pour in the besan slurry.",
+    "Stir continuously as it cooks and thickens.",
+    "Add salt, lemon juice and fresh coriander."
+   ],
+   "notes": [
+    "Mix the besan slurry smooth before it goes anywhere near the pan. Lumps will not come out later."
+   ],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "red-chutney",
+   "title": "Red Chutney",
+   "alt": [
+    "Pesarattu chutney",
+    "Poppulu podi",
+    "Peanut podi"
+   ],
+   "category": "chutneys",
+   "source": "family",
+   "cooker": null,
+   "ingredients": [
+    {
+     "item": "Poppulu",
+     "qty": "2.5 handfuls"
+    },
+    {
+     "item": "Dry coconut",
+     "qty": "1 handful, grated"
+    },
+    {
+     "item": "Red chillies",
+     "qty": "7"
+    },
+    {
+     "item": "Salt",
+     "qty": "1.5 tsp"
+    },
+    {
+     "item": "Jaggery or coconut sugar",
+     "qty": "1 tsp"
+    },
+    {
+     "item": "Onion",
+     "qty": "1 big"
+    }
+   ],
+   "steps": [
+    "Grind the poppulu, dry coconut, salt, jaggery and red chillies together into a powder.",
+    "Once it is a good fine powder, add one big onion and grind again, roughly this time.",
+    "Serve with pesarattu."
+   ],
+   "notes": [
+    "This is the chutney that goes with pesarattu. Keep the onion grind rough."
+   ],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "bisi-bele-bath-powder",
+   "title": "Bisi Bele Bath Powder",
+   "alt": [
+    "BBB powder",
+    "Bisibelebath masala"
+   ],
+   "category": "chutneys",
+   "source": "needs-checking",
+   "cooker": null,
+   "ingredients": [
+    {
+     "item": "Dry red chillies",
+     "qty": ""
+    },
+    {
+     "item": "Dry coconut",
+     "qty": ""
+    },
+    {
+     "item": "Coriander seeds",
+     "qty": ""
+    },
+    {
+     "item": "Channa dal and urad dal",
+     "qty": ""
+    },
+    {
+     "item": "Cinnamon, cloves, marathi moggu",
+     "qty": ""
+    }
+   ],
+   "steps": [
+    "Dry roast everything separately, with no oil at all.",
+    "Roast the chillies and the dry coconut last, at the end.",
+    "Cool completely and grind to a powder."
+   ],
+   "notes": [
+    "The notes only recorded two things: no oil, and the chilli and dry coconut go in at the end. The rest of the ingredient list is a standard bisi bele bath powder and needs checking against the family proportions."
+   ],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "kanduntulu",
+   "title": "Kanduntulu",
+   "alt": [
+    "Mixed dal vada",
+    "Masala vada",
+    "Aama vada"
+   ],
+   "category": "snacks",
+   "source": "family",
+   "cooker": null,
+   "ingredients": [
+    {
+     "item": "Toor dal",
+     "qty": "¼ glass"
+    },
+    {
+     "item": "Channa dal",
+     "qty": "¼ glass"
+    },
+    {
+     "item": "Moong dal",
+     "qty": "¼ glass"
+    },
+    {
+     "item": "Moong dal and channa dal",
+     "qty": "1 tbsp each, soaked separately"
+    },
+    {
+     "item": "Ginger",
+     "qty": "1 inch"
+    },
+    {
+     "item": "Green chillies",
+     "qty": "10"
+    },
+    {
+     "item": "Carrot",
+     "qty": "grated"
+    },
+    {
+     "item": "Coriander and pudina",
+     "qty": "chopped"
+    },
+    {
+     "item": "Onion",
+     "qty": "4 to 5"
+    },
+    {
+     "item": "Baking soda",
+     "qty": "½ tsp"
+    },
+    {
+     "item": "Salt",
+     "qty": "to taste"
+    },
+    {
+     "item": "For the dip",
+     "qty": "curd, coconut, coriander, tadka, salt"
+    }
+   ],
+   "steps": [
+    "Soak all three dals for 3 to 4 hours. Soak the extra 1 tbsp each of moong and channa dal separately.",
+    "Grind the main soaked dals with the ginger, chillies and salt.",
+    "Mix in the grated carrot, coriander, pudina, chopped onion, baking soda and the separately soaked whole dals.",
+    "Shape into vadas and deep fry until crispy.",
+    "For the dip, blend curd with coconut and coriander, then mix in a tadka and salt."
+   ],
+   "notes": [
+    "The separately soaked spoonful of whole dals stays whole in the vada. That is the texture you are after."
+   ],
+   "variants": [
+    {
+     "label": "Larger batch ratio",
+     "text": "The older notes give a different ratio for a bigger batch: toor dal 1 glass, moong dal ¾ glass, channa dal ½ glass, soaked 3 to 4 hours."
+    }
+   ],
+   "link": null
+  },
+  {
+   "id": "gobi-manchurian",
+   "title": "Gobi Manchurian",
+   "alt": [
+    "Cauliflower manchurian"
+   ],
+   "category": "snacks",
+   "source": "family",
+   "cooker": null,
+   "ingredients": [
+    {
+     "item": "Corn flour",
+     "qty": "¾ cup, for the batter"
+    },
+    {
+     "item": "Maida",
+     "qty": "¼ cup, for the batter"
+    },
+    {
+     "item": "Rice flour",
+     "qty": "1 tsp, for the batter"
+    },
+    {
+     "item": "Ginger garlic paste",
+     "qty": ""
+    },
+    {
+     "item": "Cooking soda",
+     "qty": "very little"
+    },
+    {
+     "item": "Cauliflower",
+     "qty": "cut into florets"
+    },
+    {
+     "item": "Onion",
+     "qty": "small chopped"
+    },
+    {
+     "item": "Green chillies",
+     "qty": "small chopped"
+    },
+    {
+     "item": "Soy sauce, green chilli sauce, tomato sauce",
+     "qty": ""
+    },
+    {
+     "item": "Corn flour slurry",
+     "qty": "to thicken"
+    },
+    {
+     "item": "Coriander",
+     "qty": "to garnish"
+    },
+    {
+     "item": "Salt and oil",
+     "qty": ""
+    }
+   ],
+   "steps": [
+    "Mix the batter ingredients into a thick paste.",
+    "Coat the cauliflower florets and deep fry until crispy.",
+    "Heat oil and fry the onion and chillies.",
+    "When they are 85 percent cooked, add the ginger garlic paste.",
+    "Add all the sauces and salt, and thicken with the corn flour slurry.",
+    "Toss the fried cauliflower through the sauce and garnish with coriander."
+   ],
+   "notes": [
+    "Toss at the very last moment. Everything you fried goes soft if it sits in the sauce."
+   ],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "pav-bhaji",
+   "title": "Pav Bhaji",
+   "alt": [],
+   "category": "snacks",
+   "source": "family",
+   "cooker": null,
+   "ingredients": [
+    {
+     "item": "Potato, cauliflower, peas, capsicum",
+     "qty": "mixed vegetables"
+    },
+    {
+     "item": "Onion and tomato",
+     "qty": ""
+    },
+    {
+     "item": "Ginger garlic paste",
+     "qty": ""
+    },
+    {
+     "item": "Pav bhaji masala",
+     "qty": ""
+    },
+    {
+     "item": "Butter",
+     "qty": ""
+    },
+    {
+     "item": "Red chilli powder",
+     "qty": ""
+    },
+    {
+     "item": "Lemon and coriander",
+     "qty": "to finish"
+    },
+    {
+     "item": "Salt",
+     "qty": "to taste"
+    },
+    {
+     "item": "Pav rolls",
+     "qty": "to serve"
+    }
+   ],
+   "steps": [
+    "Boil and mash all the vegetables.",
+    "Heat butter and fry the onion until golden.",
+    "Add the ginger garlic paste, then the tomato.",
+    "Add the pav bhaji masala, red chilli powder and salt.",
+    "Add the mashed vegetables, mix well and mash further.",
+    "Adjust the consistency with water and simmer.",
+    "Finish with butter and lemon.",
+    "Serve with toasted buttered pav."
+   ],
+   "notes": [],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "vadappalu",
+   "title": "Vadappalu",
+   "alt": [
+    "Rice flour fritters"
+   ],
+   "category": "snacks",
+   "source": "family",
+   "cooker": null,
+   "ingredients": [
+    {
+     "item": "Rice flour",
+     "qty": ""
+    },
+    {
+     "item": "Wheat flour",
+     "qty": "2 tsp"
+    },
+    {
+     "item": "Jeera",
+     "qty": ""
+    },
+    {
+     "item": "Salt",
+     "qty": "to taste"
+    },
+    {
+     "item": "Water",
+     "qty": ""
+    }
+   ],
+   "steps": [
+    "Mix the rice flour, wheat flour, salt and jeera.",
+    "Add water gradually and knead into a firm dough. It should be gatti, not soft.",
+    "Shape into small pieces.",
+    "Deep fry until golden and crispy."
+   ],
+   "notes": [],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "kodbale",
+   "title": "Kodbale",
+   "alt": [
+    "Ring murukku",
+    "Kodubale"
+   ],
+   "category": "snacks",
+   "source": "family",
+   "cooker": null,
+   "ingredients": [
+    {
+     "item": "Rice flour",
+     "qty": "1 cup"
+    },
+    {
+     "item": "Water",
+     "qty": "1.5 cups"
+    },
+    {
+     "item": "Thokku",
+     "qty": ""
+    },
+    {
+     "item": "Coriander",
+     "qty": ""
+    },
+    {
+     "item": "Jeera",
+     "qty": ""
+    },
+    {
+     "item": "Curry leaves",
+     "qty": "small chopped, if you want them"
+    },
+    {
+     "item": "Ghee",
+     "qty": ""
+    },
+    {
+     "item": "Salt",
+     "qty": "to taste"
+    }
+   ],
+   "steps": [
+    "Boil the water with salt and ghee for 15 minutes.",
+    "Add the rice flour and mix into a smooth dough.",
+    "Add the thokku, coriander, jeera and curry leaves and knead well.",
+    "Shape into rings.",
+    "Deep fry until crispy and golden."
+   ],
+   "notes": [],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "sweet-corn-kosumbari",
+   "title": "Sweet Corn Kosumbari",
+   "alt": [
+    "Corn salad",
+    "Kosambari"
+   ],
+   "category": "snacks",
+   "source": "family",
+   "cooker": null,
+   "ingredients": [
+    {
+     "item": "Sweet corn",
+     "qty": "boiled"
+    },
+    {
+     "item": "Raw coconut",
+     "qty": ""
+    },
+    {
+     "item": "Chilli paste",
+     "qty": ""
+    },
+    {
+     "item": "Lemon juice",
+     "qty": ""
+    },
+    {
+     "item": "Coriander leaves",
+     "qty": ""
+    },
+    {
+     "item": "Salt",
+     "qty": "to taste"
+    }
+   ],
+   "steps": [
+    "Combine the sweet corn and raw coconut.",
+    "Add the chilli paste, salt and lemon juice.",
+    "Mix well and garnish with coriander.",
+    "Serve fresh."
+   ],
+   "notes": [],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "dhokla",
+   "title": "Dhokla",
+   "alt": [
+    "Khaman dhokla",
+    "Besan dhokla"
+   ],
+   "category": "snacks",
+   "source": "needs-checking",
+   "cooker": "steam 15 to 20 minutes",
+   "ingredients": [
+    {
+     "item": "Besan (gram flour)",
+     "qty": "1 cup"
+    },
+    {
+     "item": "Semolina (sooji)",
+     "qty": "2 tbsp"
+    },
+    {
+     "item": "Curd",
+     "qty": "2 tbsp"
+    },
+    {
+     "item": "Water",
+     "qty": "¾ cup, or as needed"
+    },
+    {
+     "item": "Ginger and green chilli paste",
+     "qty": "1 tsp"
+    },
+    {
+     "item": "Lemon juice",
+     "qty": "1 tbsp"
+    },
+    {
+     "item": "Sugar",
+     "qty": "1 tsp for the batter"
+    },
+    {
+     "item": "Turmeric",
+     "qty": "¼ tsp"
+    },
+    {
+     "item": "Eno fruit salt",
+     "qty": "1 tsp, or ½ tsp baking soda"
+    },
+    {
+     "item": "Salt",
+     "qty": "to taste"
+    },
+    {
+     "item": "Tadka",
+     "qty": "2 tbsp oil, 1 tsp mustard seeds, curry leaves, 2 slit green chillies, hing"
+    },
+    {
+     "item": "For the tadka water",
+     "qty": "½ cup water, 1 tbsp sugar, 1 tsp lemon juice"
+    },
+    {
+     "item": "To garnish",
+     "qty": "grated coconut and coriander"
+    }
+   ],
+   "steps": [
+    "Whisk the besan, semolina, turmeric, sugar and salt with the curd, ginger chilli paste, lemon juice and water into a smooth, lump free batter. It should ribbon off the whisk.",
+    "Grease a steaming plate and preheat the steamer for 4 to 5 minutes on medium.",
+    "Add the Eno to the batter and mix gently. It will go airy immediately.",
+    "Pour into the greased plate straight away, filling it only halfway so it has room to rise. Do not let the batter stand after the Eno goes in.",
+    "Steam on medium for 15 to 20 minutes, until a knife in the centre comes out clean.",
+    "Cool slightly and cut into squares.",
+    "Make the tadka: heat oil, add mustard seeds, curry leaves, slit chillies and hing. Add the water, sugar and lemon juice and boil for a minute.",
+    "Pour the tadka evenly over the dhokla and let it soak in.",
+    "Garnish with coconut and coriander."
+   ],
+   "notes": [
+    "The notes had only a YouTube link for this one and no method. The video is \"Dhokla | How to Make Soft and Spongy Dhokla\" from HomeCookingShow. YouTube does not expose a video's description or transcript to a web page, so the method below could not be taken from the video itself. It is a standard khaman dhokla, cross checked across several published versions. Not a family recipe, and not the video's exact recipe. Watch the video and correct this.",
+    "The one thing every version agrees on: pour the moment the Eno is in. Batter that sits will not rise."
+   ],
+   "variants": [],
+   "link": "https://youtu.be/w_2eb9uaXns"
+  },
+  {
+   "id": "chirmuri",
+   "title": "Chirmuri",
+   "alt": [
+    "Puffed rice",
+    "Churmuri",
+    "Bhel",
+    "Mandakki"
+   ],
+   "category": "snacks",
+   "source": "needs-checking",
+   "cooker": null,
+   "ingredients": [
+    {
+     "item": "Puffed rice (mandakki)",
+     "qty": "4 cups"
+    },
+    {
+     "item": "Onion",
+     "qty": "1, finely chopped"
+    },
+    {
+     "item": "Tomato",
+     "qty": "1, finely chopped"
+    },
+    {
+     "item": "Carrot",
+     "qty": "grated, optional"
+    },
+    {
+     "item": "Green chillies",
+     "qty": "2, finely chopped"
+    },
+    {
+     "item": "Coriander leaves",
+     "qty": "a handful"
+    },
+    {
+     "item": "Roasted peanuts",
+     "qty": "¼ cup"
+    },
+    {
+     "item": "Fried gram or boondi",
+     "qty": "a handful, optional"
+    },
+    {
+     "item": "Chilli powder",
+     "qty": "½ tsp"
+    },
+    {
+     "item": "Coconut oil or groundnut oil",
+     "qty": "1 tbsp"
+    },
+    {
+     "item": "Lemon",
+     "qty": "½"
+    },
+    {
+     "item": "Salt",
+     "qty": "to taste"
+    },
+    {
+     "item": "Nippattu or sev",
+     "qty": "crushed, to top"
+    }
+   ],
+   "steps": [
+    "Chop everything before you start. Once this is mixed it has about two minutes before it goes soft.",
+    "Put the puffed rice in a wide bowl with the onion, tomato, carrot, chillies, coriander and peanuts.",
+    "Add the chilli powder, salt and oil and toss with your hand until it is all coated.",
+    "Squeeze the lemon over, top with crushed nippattu or sev, and eat immediately."
+   ],
+   "notes": [
+    "This was a bare heading in the notes with nothing under it. This is a standard Bangalore style churmuri, not the family version. Worth asking about.",
+    "Coconut oil is what makes it taste like the beach version. Groundnut oil is the everyday one."
+   ],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "hesaru-bele-payasa",
+   "title": "Hesaru Bele Payasa",
+   "alt": [
+    "Moong dal payasam",
+    "Pesara pappu payasam",
+    "Kheer"
+   ],
+   "category": "sweets",
+   "source": "family",
+   "cooker": "1 whistle",
+   "ingredients": [
+    {
+     "item": "Moong dal",
+     "qty": "½ glass, roasted"
+    },
+    {
+     "item": "Jaggery",
+     "qty": "¼ glass, melted"
+    },
+    {
+     "item": "Milk",
+     "qty": ""
+    },
+    {
+     "item": "Coconut",
+     "qty": "¾ kota"
+    },
+    {
+     "item": "Cardamom (elakki) powder",
+     "qty": ""
+    },
+    {
+     "item": "Dry fruits",
+     "qty": "to top"
+    }
+   ],
+   "steps": [
+    "Dry fry the moong dal until it just starts to change colour.",
+    "Wash the roasted dal.",
+    "Pressure cook with a little more water than you would normally use, for 1 whistle.",
+    "Melt the jaggery and add it to the cooked dal.",
+    "Add the milk and coconut and mix well.",
+    "Add the cardamom powder.",
+    "Top with dry fruits and serve."
+   ],
+   "notes": [
+    "Wash the dal after roasting it, not before. Roast first, then wash."
+   ],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "crispy-corn-fritters",
+   "title": "Crispy Corn Fritters",
+   "alt": [
+    "Corn fritters",
+    "Sweetcorn fritters"
+   ],
+   "category": "keepers",
+   "source": "added",
+   "cooker": null,
+   "ingredients": [
+    {
+     "item": "Fresh corn",
+     "qty": "1½ cups, about 2 to 3 ears"
+    },
+    {
+     "item": "All purpose flour",
+     "qty": "3 tbsp"
+    },
+    {
+     "item": "Rice flour",
+     "qty": "2 tbsp"
+    },
+    {
+     "item": "Jalapeño",
+     "qty": "½, deseeded and diced"
+    },
+    {
+     "item": "Red onion",
+     "qty": "1 medium, finely chopped"
+    },
+    {
+     "item": "Green onions",
+     "qty": "4, chopped"
+    },
+    {
+     "item": "Cilantro",
+     "qty": "¼ cup, finely chopped"
+    },
+    {
+     "item": "Milk",
+     "qty": "½ cup, or as needed"
+    },
+    {
+     "item": "Mayonnaise",
+     "qty": "2 tbsp for the batter, 2 tbsp for the sauce"
+    },
+    {
+     "item": "Cheese",
+     "qty": "¼ cup, grated"
+    },
+    {
+     "item": "Lemon juice",
+     "qty": "1½ tsp"
+    },
+    {
+     "item": "Lemon zest",
+     "qty": "½ tsp"
+    },
+    {
+     "item": "Red chilli powder or smoked paprika",
+     "qty": "1 tsp"
+    },
+    {
+     "item": "Black pepper",
+     "qty": "½ tsp"
+    },
+    {
+     "item": "Cumin powder",
+     "qty": "1 tsp"
+    },
+    {
+     "item": "Baking powder",
+     "qty": "½ tsp"
+    },
+    {
+     "item": "Oil",
+     "qty": "1½ tbsp for cooking"
+    },
+    {
+     "item": "Sour cream",
+     "qty": "1 tbsp, for the sauce"
+    },
+    {
+     "item": "Sriracha",
+     "qty": "1 tbsp, for the sauce"
+    },
+    {
+     "item": "Salt",
+     "qty": "1 tsp, to taste"
+    }
+   ],
+   "steps": [
+    "Divide the corn into two halves. Put one half in a food processor with the diced jalapeño and pulse 2 to 3 times until coarsely mashed.",
+    "In a large bowl combine both portions of corn with the flour, rice flour, baking powder, cheese, chilli powder, black pepper, cumin, mayonnaise, cilantro, red onion, green onions, lemon juice and lemon zest. Mix until combined.",
+    "Gradually add the milk until you reach a thick, scoopable consistency. Season with salt.",
+    "Heat the oil in a pan over medium heat. Scoop about 2 tbsp of batter per fritter and flatten gently.",
+    "Cook for 1 to 3 minutes per side until golden and crispy. Move to a paper towel lined plate, adding more oil as needed.",
+    "Whisk the mayonnaise, sour cream and sriracha into a spicy mayo and serve alongside the hot fritters."
+   ],
+   "notes": [
+    "About 77 kcal per fritter.",
+    "Smoked paprika gives a milder, smokier flavour than chilli powder.",
+    "An ice cream scoop makes portioning easy and the fritters come out the same size."
+   ],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "bean-corn-tacos",
+   "title": "Black Bean and Corn Tacos",
+   "alt": [
+    "Tacos",
+    "Pantry tacos"
+   ],
+   "category": "keepers",
+   "source": "added",
+   "cooker": null,
+   "ingredients": [
+    {
+     "item": "Oil",
+     "qty": "1 tbsp"
+    },
+    {
+     "item": "Onion",
+     "qty": "1, finely chopped"
+    },
+    {
+     "item": "Garlic",
+     "qty": "3 to 4 cloves, minced"
+    },
+    {
+     "item": "Corn",
+     "qty": "1 cup"
+    },
+    {
+     "item": "Black beans",
+     "qty": "1 can, drained and rinsed"
+    },
+    {
+     "item": "Taco seasoning",
+     "qty": "1 packet"
+    },
+    {
+     "item": "Water",
+     "qty": "¼ to ½ cup"
+    },
+    {
+     "item": "Lime",
+     "qty": "juice of ½"
+    },
+    {
+     "item": "Hard taco shells",
+     "qty": ""
+    },
+    {
+     "item": "For the sauce",
+     "qty": "½ cup Greek yogurt or sour cream, juice of ½ lime, a pinch of taco seasoning, salt"
+    }
+   ],
+   "steps": [
+    "Sauté the onion in oil until golden.",
+    "Add the garlic and cook for 30 seconds.",
+    "Add the corn and cook for 2 to 3 minutes.",
+    "Stir in the black beans.",
+    "Add the taco seasoning and water, and simmer for 3 to 5 minutes until thickened.",
+    "Mash a few of the beans with your spoon so the filling holds together.",
+    "Finish with lime juice.",
+    "Mix the sauce ingredients together and serve alongside."
+   ],
+   "notes": [
+    "Toppings, whatever you have: diced tomatoes, diced cucumber for crunch, avocado or guacamole, grated cheese, sour cream or Greek yogurt, red onion, pickled jalapeños, coriander.",
+    "Optional additions: pan fried paneer cubes, mushrooms, zucchini, small diced roasted potatoes.",
+    "Onion, garlic, corn, black beans, taco seasoning, tomatoes, cheese and the yogurt lime sauce carry it on their own. You will not miss the peppers or lettuce."
+   ],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "avocado-pesto-bruschetta",
+   "title": "Avocado Pesto Bruschetta",
+   "alt": [
+    "Bruschetta",
+    "Avocado toast"
+   ],
+   "category": "keepers",
+   "source": "added",
+   "cooker": null,
+   "ingredients": [
+    {
+     "item": "Baguette",
+     "qty": "sliced"
+    },
+    {
+     "item": "Avocado",
+     "qty": "1"
+    },
+    {
+     "item": "Pesto",
+     "qty": "1 tbsp"
+    },
+    {
+     "item": "Garlic",
+     "qty": "1 clove, grated"
+    },
+    {
+     "item": "Lemon juice",
+     "qty": "if you have it"
+    },
+    {
+     "item": "Salt and pepper",
+     "qty": ""
+    },
+    {
+     "item": "Red chilli flakes",
+     "qty": ""
+    },
+    {
+     "item": "Cherry tomatoes",
+     "qty": ""
+    },
+    {
+     "item": "Rocket",
+     "qty": ""
+    },
+    {
+     "item": "Walnuts and pistachios",
+     "qty": "crushed and toasted"
+    },
+    {
+     "item": "Honey or balsamic glaze",
+     "qty": ""
+    },
+    {
+     "item": "Parmesan",
+     "qty": "grated"
+    }
+   ],
+   "steps": [
+    "Toast the baguette slices.",
+    "Mash the avocado with the pesto, grated garlic, lemon juice, salt, pepper and chilli flakes.",
+    "Spread onto the toast.",
+    "Top with cherry tomatoes, rocket, the crushed toasted nuts, a honey or balsamic glaze, grated parmesan and a little more chilli."
+   ],
+   "notes": [
+    "Ten minutes start to finish."
+   ],
+   "variants": [],
+   "link": null
+  },
+  {
+   "id": "overnight-oats",
+   "title": "Overnight Oats",
+   "alt": [
+    "Soaked oats",
+    "Bircher"
+   ],
+   "category": "keepers",
+   "source": "needs-checking",
+   "cooker": null,
+   "ingredients": [
+    {
+     "item": "Rolled oats",
+     "qty": "½ cup"
+    },
+    {
+     "item": "Milk or yogurt",
+     "qty": "½ cup milk, or ⅓ cup milk plus ¼ cup yogurt"
+    },
+    {
+     "item": "Chia seeds",
+     "qty": "1 tbsp, optional"
+    },
+    {
+     "item": "Honey, jaggery or maple",
+     "qty": "1 to 2 tsp"
+    },
+    {
+     "item": "Salt",
+     "qty": "a pinch"
+    },
+    {
+     "item": "To top",
+     "qty": "banana, berries, chopped nuts, cinnamon, peanut butter"
+    }
+   ],
+   "steps": [
+    "Stir the oats, milk or yogurt, chia seeds, sweetener and salt together in a jar.",
+    "Cover and refrigerate overnight, or at least 4 hours.",
+    "In the morning, loosen with a splash more milk if it has gone too thick.",
+    "Add the toppings just before eating so they stay fresh."
+   ],
+   "notes": [
+    "This was an empty numbered line in the notes with no method. Standard 1:1 oats to liquid ratio, not a family recipe.",
+    "Use rolled oats, not instant. Instant turns to paste overnight."
+   ],
+   "variants": [],
+   "link": null
+  }
+ ]
+}
