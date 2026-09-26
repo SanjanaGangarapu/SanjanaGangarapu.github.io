@@ -60,8 +60,9 @@
     .tst-avatar { width:54px; height:54px; border-radius:50%; object-fit:cover; flex:none; border:1px solid var(--line); }
     .tst-meta { display:flex; flex-direction:column; gap:.15rem; }
     /* design audit: tighter gaps after the hero and around the testimonial */
-    .article-hero + .section { padding-top:clamp(3rem,5vw,4.2rem); padding-bottom:clamp(3rem,6vw,4.5rem); }
-    .testimonials { margin-top:0; padding-top:clamp(3rem,6vw,4.5rem); }
+    .article-hero.photo { padding-bottom:clamp(1.5rem,3vw,2.2rem); }
+    .article-hero + .section { padding-top:clamp(2rem,3.5vw,2.8rem); padding-bottom:clamp(2rem,3.5vw,2.8rem); }
+    .testimonials { margin-top:0; padding-top:clamp(2rem,3.5vw,2.8rem); }
     .testimonials + .section { padding-top:clamp(3rem,6vw,4.5rem); }
     /* design audit: drop the step arrows, numbering carries the sequence */
     .strategy-map .stage::after { display:none; }
@@ -109,8 +110,7 @@
     <section class="section wrap">
       <!-- ACT I: SETUP -->
       <div class="prose">
-        <span class="eyebrow">The setup</span>
-        <h2 style="margin-top:1rem;">The challenge</h2>
+        <h2 style="margin-top:0;">The challenge</h2>
         <p>
           <span class="drop">F</span>ill a room, not with a general conference crowd, but with founders who
           will have to comply with India's DPDP Act, and the investors and enterprise leaders who will start
@@ -119,9 +119,9 @@
         </p>
       </div>
       <div class="article-meta" style="border-top:1px solid var(--line);padding-top:1.8rem;">
-        <div class="item"><div class="k">Client</div><div class="v">DPDP Zone, Bengaluru</div></div>
+        <div class="item"><div class="k">Client</div><div class="v"><img class="brandmark" src="../assets/images/work/dpdp-logo.png" alt="DPDP Zone" /></div></div>
         <div class="item"><div class="k">Audience</div><div class="v">Founders, investors, enterprise &amp; legal leaders</div></div>
-        <div class="item"><div class="k">Timeline</div><div class="v">Two months, Jul–Sep 2026</div></div>
+        <div class="item"><div class="k">Timeline</div><div class="v">Jul–Sep 2026</div></div>
         <div class="item"><div class="k">Channel</div><div class="v">LinkedIn, organic &amp; paid</div></div>
       </div>
 
@@ -130,7 +130,7 @@
         <span class="eyebrow">The work</span>
         <h2 style="margin-top:1rem;">One system, every format</h2>
         <p>
-          I owned the campaign end to end and built all 78 posts on one system, so every format stayed
+          I owned the campaign end to end and built all <strong>78 posts</strong> on one system, so every format stayed
           consistent and fast to produce even as the agenda and roster moved.
         </p>
       </div>
@@ -185,8 +185,8 @@
         <span class="eyebrow">The results</span>
         <h2 style="margin-top:1rem;">What two months delivered</h2>
         <p>
-          The room filled. On 18 September, 350 people came to the Radisson Blu Atria: 250 founders,
-          35 investors, and an ecosystem of more than 40 partners. My work was the LinkedIn layer that built
+          The room filled. On 18 September, <strong>350</strong> people came to the Radisson Blu Atria: <strong>250</strong> founders,
+          <strong>35</strong> investors, and an ecosystem of more than <strong>40</strong> partners. My work was the LinkedIn layer that built
           the event's audience and kept the right people paying attention. Here is what that delivered.
         </p>
       </div>
@@ -222,7 +222,7 @@
       <div class="wrap">
         <div class="tst-head">
           <span class="tst-mark" aria-hidden="true">“</span>
-          <h2>The client result</h2>
+          <h2>Testimonial</h2>
           <span class="tst-rule" aria-hidden="true"></span>
         </div>
         <div class="tst-grid" style="grid-template-columns:1fr;max-width:720px;">
