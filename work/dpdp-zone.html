@@ -68,12 +68,35 @@
     .strategy-map .stage::after { display:none; }
     /* design audit: one box language for steps, metrics, panels and comparison */
     .strategy-map .stage { border-radius:14px; background:var(--card); border:1px solid var(--line); }
-    .metrics { background:transparent; border:0; gap:clamp(.8rem,2vw,1.2rem); }
+    .metrics { background:transparent; border:0; gap:clamp(.8rem,2vw,1.2rem); margin-bottom:0; }
     .metric { background:var(--card); border:1px solid var(--line); border-radius:14px; text-align:left; padding:1.5rem 1.6rem; }
     .metric .n { font-size:clamp(2.2rem,5.5vw,3rem); }
     .dpdp-cmp { border:1px solid var(--line); border-radius:14px; background:var(--card); padding:.3rem 1.6rem; }
     .dpdp-cmp .r:last-child { border-bottom:0; }
     .dpdp-marquee { margin-bottom:clamp(2rem,4.5vw,3rem); }
+    /* carousel-post slideshow: tabbed decks, swipeable, arrows + dots */
+    .dpdp-show { margin-top:1.8rem; }
+    .dpdp-tabs { display:flex; flex-wrap:wrap; gap:.5rem; margin-bottom:1rem; }
+    .dpdp-tab { font-family:var(--sans); font-size:.8rem; font-weight:600; letter-spacing:.02em; padding:.55rem 1rem; border-radius:100px; border:1px solid var(--line); background:transparent; color:var(--ink-soft); cursor:pointer; transition:background .2s, color .2s; }
+    .dpdp-tab span { font-weight:400; color:var(--ink-faint); margin-left:.35rem; }
+    .dpdp-tab:hover { border-color:var(--ink); color:var(--ink); }
+    .dpdp-tab.is-on { background:var(--ink); color:var(--paper); border-color:var(--ink); }
+    .dpdp-tab.is-on span { color:rgba(239,240,239,.7); }
+    .dpdp-deck[hidden] { display:none; }
+    .dpdp-stage { position:relative; }
+    .dpdp-slides { display:flex; gap:1rem; overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none; padding:.2rem 0 .4rem; -webkit-overflow-scrolling:touch; }
+    .dpdp-slides::-webkit-scrollbar { display:none; }
+    .dpdp-s { flex:0 0 clamp(220px,32%,340px); scroll-snap-align:start; margin:0; border:1px solid var(--line); border-radius:14px; overflow:hidden; background:var(--card); }
+    .dpdp-s img { display:block; width:100%; aspect-ratio:817/1000; object-fit:cover; }
+    .dpdp-arrow { position:absolute; top:50%; transform:translateY(-50%); width:42px; height:42px; border-radius:50%; border:1px solid var(--line); background:var(--paper); color:var(--ink); cursor:pointer; display:grid; place-items:center; font-size:1.05rem; box-shadow:0 8px 20px -12px rgba(0,0,0,.45); transition:background .2s, color .2s; }
+    .dpdp-arrow.prev { left:-.5rem; } .dpdp-arrow.next { right:-.5rem; }
+    .dpdp-arrow:hover { background:var(--ink); color:var(--paper); border-color:var(--ink); }
+    .dpdp-meta { display:flex; align-items:center; justify-content:space-between; margin-top:.8rem; max-width:720px; }
+    .dpdp-dots { display:flex; gap:.4rem; }
+    .dpdp-dots i { width:7px; height:7px; border-radius:50%; background:var(--line); display:block; transition:background .2s; }
+    .dpdp-dots i.is-on { background:var(--accent); }
+    .dpdp-count { font-family:var(--sans); font-size:.76rem; letter-spacing:.06em; color:var(--ink-faint); }
+    @media (max-width:560px){ .dpdp-s { flex-basis:78%; } .dpdp-arrow { display:none; } }
   </style>
 </head>
 <body>
@@ -105,6 +128,12 @@
         <div class="s"><div class="n"><em>+1,625%</em></div><div class="l">Follower growth</div></div>
         <div class="s"><div class="n">19%</div><div class="l">Organic engagement</div></div>
       </div>
+      <div class="article-meta">
+        <div class="item"><div class="k">Client</div><div class="v"><img class="brandmark" src="../assets/images/work/dpdp-logo.png" alt="DPDP Zone" /></div></div>
+        <div class="item"><div class="k">Audience</div><div class="v">Founders, investors, enterprise &amp; legal leaders</div></div>
+        <div class="item"><div class="k">Timeline</div><div class="v">Jul–Sep 2026</div></div>
+        <div class="item"><div class="k">Channel</div><div class="v">LinkedIn, organic &amp; paid</div></div>
+      </div>
     </section>
 
     <section class="section wrap">
@@ -117,12 +146,6 @@
           asking them about it. The page was new, the ticket was paid, the date was fixed, and the partner
           roster kept growing while the campaign was already live.
         </p>
-      </div>
-      <div class="article-meta" style="border-top:1px solid var(--line);padding-top:1.8rem;">
-        <div class="item"><div class="k">Client</div><div class="v"><img class="brandmark" src="../assets/images/work/dpdp-logo.png" alt="DPDP Zone" /></div></div>
-        <div class="item"><div class="k">Audience</div><div class="v">Founders, investors, enterprise &amp; legal leaders</div></div>
-        <div class="item"><div class="k">Timeline</div><div class="v">Jul–Sep 2026</div></div>
-        <div class="item"><div class="k">Channel</div><div class="v">LinkedIn, organic &amp; paid</div></div>
       </div>
 
       <!-- ACT II: ADVENTURE -->
@@ -172,13 +195,67 @@
       <p class="dpdp-note">Selected campaign creative.</p>
 
       <div class="prose" style="margin-top:clamp(2.5rem,6vw,4rem);">
-        <h3>What the content showed</h3>
+        <span class="eyebrow">The insights</span>
+        <h2 style="margin-top:1rem;">What worked</h2>
         <ul class="bullets">
           <li>Partner and speaker announcements travelled furthest. Naming what each one brings gets them to reshare.</li>
           <li>Exclusivity beat information. Posts about who the room was for outperformed posts about the agenda.</li>
           <li>Event week drove discovery. Search appearances for the page jumped 164%.</li>
         </ul>
       </div>
+
+      <div class="dpdp-show" id="carousels">
+        <div class="dpdp-tabs" role="tablist" aria-label="Carousel posts">
+          <button class="dpdp-tab is-on" type="button" role="tab" aria-selected="true" data-deck="audience">Audience fit <span>6 slides</span></button>
+          <button class="dpdp-tab" type="button" role="tab" aria-selected="false" data-deck="panel">Panel announcement <span>4 slides</span></button>
+          <button class="dpdp-tab" type="button" role="tab" aria-selected="false" data-deck="campaign">Campaign carousel <span>4 slides</span></button>
+        </div>
+
+        <div class="dpdp-deck" data-deck="audience">
+          <div class="dpdp-stage">
+            <div class="dpdp-slides">
+              <figure class="dpdp-s"><img src="../assets/images/work/slides/audience-01.jpg" alt="Audience fit carousel, slide 1 of 6" loading="lazy" /></figure>
+              <figure class="dpdp-s"><img src="../assets/images/work/slides/audience-02.jpg" alt="Audience fit carousel, slide 2 of 6" loading="lazy" /></figure>
+              <figure class="dpdp-s"><img src="../assets/images/work/slides/audience-03.jpg" alt="Audience fit carousel, slide 3 of 6" loading="lazy" /></figure>
+              <figure class="dpdp-s"><img src="../assets/images/work/slides/audience-04.jpg" alt="Audience fit carousel, slide 4 of 6" loading="lazy" /></figure>
+              <figure class="dpdp-s"><img src="../assets/images/work/slides/audience-05.jpg" alt="Audience fit carousel, slide 5 of 6" loading="lazy" /></figure>
+              <figure class="dpdp-s"><img src="../assets/images/work/slides/audience-06.jpg" alt="Audience fit carousel, slide 6 of 6" loading="lazy" /></figure>
+            </div>
+            <button class="dpdp-arrow prev" type="button" aria-label="Previous slide">←</button>
+            <button class="dpdp-arrow next" type="button" aria-label="Next slide">→</button>
+          </div>
+          <div class="dpdp-meta"><div class="dpdp-dots" aria-hidden="true"></div><div class="dpdp-count"></div></div>
+        </div>
+
+        <div class="dpdp-deck" data-deck="panel" hidden>
+          <div class="dpdp-stage">
+            <div class="dpdp-slides">
+              <figure class="dpdp-s"><img src="../assets/images/work/slides/panel-01.jpg" alt="Panel announcement carousel, slide 1 of 4" loading="lazy" /></figure>
+              <figure class="dpdp-s"><img src="../assets/images/work/slides/panel-02.jpg" alt="Panel announcement carousel, slide 2 of 4" loading="lazy" /></figure>
+              <figure class="dpdp-s"><img src="../assets/images/work/slides/panel-03.jpg" alt="Panel announcement carousel, slide 3 of 4" loading="lazy" /></figure>
+              <figure class="dpdp-s"><img src="../assets/images/work/slides/panel-04.jpg" alt="Panel announcement carousel, slide 4 of 4" loading="lazy" /></figure>
+            </div>
+            <button class="dpdp-arrow prev" type="button" aria-label="Previous slide">←</button>
+            <button class="dpdp-arrow next" type="button" aria-label="Next slide">→</button>
+          </div>
+          <div class="dpdp-meta"><div class="dpdp-dots" aria-hidden="true"></div><div class="dpdp-count"></div></div>
+        </div>
+
+        <div class="dpdp-deck" data-deck="campaign" hidden>
+          <div class="dpdp-stage">
+            <div class="dpdp-slides">
+              <figure class="dpdp-s"><img src="../assets/images/work/slides/campaign-01.jpg" alt="Campaign carousel, slide 1 of 4" loading="lazy" /></figure>
+              <figure class="dpdp-s"><img src="../assets/images/work/slides/campaign-02.jpg" alt="Campaign carousel, slide 2 of 4" loading="lazy" /></figure>
+              <figure class="dpdp-s"><img src="../assets/images/work/slides/campaign-03.jpg" alt="Campaign carousel, slide 3 of 4" loading="lazy" /></figure>
+              <figure class="dpdp-s"><img src="../assets/images/work/slides/campaign-04.jpg" alt="Campaign carousel, slide 4 of 4" loading="lazy" /></figure>
+            </div>
+            <button class="dpdp-arrow prev" type="button" aria-label="Previous slide">←</button>
+            <button class="dpdp-arrow next" type="button" aria-label="Next slide">→</button>
+          </div>
+          <div class="dpdp-meta"><div class="dpdp-dots" aria-hidden="true"></div><div class="dpdp-count"></div></div>
+        </div>
+      </div>
+      <p class="dpdp-note">Three of the campaign's carousel posts. Swipe, or use the arrows, to move through each deck.</p>
 
       <!-- ACT III: RESOLUTION -->
       <div class="prose" id="results" style="margin-top:clamp(2.5rem,6vw,4rem);">
@@ -205,16 +282,16 @@
       <p class="dpdp-note">Paid bought reach. Organic bought engagement.</p>
 
       <div class="prose" style="margin-top:clamp(2.5rem,6vw,4rem);">
-        <h3>The only growing page in its set</h3>
-        <p>Over the campaign's first fifty days, against three comparable pages, DPDP Zone was the smallest and the only one adding followers.</p>
+        <h3>The only page that grew</h3>
+        <p>Over the campaign's first fifty days, measured against three anonymised competitor pages, DPDP Zone was the smallest and the only one adding followers.</p>
       </div>
       <div class="dpdp-cmp">
         <div class="r hi"><span class="name">DPDP Zone</span><span class="val">+1,625%</span></div>
-        <div class="r"><span class="name">Peer A</span><span class="val">−49.7%</span></div>
-        <div class="r"><span class="name">Peer B</span><span class="val">−17.7%</span></div>
-        <div class="r"><span class="name">Peer C</span><span class="val">−7.2%</span></div>
+        <div class="r"><span class="name">Competitor A</span><span class="val">−49.7%</span></div>
+        <div class="r"><span class="name">Competitor B</span><span class="val">−17.7%</span></div>
+        <div class="r"><span class="name">Competitor C</span><span class="val">−7.2%</span></div>
       </div>
-      <p class="dpdp-note">New-follower rate, first fifty days. Peers are comparable Bengaluru startup and privacy pages, anonymised.</p>
+      <p class="dpdp-note">New follower rate, first fifty days.</p>
     </section>
 
     <!-- Client result -->
@@ -271,5 +348,39 @@
   </footer>
 
   <script src="../js/main.js"></script>
+  <script>
+    /* Carousel-post slideshow: tab between decks, scroll one slide per arrow, dots + counter follow the scroll */
+    (function () {
+      var show = document.getElementById('carousels');
+      if (!show) return;
+      var tabs = show.querySelectorAll('.dpdp-tab');
+      var decks = show.querySelectorAll('.dpdp-deck');
+      function setup(deck) {
+        var track = deck.querySelector('.dpdp-slides');
+        var slides = track.querySelectorAll('.dpdp-s');
+        var dots = deck.querySelector('.dpdp-dots');
+        var count = deck.querySelector('.dpdp-count');
+        dots.innerHTML = '';
+        slides.forEach(function () { dots.appendChild(document.createElement('i')); });
+        function step() { return slides[0].getBoundingClientRect().width + 16; }
+        function paint() {
+          var i = Math.min(Math.round(track.scrollLeft / step()), slides.length - 1);
+          dots.querySelectorAll('i').forEach(function (d, k) { d.classList.toggle('is-on', k === i); });
+          count.textContent = (i + 1) + ' / ' + slides.length;
+        }
+        deck.querySelector('.prev').addEventListener('click', function () { track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+        deck.querySelector('.next').addEventListener('click', function () { track.scrollBy({ left: step(), behavior: 'smooth' }); });
+        track.addEventListener('scroll', paint, { passive: true });
+        paint();
+      }
+      decks.forEach(setup);
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          tabs.forEach(function (t) { t.classList.toggle('is-on', t === tab); t.setAttribute('aria-selected', t === tab ? 'true' : 'false'); });
+          decks.forEach(function (d) { d.hidden = d.dataset.deck !== tab.dataset.deck; });
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
