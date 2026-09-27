@@ -163,6 +163,12 @@
     .guide li:last-child { border-bottom:0; }
     .guide li::before { content:counter(g, decimal-leading-zero); font-family:var(--serif); color:var(--accent); font-size:1.05rem; }
     @media (max-width:720px){ .guide { grid-template-columns:1fr; } .guide p { max-width:none; } }
+    /* ── direct channels: three short cards ── */
+    .direct { display:grid; grid-template-columns:repeat(3,1fr); gap:1.1rem; margin-top:1.6rem; max-width:1112px; }
+    .direct .d { border:1px solid var(--line); border-radius:14px; background:var(--card); padding:1.2rem 1.3rem; }
+    .direct .n { display:block; font-family:var(--serif); font-size:1.2rem; color:var(--ink); margin-bottom:.5rem; }
+    .direct p { color:var(--ink-soft); font-size:.92rem; line-height:1.55; margin:0; }
+    @media (max-width:820px){ .direct { grid-template-columns:1fr; } }
     /* ── press ── */
     .press { margin-top:1.6rem; max-width:1112px; }
     .press img { width:100%; height:auto; display:block; border:1px solid var(--line); border-radius:10px; background:#fff; }
@@ -221,10 +227,10 @@
       <nav class="crumb" aria-label="Breadcrumb"><a href="../index.html#work">Work</a><span class="sep">/</span><span>Integrated Marketing</span></nav>
       <h1>Five campuses, <em>one voice</em></h1>
       <p class="lead" style="max-width:62ch;">
-        A year in-house with Ekya Schools and the CMR group: social media for five campuses across
-        Facebook, Instagram, LinkedIn and Twitter, campaign strategy and content, designer briefs,
-        community engagement, print, WhatsApp campaigns, press and events, so that a K-12 network and
-        its sister colleges sounded like one family wherever a parent met them.
+        A year in-house with Ekya Schools and the CMR group, running every channel a parent hears the
+        school through: social media for five campuses, email sequences and newsletters, automated
+        WhatsApp communication, PR, the website, print and on-ground events, so that a K-12 network and
+        its sister colleges sounded like one family wherever a family met them.
       </p>
       <div class="ek-stats" aria-label="At a glance">
         <div class="s"><div class="n">5</div><div class="l">Campuses</div></div>
@@ -235,7 +241,7 @@
         <div class="item"><div class="k">Client</div><div class="v"><img class="brandmark" src="../assets/images/logos/ekya.png" alt="Ekya Schools" /></div></div>
         <div class="item"><div class="k">Role</div><div class="v">Content Writer, MarComm</div></div>
         <div class="item"><div class="k">Timeline</div><div class="v">Jul 2022 – Jun 2023</div></div>
-        <div class="item"><div class="k">Channels</div><div class="v">Social · Print · On-ground · Digital</div></div>
+        <div class="item"><div class="k">Channels</div><div class="v">Social · Email &amp; WhatsApp · PR · Print · Digital · On-ground</div></div>
       </div>
     </section>
 
@@ -249,14 +255,15 @@
           each with its own parents, students and calendar. The feed had to stay alive every day for all
           of them, print and events had to land on top of it, and everything had to sound like one family.
           My job was to run that whole surface: the strategy, the calendars, the writing, the briefs to
-          designers, the replies to parents, and the campaigns that gave the year its shape.
+          designers, the replies to parents, the email sequences and WhatsApp automations that reached
+          families directly, the press, and the campaigns that gave the year its shape.
         </p>
       </div>
 
       <div class="prose block">
         <span class="eyebrow">The work</span>
         <h2>One story, every surface</h2>
-        <p>Social was the daily work; print, events and the website sat on top of it. Everything was written to one voice and sized for the place it would be read.</p>
+        <p>Social was the daily work; email, WhatsApp, newsletters, PR, print, events and the website sat on top of it. Everything was written to one voice and sized for the place it would be read.</p>
       </div>
 
       <div class="sub">
@@ -451,13 +458,23 @@
         <figcaption>The New Indian Express, run-up to the Karnataka Budget 2023–24: Ekya's founder and CMR University's Provost quoted on teacher training, in the state's education coverage.</figcaption>
       </figure>
 
+      <div class="sub">
+        <h3>Email, WhatsApp and newsletters</h3>
+        <p>The channels that reached families directly, and the ones that don't photograph well.</p>
+      </div>
+      <div class="direct">
+        <div class="d"><span class="n">Email sequences</span><p>Written and built for admissions enquiries and event registrations: the welcome, the reminders, the follow-ups, each step timed to where a parent was in the decision.</p></div>
+        <div class="d"><span class="n">WhatsApp Business API</span><p>Automated communication to parents and prospects, from campus updates to event confirmations, with engagement tracked and the messaging tuned on what the numbers said.</p></div>
+        <div class="d"><span class="n">Newsletters</span><p>The regular round-up for the school community: what happened on each campus, what is coming, and what parents needed to know, kept in the same voice as the feed.</p></div>
+      </div>
+
       <div class="prose block">
         <span class="eyebrow">The insights</span>
         <h2>What held it together</h2>
         <ul class="bullets">
           <li>Five campuses need one voice and five calendars. The strategy was shared; the posts were not. Each campus got its own events, faces and dates inside the same tone.</li>
           <li>The daily feed is what makes the campaigns land. A marathon or a festival post works because parents have seen the school every day in between.</li>
-          <li>Integrated communication is the through-line, not any single asset: the same promise on a booth wall, a newspaper insert and a WhatsApp message, sized for where it is read.</li>
+          <li>Integrated communication is the through-line, not any single asset: the same promise on a booth wall, a newspaper insert, an email sequence and a WhatsApp message, sized for where it is read.</li>
         </ul>
       </div>
 
