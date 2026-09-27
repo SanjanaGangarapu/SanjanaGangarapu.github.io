@@ -64,32 +64,17 @@
       .saga-stack { width: min(70%, 260px); margin: 0 auto; }
     }
     @media (prefers-reduced-motion: reduce) { .saga-stack img { transition: none; } }
-    /* Meraak: one deck per project, landscape photos, click to view large */
-    .dpdp-show { margin-top:1.6rem; max-width:1112px; }
-    .dpdp-tabs { display:flex; flex-wrap:wrap; gap:.5rem; margin-bottom:1rem; }
-    .dpdp-tab { font-family:var(--sans); font-size:.8rem; font-weight:600; letter-spacing:.02em; padding:.55rem 1rem; border-radius:100px; border:1px solid var(--line); background:transparent; color:var(--ink-soft); cursor:pointer; transition:background .2s, color .2s; }
-    .dpdp-tab span { font-weight:400; color:var(--ink-faint); margin-left:.35rem; }
-    .dpdp-tab:hover { border-color:var(--ink); color:var(--ink); }
-    .dpdp-tab.is-on { background:var(--ink); color:var(--paper); border-color:var(--ink); }
-    .dpdp-tab.is-on span { color:rgba(239,240,239,.7); }
-    .dpdp-deck[hidden] { display:none; }
-    .dpdp-stage { position:relative; }
-    .dpdp-slides { display:flex; gap:1rem; overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none; padding:.2rem 0 .4rem; -webkit-overflow-scrolling:touch; }
-    .dpdp-slides::-webkit-scrollbar { display:none; }
-    .dpdp-s { flex:0 0 clamp(260px,48%,540px); scroll-snap-align:start; margin:0; padding:0; border:1px solid var(--line); border-radius:14px; overflow:hidden; background:var(--card); cursor:zoom-in; transition:transform .25s ease, box-shadow .25s ease; }
-    .dpdp-s:hover { transform:translateY(-3px); box-shadow:0 14px 28px -16px rgba(0,0,0,.45); }
-    .dpdp-s img { display:block; width:100%; aspect-ratio:3/2; object-fit:cover; }
-    .dpdp-arrow { position:absolute; top:50%; transform:translateY(-50%); width:42px; height:42px; border-radius:50%; border:1px solid var(--line); background:var(--paper); color:var(--ink); cursor:pointer; display:grid; place-items:center; font-size:1.05rem; box-shadow:0 8px 20px -12px rgba(0,0,0,.45); transition:background .2s, color .2s; }
-    .dpdp-arrow.prev { left:-.5rem; } .dpdp-arrow.next { right:-.5rem; }
-    .dpdp-arrow:hover { background:var(--ink); color:var(--paper); border-color:var(--ink); }
-    .dpdp-meta { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-top:.8rem; }
-    .dpdp-meta .right { display:flex; align-items:center; gap:1.2rem; }
-    .dpdp-meta a.inline { font-family:var(--sans); font-size:.82rem; }
-    .dpdp-dots { display:flex; gap:.4rem; }
-    .dpdp-dots i { width:7px; height:7px; border-radius:50%; background:var(--line); display:block; transition:background .2s; }
-    .dpdp-dots i.is-on { background:var(--accent); }
-    .dpdp-count { font-family:var(--sans); font-size:.76rem; letter-spacing:.06em; color:var(--ink-faint); }
-    @media (max-width:560px){ .dpdp-s { flex-basis:84%; } .dpdp-arrow { display:none; } .dpdp-dots { display:none; } }
+    /* Meraak: three projects, two photographs each, click to view large */
+    .mk-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.4rem; margin-top:1.6rem; max-width:1112px; }
+    .mk-project { display:flex; flex-direction:column; gap:.8rem; }
+    .mk-photo { display:block; width:100%; padding:0; margin:0; border:1px solid var(--line); border-radius:12px; overflow:hidden; background:var(--card); cursor:zoom-in; transition:transform .25s ease, box-shadow .25s ease; }
+    .mk-photo:hover { transform:translateY(-3px); box-shadow:0 14px 28px -16px rgba(0,0,0,.45); }
+    .mk-photo img { display:block; width:100%; aspect-ratio:3/2; object-fit:cover; }
+    .mk-cap { display:flex; align-items:baseline; justify-content:space-between; gap:.8rem; margin-top:.2rem; font-family:var(--sans); }
+    .mk-cap .n { font-family:var(--serif); font-size:1.05rem; color:var(--ink); }
+    .mk-cap a.inline { color:var(--accent); font-size:.8rem; text-decoration:underline; text-underline-offset:3px; white-space:nowrap; }
+    @media (max-width:820px){ .mk-grid { grid-template-columns:1fr; gap:2rem; } .mk-project { display:grid; grid-template-columns:1fr 1fr; } .mk-cap { grid-column:1 / -1; } }
+    @media (max-width:480px){ .mk-project { grid-template-columns:1fr; } }
     /* reader */
     .dpdp-lb { position:fixed; inset:0; z-index:200; background:rgba(18,18,18,.9); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); display:flex; align-items:center; justify-content:center; padding:2rem; }
     .dpdp-lb[hidden] { display:none; }
@@ -223,65 +208,21 @@
         </p>
         <p>Three of the workplaces I wrote about, in the studio's own photographs.</p>
       </div>
-      <div class="dpdp-show" id="meraak">
-        <div class="dpdp-tabs" role="tablist" aria-label="Meraak Studio projects">
-          <button class="dpdp-tab is-on" type="button" role="tab" aria-selected="true" data-deck="varthana">Varthana <span>8 photos</span></button>
-          <button class="dpdp-tab" type="button" role="tab" aria-selected="false" data-deck="equinity">Equinity <span>10 photos</span></button>
-          <button class="dpdp-tab" type="button" role="tab" aria-selected="false" data-deck="diageo">DIAGEO <span>9 photos</span></button>
+      <div class="mk-grid" id="meraak" aria-label="Meraak Studio projects">
+        <div class="mk-project">
+          <button class="mk-photo dpdp-tile" type="button" data-group="varthana" data-src="../assets/images/work/meraak/varthana-01.jpg" data-cap="Varthana, Meraak Studio"><img src="../assets/images/work/meraak/varthana-01.jpg" alt="Varthana office, lounge with the brand wall and glass-walled workspace" loading="lazy" /></button>
+          <button class="mk-photo dpdp-tile" type="button" data-group="varthana" data-src="../assets/images/work/meraak/varthana-02.jpg" data-cap="Varthana, Meraak Studio"><img src="../assets/images/work/meraak/varthana-02.jpg" alt="Varthana office, meeting room with a long walnut table" loading="lazy" /></button>
+          <div class="mk-cap"><span class="n">Varthana</span><a class="inline" href="https://merak-studio.com/offices/varthana-2/" target="_blank" rel="noopener">Read the story ↗</a></div>
         </div>
-        <div class="dpdp-deck" data-deck="varthana">
-          <div class="dpdp-stage">
-            <div class="dpdp-slides">
-              <button class="dpdp-s dpdp-tile" type="button" data-group="varthana" data-src="../assets/images/work/meraak/varthana-01.jpg" data-cap="Varthana, Meraak Studio"><img src="../assets/images/work/meraak/varthana-01.jpg" alt="Varthana office, reception lounge with the brand wall" loading="lazy" /></button>
-              <button class="dpdp-s dpdp-tile" type="button" data-group="varthana" data-src="../assets/images/work/meraak/varthana-02.jpg" data-cap="Varthana, Meraak Studio"><img src="../assets/images/work/meraak/varthana-02.jpg" alt="Varthana office, seating and dining details" loading="lazy" /></button>
-              <button class="dpdp-s dpdp-tile" type="button" data-group="varthana" data-src="../assets/images/work/meraak/varthana-03.jpg" data-cap="Varthana, Meraak Studio"><img src="../assets/images/work/meraak/varthana-03.jpg" alt="Varthana office, open workspace with shelving" loading="lazy" /></button>
-              <button class="dpdp-s dpdp-tile" type="button" data-group="varthana" data-src="../assets/images/work/meraak/varthana-04.jpg" data-cap="Varthana, Meraak Studio"><img src="../assets/images/work/meraak/varthana-04.jpg" alt="Varthana office, long meeting table" loading="lazy" /></button>
-              <button class="dpdp-s dpdp-tile" type="button" data-group="varthana" data-src="../assets/images/work/meraak/varthana-05.jpg" data-cap="Varthana, Meraak Studio"><img src="../assets/images/work/meraak/varthana-05.jpg" alt="Varthana office, dark conference table" loading="lazy" /></button>
-              <button class="dpdp-s dpdp-tile" type="button" data-group="varthana" data-src="../assets/images/work/meraak/varthana-06.jpg" data-cap="Varthana, Meraak Studio"><img src="../assets/images/work/meraak/varthana-06.jpg" alt="Varthana office, executive desk" loading="lazy" /></button>
-              <button class="dpdp-s dpdp-tile" type="button" data-group="varthana" data-src="../assets/images/work/meraak/varthana-07.jpg" data-cap="Varthana, Meraak Studio"><img src="../assets/images/work/meraak/varthana-07.jpg" alt="Varthana office, console and styling details" loading="lazy" /></button>
-              <button class="dpdp-s dpdp-tile" type="button" data-group="varthana" data-src="../assets/images/work/meraak/varthana-08.jpg" data-cap="Varthana, Meraak Studio"><img src="../assets/images/work/meraak/varthana-08.jpg" alt="Varthana office, chairs and joinery details" loading="lazy" /></button>
-            </div>
-            <button class="dpdp-arrow prev" type="button" aria-label="Previous photo">←</button>
-            <button class="dpdp-arrow next" type="button" aria-label="Next photo">→</button>
-          </div>
-          <div class="dpdp-meta"><div class="dpdp-dots" aria-hidden="true"></div><div class="right"><div class="dpdp-count"></div><a class="inline" href="https://merak-studio.com/offices/varthana-2/" target="_blank" rel="noopener">Read the story ↗</a></div></div>
+        <div class="mk-project">
+          <button class="mk-photo dpdp-tile" type="button" data-group="equinity" data-src="../assets/images/work/meraak/equinity-01.jpg" data-cap="Equinity, Meraak Studio"><img src="../assets/images/work/meraak/equinity-01.jpg" alt="Equinity office, reception with a marble desk" loading="lazy" /></button>
+          <button class="mk-photo dpdp-tile" type="button" data-group="equinity" data-src="../assets/images/work/meraak/equinity-02.jpg" data-cap="Equinity, Meraak Studio"><img src="../assets/images/work/meraak/equinity-02.jpg" alt="Equinity office, boardroom" loading="lazy" /></button>
+          <div class="mk-cap"><span class="n">Equinity</span><a class="inline" href="https://merak-studio.com/offices/equinity/" target="_blank" rel="noopener">Read the story ↗</a></div>
         </div>
-        <div class="dpdp-deck" data-deck="equinity" hidden>
-          <div class="dpdp-stage">
-            <div class="dpdp-slides">
-              <button class="dpdp-s dpdp-tile" type="button" data-group="equinity" data-src="../assets/images/work/meraak/equinity-01.jpg" data-cap="Equinity, Meraak Studio"><img src="../assets/images/work/meraak/equinity-01.jpg" alt="Equinity office, reception" loading="lazy" /></button>
-              <button class="dpdp-s dpdp-tile" type="button" data-group="equinity" data-src="../assets/images/work/meraak/equinity-02.jpg" data-cap="Equinity, Meraak Studio"><img src="../assets/images/work/meraak/equinity-02.jpg" alt="Equinity office, open workspace" loading="lazy" /></button>
-              <button class="dpdp-s dpdp-tile" type="button" data-group="equinity" data-src="../assets/images/work/meraak/equinity-03.jpg" data-cap="Equinity, Meraak Studio"><img src="../assets/images/work/meraak/equinity-03.jpg" alt="Equinity office, meeting room" loading="lazy" /></button>
-              <button class="dpdp-s dpdp-tile" type="button" data-group="equinity" data-src="../assets/images/work/meraak/equinity-04.jpg" data-cap="Equinity, Meraak Studio"><img src="../assets/images/work/meraak/equinity-04.jpg" alt="Equinity office, boardroom" loading="lazy" /></button>
-              <button class="dpdp-s dpdp-tile" type="button" data-group="equinity" data-src="../assets/images/work/meraak/equinity-05.jpg" data-cap="Equinity, Meraak Studio"><img src="../assets/images/work/meraak/equinity-05.jpg" alt="Equinity office, long open-plan floor" loading="lazy" /></button>
-              <button class="dpdp-s dpdp-tile" type="button" data-group="equinity" data-src="../assets/images/work/meraak/equinity-06.jpg" data-cap="Equinity, Meraak Studio"><img src="../assets/images/work/meraak/equinity-06.jpg" alt="Equinity office, workstations" loading="lazy" /></button>
-              <button class="dpdp-s dpdp-tile" type="button" data-group="equinity" data-src="../assets/images/work/meraak/equinity-07.jpg" data-cap="Equinity, Meraak Studio"><img src="../assets/images/work/meraak/equinity-07.jpg" alt="Equinity office, glass meeting rooms" loading="lazy" /></button>
-              <button class="dpdp-s dpdp-tile" type="button" data-group="equinity" data-src="../assets/images/work/meraak/equinity-08.jpg" data-cap="Equinity, Meraak Studio"><img src="../assets/images/work/meraak/equinity-08.jpg" alt="Equinity office, wall graphics" loading="lazy" /></button>
-              <button class="dpdp-s dpdp-tile" type="button" data-group="equinity" data-src="../assets/images/work/meraak/equinity-09.jpg" data-cap="Equinity, Meraak Studio"><img src="../assets/images/work/meraak/equinity-09.jpg" alt="Equinity office, corridor" loading="lazy" /></button>
-              <button class="dpdp-s dpdp-tile" type="button" data-group="equinity" data-src="../assets/images/work/meraak/equinity-10.jpg" data-cap="Equinity, Meraak Studio"><img src="../assets/images/work/meraak/equinity-10.jpg" alt="Equinity office, washroom detail" loading="lazy" /></button>
-            </div>
-            <button class="dpdp-arrow prev" type="button" aria-label="Previous photo">←</button>
-            <button class="dpdp-arrow next" type="button" aria-label="Next photo">→</button>
-          </div>
-          <div class="dpdp-meta"><div class="dpdp-dots" aria-hidden="true"></div><div class="right"><div class="dpdp-count"></div><a class="inline" href="https://merak-studio.com/offices/equinity/" target="_blank" rel="noopener">Read the story ↗</a></div></div>
-        </div>
-        <div class="dpdp-deck" data-deck="diageo" hidden>
-          <div class="dpdp-stage">
-            <div class="dpdp-slides">
-              <button class="dpdp-s dpdp-tile" type="button" data-group="diageo" data-src="../assets/images/work/meraak/diageo-01.jpg" data-cap="DIAGEO, Meraak Studio"><img src="../assets/images/work/meraak/diageo-01.jpg" alt="DIAGEO office, reception" loading="lazy" /></button>
-              <button class="dpdp-s dpdp-tile" type="button" data-group="diageo" data-src="../assets/images/work/meraak/diageo-02.jpg" data-cap="DIAGEO, Meraak Studio"><img src="../assets/images/work/meraak/diageo-02.jpg" alt="DIAGEO office, long boardroom" loading="lazy" /></button>
-              <button class="dpdp-s dpdp-tile" type="button" data-group="diageo" data-src="../assets/images/work/meraak/diageo-03.jpg" data-cap="DIAGEO, Meraak Studio"><img src="../assets/images/work/meraak/diageo-03.jpg" alt="DIAGEO office, meeting room with blue chairs" loading="lazy" /></button>
-              <button class="dpdp-s dpdp-tile" type="button" data-group="diageo" data-src="../assets/images/work/meraak/diageo-04.jpg" data-cap="DIAGEO, Meraak Studio"><img src="../assets/images/work/meraak/diageo-04.jpg" alt="DIAGEO office, Guinness meeting room" loading="lazy" /></button>
-              <button class="dpdp-s dpdp-tile" type="button" data-group="diageo" data-src="../assets/images/work/meraak/diageo-05.jpg" data-cap="DIAGEO, Meraak Studio"><img src="../assets/images/work/meraak/diageo-05.jpg" alt="DIAGEO office, Singleton meeting room" loading="lazy" /></button>
-              <button class="dpdp-s dpdp-tile" type="button" data-group="diageo" data-src="../assets/images/work/meraak/diageo-06.jpg" data-cap="DIAGEO, Meraak Studio"><img src="../assets/images/work/meraak/diageo-06.jpg" alt="DIAGEO office, Singleton meeting room, second view" loading="lazy" /></button>
-              <button class="dpdp-s dpdp-tile" type="button" data-group="diageo" data-src="../assets/images/work/meraak/diageo-07.jpg" data-cap="DIAGEO, Meraak Studio"><img src="../assets/images/work/meraak/diageo-07.jpg" alt="DIAGEO office, meeting room with red chairs" loading="lazy" /></button>
-              <button class="dpdp-s dpdp-tile" type="button" data-group="diageo" data-src="../assets/images/work/meraak/diageo-08.jpg" data-cap="DIAGEO, Meraak Studio"><img src="../assets/images/work/meraak/diageo-08.jpg" alt="DIAGEO office, breakout area" loading="lazy" /></button>
-              <button class="dpdp-s dpdp-tile" type="button" data-group="diageo" data-src="../assets/images/work/meraak/diageo-09.jpg" data-cap="DIAGEO, Meraak Studio"><img src="../assets/images/work/meraak/diageo-09.jpg" alt="DIAGEO office, planted breakout wall" loading="lazy" /></button>
-            </div>
-            <button class="dpdp-arrow prev" type="button" aria-label="Previous photo">←</button>
-            <button class="dpdp-arrow next" type="button" aria-label="Next photo">→</button>
-          </div>
-          <div class="dpdp-meta"><div class="dpdp-dots" aria-hidden="true"></div><div class="right"><div class="dpdp-count"></div><a class="inline" href="https://merak-studio.com/offices/diageo/" target="_blank" rel="noopener">Read the story ↗</a></div></div>
+        <div class="mk-project">
+          <button class="mk-photo dpdp-tile" type="button" data-group="diageo" data-src="../assets/images/work/meraak/diageo-01.jpg" data-cap="DIAGEO, Meraak Studio"><img src="../assets/images/work/meraak/diageo-01.jpg" alt="DIAGEO office, lounge with the brand wall" loading="lazy" /></button>
+          <button class="mk-photo dpdp-tile" type="button" data-group="diageo" data-src="../assets/images/work/meraak/diageo-02.jpg" data-cap="DIAGEO, Meraak Studio"><img src="../assets/images/work/meraak/diageo-02.jpg" alt="DIAGEO office, Cîroc meeting room" loading="lazy" /></button>
+          <div class="mk-cap"><span class="n">DIAGEO</span><a class="inline" href="https://merak-studio.com/offices/diageo/" target="_blank" rel="noopener">Read the story ↗</a></div>
         </div>
       </div>
 
@@ -382,36 +323,7 @@
 
   <script src="../js/main.js"></script>
   <script>
-    /* Meraak decks: tab between projects, arrows scroll one photo, dots + counter follow the scroll */
-    (function () {
-      var show = document.getElementById('meraak');
-      if (!show) return;
-      var tabs = show.querySelectorAll('.dpdp-tab'), decks = show.querySelectorAll('.dpdp-deck');
-      function setup(deck) {
-        var track = deck.querySelector('.dpdp-slides'), slides = track.querySelectorAll('.dpdp-s');
-        var dots = deck.querySelector('.dpdp-dots'), count = deck.querySelector('.dpdp-count');
-        dots.innerHTML = '';
-        slides.forEach(function () { dots.appendChild(document.createElement('i')); });
-        function step() { return slides[0].getBoundingClientRect().width + 16; }
-        function paint() {
-          var i = Math.min(Math.round(track.scrollLeft / step()), slides.length - 1);
-          dots.querySelectorAll('i').forEach(function (d, k) { d.classList.toggle('is-on', k === i); });
-          count.textContent = (i + 1) + ' / ' + slides.length;
-        }
-        deck.querySelector('.prev').addEventListener('click', function () { track.scrollBy({ left: -step(), behavior: 'smooth' }); });
-        deck.querySelector('.next').addEventListener('click', function () { track.scrollBy({ left: step(), behavior: 'smooth' }); });
-        track.addEventListener('scroll', paint, { passive: true });
-        paint();
-      }
-      decks.forEach(setup);
-      tabs.forEach(function (tab) {
-        tab.addEventListener('click', function () {
-          tabs.forEach(function (t) { t.classList.toggle('is-on', t === tab); t.setAttribute('aria-selected', t === tab ? 'true' : 'false'); });
-          decks.forEach(function (d) { d.hidden = d.dataset.deck !== tab.dataset.deck; if (!d.hidden) d.querySelector('.dpdp-slides').dispatchEvent(new Event('scroll')); });
-        });
-      });
-    })();
-    /* Lightbox: the Saga stack opens the 16-page reader; any Meraak photo opens its project set. Arrows or keys move, Esc or backdrop closes */
+    /* Lightbox: the Saga stack opens the 16-page reader; any Meraak photo opens its project pair. Arrows or keys move, Esc or backdrop closes */
     (function () {
       var lb = document.getElementById('lightbox'), open = document.getElementById('sagaopen');
       if (!lb) return;
