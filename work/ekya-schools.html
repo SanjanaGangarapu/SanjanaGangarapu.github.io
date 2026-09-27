@@ -4,19 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ekya Schools · Integrated Marketing &amp; Communications · Sanjana Gangarapu</title>
-  <meta name="description" content="One voice for a K-12 school network across print, on-ground and digital: newspaper and campus inserts, a brochure, a festival booth, tickets, a landing page and social film for FIND Festival '23." />
+  <meta name="description" content="A year of marketing and communications for Ekya Schools and the CMR group: social media for five campuses across four platforms, campaign content, print, a festival booth, WhatsApp campaigns, press and events." />
   <link rel="canonical" href="https://sanjanagangarapu.com/work/ekya-schools.html" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Sanjana Gangarapu" />
   <meta property="og:title" content="Ekya Schools · Integrated Marketing &amp; Communications · Sanjana Gangarapu" />
-  <meta property="og:description" content="One voice for a K-12 school network across print, on-ground and digital: inserts, a brochure, a festival booth, tickets, a landing page and social film." />
+  <meta property="og:description" content="A year of marketing and communications for Ekya Schools and the CMR group: social media for five campuses, campaign content, print, a festival booth, WhatsApp campaigns, press and events." />
   <meta property="og:url" content="https://sanjanagangarapu.com/work/ekya-schools.html" />
   <meta property="og:image" content="https://sanjanagangarapu.com/assets/og-cover.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Ekya Schools · Integrated Marketing &amp; Communications · Sanjana Gangarapu" />
-  <meta name="twitter:description" content="One voice for a K-12 school network across print, on-ground and digital: inserts, a brochure, a festival booth, tickets, a landing page and social film." />
+  <meta name="twitter:description" content="A year of marketing and communications for Ekya Schools and the CMR group: social media for five campuses, campaign content, print, a festival booth, WhatsApp campaigns, press and events." />
   <meta name="twitter:image" content="https://sanjanagangarapu.com/assets/og-cover.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -86,7 +86,8 @@
     .booth .f { position:absolute; left:0; width:var(--u); background-size:100% 100%; background-repeat:no-repeat; background-color:#E85460; backface-visibility:visible; }
     .booth .f::after { content:""; position:absolute; inset:0; pointer-events:none; }
     /* valance: top band, four sides */
-    .booth .v { top:0; height: calc(var(--u) * .19); }
+    .booth .v { top:0; height: calc(var(--u) * .19); backface-visibility:hidden; -webkit-backface-visibility:hidden; }
+    .booth .vi { top:0; height: calc(var(--u) * .19); background:#C4444E; backface-visibility:hidden; -webkit-backface-visibility:hidden; }
     .booth .v.front { transform: translateZ(calc(var(--u) / 2)); background-image:url('../assets/images/work/ekya/booth/valance-front.jpg'); }
     .booth .v.back  { transform: rotateY(180deg) translateZ(calc(var(--u) / 2)); background-image:url('../assets/images/work/ekya/booth/valance-front.jpg'); }
     .booth .v.left  { transform: rotateY(90deg) translateZ(calc(var(--u) / 2)); background-image:url('../assets/images/work/ekya/booth/valance-left.jpg'); }
@@ -99,12 +100,17 @@
     .booth .wall-out { top: calc(var(--u) * .19); height:var(--u); transform: rotateY(180deg) translateZ(calc(var(--u) / 2 + 1px)); background:#E85460; backface-visibility:hidden; -webkit-backface-visibility:hidden; }
     .booth .wall-out::after { border:6px solid #fff; inset:8px; }
     /* counter skirt, four sides */
-    .booth .c { top: calc(var(--u) * 1.19); height: calc(var(--u) * .55); }
+    .booth .c { top: calc(var(--u) * 1.19); height: calc(var(--u) * .55); backface-visibility:hidden; -webkit-backface-visibility:hidden; }
+    .booth .ci { top: calc(var(--u) * 1.19); height: calc(var(--u) * .55); background:#C4444E; backface-visibility:hidden; -webkit-backface-visibility:hidden; }
+    .booth .in-front { transform: rotateY(180deg) translateZ(calc(var(--u) / -2 + 1px)); }
+    .booth .in-back  { transform: translateZ(calc(var(--u) / -2 + 1px)); }
+    .booth .in-left  { transform: rotateY(-90deg) translateZ(calc(var(--u) / -2 + 1px)); }
+    .booth .in-right { transform: rotateY(90deg) translateZ(calc(var(--u) / -2 + 1px)); }
+    .booth .ci::after, .booth .vi::after { background: rgba(0,0,0,.18); }
     .booth .c.front { transform: translateZ(calc(var(--u) / 2)); background-image:url('../assets/images/work/ekya/booth/counter-front.jpg'); }
     .booth .c.back  { transform: rotateY(180deg) translateZ(calc(var(--u) / 2)); background-image:url('../assets/images/work/ekya/booth/counter-front.jpg'); }
     .booth .c.left  { transform: rotateY(90deg) translateZ(calc(var(--u) / 2)); background-image:url('../assets/images/work/ekya/booth/counter-left.jpg'); }
     .booth .c.right { transform: rotateY(-90deg) translateZ(calc(var(--u) / 2)); background-image:url('../assets/images/work/ekya/booth/counter-left.jpg'); }
-    .booth .top { top: calc(var(--u) * 1.19); height:var(--u); transform: translateY(calc(var(--u) * -.5)) rotateX(90deg); background:#F3EFE8; }
     /* light: the sides sit in shade */
     .booth .left::after, .booth .right::after { background: rgba(0,0,0,.14); }
     .booth .back::after, .booth .wall-out::after { background: rgba(0,0,0,.22); }
@@ -124,8 +130,20 @@
     @media (max-width:820px){ .booth-wrap { grid-template-columns:1fr; } .booth-stage { --u: clamp(150px, 42vw, 220px); } .booth-copy p { max-width:none; } }
     @media (prefers-reduced-motion:reduce){ .booth { transition:none; } }
 
-    /* ── digital: landing page frame and reel side by side ── */
-    .ek-digital { display:grid; grid-template-columns: 380px 320px; gap:clamp(1.6rem,4vw,3rem); margin-top:1.6rem; align-items:start; }
+    /* ── social films side by side ── */
+    .ek-films { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:clamp(1.2rem,3vw,2rem); margin-top:1.6rem; max-width:1112px; }
+    .ek-films video { width:100%; aspect-ratio:16/9; object-fit:cover; border:1px solid var(--line); border-radius:12px; background:#000; display:block; box-shadow:0 18px 40px -28px rgba(0,0,0,.5); }
+    @media (max-width:640px){ .ek-films { grid-template-columns:1fr; } }
+    /* ── articles beside the landing page ── */
+    .ek-articles { display:flex; flex-direction:column; gap:.6rem; }
+    .ek-articles .k { font-family:var(--sans); font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); font-weight:700; margin-bottom:.4rem; }
+    .ek-articles .art { display:block; text-decoration:none; color:inherit; border:1px solid var(--line); border-radius:12px; background:var(--card); padding:1rem 1.1rem; transition:transform .25s ease, box-shadow .25s ease; }
+    .ek-articles a.art:hover { transform:translateY(-2px); box-shadow:0 14px 28px -20px rgba(0,0,0,.45); }
+    .ek-articles .t { display:block; font-family:var(--serif); font-size:1.15rem; color:var(--ink); line-height:1.3; }
+    .ek-articles .d { display:block; font-size:.9rem; color:var(--ink-soft); margin-top:.3rem; }
+    .ek-articles .go { display:inline-block; margin-top:.5rem; font-family:var(--sans); font-size:.78rem; color:var(--accent); text-decoration:underline; text-underline-offset:3px; }
+    /* ── digital: landing page frame and articles side by side ── */
+    .ek-digital { display:grid; grid-template-columns: 380px minmax(0, 1fr); gap:clamp(1.6rem,4vw,3rem); margin-top:1.6rem; align-items:start; }
     .ek-shot figcaption { font-size:.8rem; color:var(--ink-faint); margin-top:.7rem; font-family:var(--sans); }
     .ek-frame { width:380px; max-width:100%; height:568px; overflow-y:auto; border:1px solid var(--line); border-radius:12px; box-shadow:0 18px 40px -28px rgba(0,0,0,.5); background:#fff; scrollbar-width:thin; }
     .ek-frame img { width:100%; display:block; }
@@ -164,22 +182,23 @@
   <main>
     <section class="article-hero wrap photo" style="--hero-img:url('../assets/images/work/ekya-exhibition.jpg')">
       <nav class="crumb" aria-label="Breadcrumb"><a href="../index.html#work">Work</a><span class="sep">/</span><span>Integrated Marketing</span></nav>
-      <h1>One voice for <em>Ekya Schools</em></h1>
+      <h1>Five campuses, <em>one voice</em></h1>
       <p class="lead" style="max-width:62ch;">
-        A K-12 school network that needed to sound the same in print, on the ground and online:
-        newspaper and campus inserts, a brochure, a festival booth, entry tickets, a landing page and
-        social film, all for one season and one story.
+        A year in-house with Ekya Schools and the CMR group: social media for five campuses across
+        Facebook, Instagram, LinkedIn and Twitter, campaign strategy and content, designer briefs,
+        community engagement, print, WhatsApp campaigns, press and events, so that a K-12 network and
+        its sister colleges sounded like one family wherever a parent met them.
       </p>
       <div class="ek-stats" aria-label="At a glance">
-        <div class="s"><div class="n">7</div><div class="l">Pieces</div></div>
-        <div class="s"><div class="n">3</div><div class="l">Channels</div></div>
-        <div class="s"><div class="n">FIND <em>’23</em></div><div class="l">Festival campaign</div></div>
+        <div class="s"><div class="n">5</div><div class="l">Campuses</div></div>
+        <div class="s"><div class="n">4</div><div class="l">Social platforms</div></div>
+        <div class="s"><div class="n">12</div><div class="l">Months</div></div>
       </div>
       <div class="article-meta">
         <div class="item"><div class="k">Client</div><div class="v"><img class="brandmark" src="../assets/images/logos/ekya.png" alt="Ekya Schools" /></div></div>
-        <div class="item"><div class="k">Role</div><div class="v">Marketing &amp; Communications</div></div>
-        <div class="item"><div class="k">Timeline</div><div class="v">2022–2023</div></div>
-        <div class="item"><div class="k">Channels</div><div class="v">Print · On-ground · Digital</div></div>
+        <div class="item"><div class="k">Role</div><div class="v">Content Writer, MarComm</div></div>
+        <div class="item"><div class="k">Timeline</div><div class="v">Jul 2022 – Jun 2023</div></div>
+        <div class="item"><div class="k">Channels</div><div class="v">Social · Print · On-ground · Digital</div></div>
       </div>
     </section>
 
@@ -188,18 +207,38 @@
       <div class="prose">
         <h2>The challenge</h2>
         <p>
-          <span class="drop">A</span>cross a school network, communication has to work everywhere at once: on a
-          newspaper page a parent reads at breakfast, on a ticket handed out at a festival gate, on a booth
-          wall in a crowded hall, and in a post scrolling past on a phone. Each of those meets a different
-          parent in a different mood. My job was to keep the message, the voice and the identity the same
-          across all of them, so that wherever a family met Ekya, it felt like the same school.
+          <span class="drop">F</span>ive campuses, four social platforms, and a group that spans a K-12 school
+          network and its sister colleges: Ekya Schools, the CMR pre-university colleges and a CMR school,
+          each with its own parents, students and calendar. The feed had to stay alive every day for all
+          of them, print and events had to land on top of it, and everything had to sound like one family.
+          My job was to run that whole surface: the strategy, the calendars, the writing, the briefs to
+          designers, the replies to parents, and the campaigns that gave the year its shape.
         </p>
       </div>
 
       <div class="prose block">
         <span class="eyebrow">The work</span>
         <h2>One story, every surface</h2>
-        <p>Everything below was written and produced as one set: the same promise, the same tone, sized for the place it would be read.</p>
+        <p>Social was the daily work; print, events and the website sat on top of it. Everything was written to one voice and sized for the place it would be read.</p>
+      </div>
+
+      <div class="sub">
+        <h3>Social</h3>
+        <p>Facebook, Instagram, LinkedIn and Twitter for five campuses: monthly strategy and content calendars, the posts themselves, briefs to the designers, and the comments and messages answered in the brand's voice. WhatsApp Business API campaigns ran alongside. The year's set pieces were a city marathon campaign, a Christmas festival campaign and the run-up to FIND Festival '23.</p>
+      </div>
+      <div class="ek-films">
+        <figure class="ek-shot">
+          <video controls preload="metadata" playsinline poster="../assets/images/work/ekya/film-open-house.jpg">
+            <source src="../assets/video/ekya/open-house.mp4" type="video/mp4" />
+          </video>
+          <figcaption>Open House at Ekya School, NICE Road. Social film.</figcaption>
+        </figure>
+        <figure class="ek-shot">
+          <video controls preload="metadata" playsinline poster="../assets/images/work/ekya/film-game-time.jpg">
+            <source src="../assets/video/ekya/game-time.mp4" type="video/mp4" />
+          </video>
+          <figcaption>“Buckle up, it’s game time!” Social reel.</figcaption>
+        </figure>
       </div>
 
       <div class="sub">
@@ -263,49 +302,67 @@
             <div class="f v right"></div>
             <div class="f wall"></div>
             <div class="f wall-out"></div>
-            <div class="f top"></div>
             <div class="f c front"></div>
             <div class="f c back back"></div>
             <div class="f c left"></div>
             <div class="f c right"></div>
+            <div class="f ci in-front"></div><div class="f ci in-back"></div><div class="f ci in-left"></div><div class="f ci in-right"></div>
+            <div class="f vi in-front"></div><div class="f vi in-back"></div><div class="f vi in-left"></div><div class="f vi in-right"></div>
             <div class="post fl"></div><div class="post fr"></div><div class="post bl"></div><div class="post br"></div>
             <div class="shadow"></div>
           </div>
         </div>
         <div class="booth-copy">
           <h3>The booth</h3>
-          <p>A canopy stall for FIND Festival ’23: the school name on the valance, the festival artwork on the back wall, and the Design Thinking line on the counter, so the message reads from every side of the hall.</p>
+          <p>The FIND Festival ’23 stall, where families collected the Design Thinking kit: the school name on the valance, the festival artwork on the back wall, the Design Thinking line on the counter, so it reads from every side of the hall.</p>
           <p class="hint"><b>Drag</b> to turn it · it turns by itself when you let go</p>
         </div>
       </div>
 
       <div class="sub">
         <h3>Digital</h3>
-        <p>The online half of the same story: a campus landing page and a social reel for the festival.</p>
+        <p>Website content and the school blog: campus landing pages, and articles written for parents under the school's name.</p>
       </div>
       <div class="ek-digital">
         <figure class="ek-shot">
           <div class="ek-frame"><img src="../assets/images/work/ekya/landing.jpg" alt="Ekya Schools website landing page for the Byrathi campus, scroll to view the full page" loading="lazy" /></div>
           <figcaption>Website landing page, Byrathi campus. Scroll inside the frame.</figcaption>
         </figure>
-        <figure class="ek-shot">
-          <video controls preload="metadata" playsinline poster="">
-            <source src="../assets/images/work/ekya-reel.mp4" type="video/mp4" />
-          </video>
-          <figcaption>Social reel. “Buckle up, it’s game time!”</figcaption>
-        </figure>
+        <div class="ek-articles">
+          <span class="k">Articles for the school blog</span>
+          <a class="art" href="https://www.ekyaschools.com/blog/communicating-education/" target="_blank" rel="noopener"><span class="t">Communicating Education</span><span class="d">Why a school should be transparent about how it teaches, and what that does for trust. February 2023.</span><span class="go">Read ↗</span></a>
+          <a class="art" href="https://www.ekyaschools.com/blog/chatgpt-and-beyond-how-to-handle-ai-in-school/" target="_blank" rel="noopener"><span class="t">ChatGPT and Beyond: How to Handle AI in School</span><span class="d">A parent's guide to the first year of AI in the classroom.</span><span class="go">Read ↗</span></a>
+          <div class="art"><span class="t">Quick Ways to Boost Your Child's Attention Span</span><span class="d">Practical routines for younger learners.</span></div>
+        </div>
       </div>
 
       <div class="prose block">
         <span class="eyebrow">The insights</span>
         <h2>What held it together</h2>
         <ul class="bullets">
-          <li>Integrated communication is less about any single asset and more about the through-line: the same voice, promise and identity showing up whether a parent meets the school in print, online or in person.</li>
-          <li>Each surface got its own length and pace. A ticket carries one line, a brochure carries the whole story, and neither one tries to be the other.</li>
-          <li>The festival artwork did the most work. Putting FIND on the booth, the ticket and the reel meant a parent saw the same picture three times before they walked in.</li>
+          <li>Five campuses need one voice and five calendars. The strategy was shared; the posts were not. Each campus got its own events, faces and dates inside the same tone.</li>
+          <li>The daily feed is what makes the campaigns land. A marathon or a festival post works because parents have seen the school every day in between.</li>
+          <li>Integrated communication is the through-line, not any single asset: the same promise on a booth wall, a newspaper insert and a WhatsApp message, sized for where it is read.</li>
         </ul>
       </div>
 
+    </section>
+
+    <section class="testimonials">
+      <div class="wrap">
+        <div class="tst-head">
+          <span class="tst-mark" aria-hidden="true">“</span>
+          <h2>Testimonial</h2>
+          <span class="tst-rule" aria-hidden="true"></span>
+        </div>
+        <div class="tst-grid" style="grid-template-columns:1fr;max-width:720px;">
+          <figure class="tst-card">
+            <div class="tst-logo"><img src="../assets/images/logos/ekya.png" alt="Ekya Schools" /></div>
+            <blockquote>I highly recommend Sanjana as a skilled content writer. Her ability to create engaging and well-researched articles is impressive. She's a dedicated and reliable professional who consistently meets deadlines and adapts to various subjects effectively. Sanjana's passion for writing shines through her work, making her an excellent choice for any content-related projects.</blockquote>
+            <figcaption><span class="n">Mohammed Mairaj Ul Hussain</span><span class="r">Marketing Executive, Ekya Schools</span></figcaption>
+          </figure>
+        </div>
+      </div>
     </section>
 
     <nav class="next-proj">
@@ -381,7 +438,8 @@
       var ry = -32, rx = -14, vel = 0, dragging = false, lastX = 0, lastT = 0, idleUntil = 0, hover = false;
       function paint() { booth.style.transform = 'rotateX(' + rx + 'deg) rotateY(' + ry + 'deg)'; }
       function frame(t) {
-        if (!dragging) {
+        if (typeof window.boothRy === 'number') { ry = window.boothRy; }
+        else if (!dragging) {
           if (Math.abs(vel) > 0.02) { ry += vel; vel *= 0.94; }
           else if (!reduce && !hover && t > idleUntil) { ry += 0.12; }
         }
