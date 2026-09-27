@@ -179,7 +179,6 @@
     .audit .shot { display:block; text-decoration:none; color:inherit; border:1px solid var(--line); border-radius:10px; overflow:hidden; background:var(--card); transition:transform .25s ease, box-shadow .25s ease; }
     .audit .shot:hover { transform:translateY(-2px); box-shadow:0 14px 28px -20px rgba(0,0,0,.45); }
     .audit .shot img { display:block; width:100%; height:auto; aspect-ratio:16/10; object-fit:cover; object-position:top; background:#fff; }
-    .audit .shot.wide img { aspect-ratio:auto; height:auto; }
     .audit .shot span { display:block; font-family:var(--sans); font-size:.74rem; color:var(--ink-faint); padding:.5rem .7rem; }
     @media (max-width:820px){ .audit { grid-template-columns:1fr; } }
     @media (max-width:480px){ .audit .shots { grid-template-columns:1fr; } }
@@ -485,8 +484,8 @@
           </ul>
         </div>
         <div class="shots">
-          <a href="../assets/images/work/ekya/audit-tickets.jpg" target="_blank" rel="noopener" class="shot wide"><img width="1215" height="400" src="../assets/images/work/ekya/audit-tickets.jpg" alt="Issue tracker for the Ekya Schools website: text blocking image, missing space, missing campus contact, with deadlines and status" loading="lazy" /><span>Issue tracker, Ekya Schools site</span></a>
-          <a href="../assets/images/work/ekya/audit-landing.jpg" target="_blank" rel="noopener" class="shot wide"><img width="906" height="628" src="../assets/images/work/ekya/audit-landing.jpg" alt="CMR National Public School landing page review with the enquiry form" loading="lazy" /><span>Landing page review, CMR NPS</span></a>
+          <a href="../assets/images/work/ekya/audit-tickets.jpg" target="_blank" rel="noopener" class="shot wide"><img width="1215" height="400" style="aspect-ratio:1215/400" src="../assets/images/work/ekya/audit-tickets.jpg" alt="Issue tracker for the Ekya Schools website: text blocking image, missing space, missing campus contact, with deadlines and status" loading="lazy" /><span>Issue tracker, Ekya Schools site</span></a>
+          <a href="../assets/images/work/ekya/audit-landing.jpg" target="_blank" rel="noopener" class="shot wide"><img width="906" height="628" style="aspect-ratio:906/628" src="../assets/images/work/ekya/audit-landing.jpg" alt="CMR National Public School landing page review with the enquiry form" loading="lazy" /><span>Landing page review, CMR NPS</span></a>
           <a href="../assets/images/work/ekya/audit-mobile.jpg" target="_blank" rel="noopener" class="shot tall"><img width="592" height="1035" src="../assets/images/work/ekya/audit-mobile.jpg" alt="CMR National PU College site on mobile with the enquiry banner marked up" loading="lazy" /><span>Mobile review, CMR NPUC</span></a>
           <a href="../assets/images/work/ekya/audit-staging.jpg" target="_blank" rel="noopener" class="shot tall"><img width="591" height="1184" src="../assets/images/work/ekya/audit-staging.jpg" alt="Staging site with a copy error circled: the wrong institution named on the campuses page" loading="lazy" /><span>Staging copy check</span></a>
         </div>
