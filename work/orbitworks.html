@@ -25,6 +25,82 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    /* one left edge for the whole page */
+    .section .prose { margin-inline: 0; }
+    .article-hero.photo { padding-bottom: clamp(2rem, 4vw, 3rem); }
+    .article-hero + .section { padding-top: clamp(2rem, 3.5vw, 2.8rem); }
+    .prose h2 { margin-top: 0; }
+    .block { margin-top: clamp(2.6rem, 6vw, 4.2rem); }
+    .block .eyebrow + h2 { margin-top: .6rem; }
+    .block p:last-child { margin-bottom: 0; }
+    .ob-stats { display:flex; flex-wrap:wrap; gap:clamp(1.2rem,4vw,3rem); margin-top:2rem; }
+    .ob-stats .s .n { font-family:var(--serif); font-size:clamp(1.8rem,4.5vw,2.8rem); line-height:1; color:var(--ink); }
+    .ob-stats .s .n em { color:var(--accent); font-style:normal; }
+    .ob-stats .s .l { font-size:.74rem; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-faint); margin-top:.5rem; }
+
+    /* ── the feed: three originals against three redesigns, one switch ── */
+    .feed { margin-top:1.6rem; max-width:1112px; }
+    .seg { display:inline-flex; border:1px solid var(--line); border-radius:100px; padding:3px; background:var(--card); margin-bottom:1rem; }
+    .seg button { font-family:var(--sans); font-size:.8rem; font-weight:600; letter-spacing:.02em; padding:.5rem 1.1rem; border-radius:100px; border:0; background:transparent; color:var(--ink-soft); cursor:pointer; transition:background .25s, color .25s; }
+    .seg button.is-on { background:var(--ink); color:var(--paper); }
+    .feed .row { display:grid; grid-template-columns:repeat(3,1fr); gap:1.1rem; }
+    .feed .tile { position:relative; aspect-ratio:4/5; border:1px solid var(--line); border-radius:14px; overflow:hidden; background:#E9E9E8; }
+    .feed .tile img { position:absolute; inset:0; width:100%; height:100%; object-fit:contain; transition:opacity .6s ease, transform .6s ease; }
+    .feed .tile img.after { opacity:0; transform:scale(1.02); }
+    .feed.show-after .tile img.after { opacity:1; transform:none; }
+    .feed.show-after .tile img.before { opacity:0; }
+    .feed .tile .tag { position:absolute; left:.8rem; top:.8rem; font-family:var(--sans); font-size:.68rem; letter-spacing:.12em; text-transform:uppercase; font-weight:700; padding:.3rem .6rem; border-radius:100px; background:rgba(22,21,16,.7); color:#fff; transition:background .3s; }
+    .feed.show-after .tile .tag { background:var(--accent); }
+    .feed .cap { display:flex; justify-content:space-between; gap:1rem; margin-top:.9rem; font-family:var(--sans); font-size:.8rem; color:var(--ink-faint); }
+    .feed .cap b { color:var(--ink); font-weight:600; }
+    @media (max-width:640px){ .feed .row { grid-template-columns:1fr; max-width:360px; } }
+    @media (prefers-reduced-motion:reduce){ .feed .tile img { transition:none; } }
+
+    /* ── the system: the rules the redesigns were held to ── */
+    .sys { display:grid; grid-template-columns:repeat(4,1fr); gap:1.1rem; margin-top:1.6rem; max-width:1112px; }
+    .sys .c { border:1px solid var(--line); border-radius:14px; background:var(--card); padding:1.2rem 1.3rem; min-height:190px; display:flex; flex-direction:column; gap:.6rem; }
+    .sys .k { font-family:var(--sans); font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); font-weight:700; }
+    .sys .n { font-family:var(--serif); font-size:1.2rem; color:var(--ink); }
+    .sys p { font-size:.9rem; color:var(--ink-soft); margin:0; line-height:1.5; }
+    .sys .sw { display:flex; gap:.5rem; margin-top:auto; }
+    .sys .sw i { display:block; width:38px; height:38px; border-radius:50%; border:1px solid rgba(0,0,0,.08); }
+    .sys .type { margin-top:auto; font-family:var(--sans); }
+    .sys .type b { display:block; font-size:1.5rem; font-weight:700; letter-spacing:-.01em; color:#0E0E0E; line-height:1.05; }
+    .sys .type span { display:block; font-size:.85rem; color:var(--ink-soft); margin-top:.2rem; }
+    .sys .chev { margin-top:auto; display:inline-block; font-family:var(--sans); font-weight:700; font-size:.8rem; letter-spacing:.06em; color:#0E0E0E; background:#fff; border:1px solid var(--line); padding:.5rem .9rem .5rem .8rem; clip-path:polygon(0 0, calc(100% - 12px) 0, 100% 50%, calc(100% - 12px) 100%, 0 100%); }
+    .sys .chev small { display:block; font-weight:500; color:var(--ink-soft); letter-spacing:0; font-size:.72rem; }
+    .sys .lock { margin-top:auto; display:flex; align-items:center; gap:.5rem; font-family:var(--sans); font-weight:700; font-size:1.05rem; color:#fff; background:#0E0E0E; border-radius:8px; padding:.55rem .8rem; width:fit-content; }
+    .sys .lock i { width:22px; height:12px; border:2px solid #1BBE95; border-radius:50%; transform:rotate(-20deg); display:block; }
+    @media (max-width:900px){ .sys { grid-template-columns:1fr 1fr; } }
+    @media (max-width:480px){ .sys { grid-template-columns:1fr; } }
+
+    /* ── each case: numbered heading, copy, then the comparison at full width ── */
+    .case { margin-top:clamp(2.6rem,6vw,4.2rem); }
+    .case .num { font-family:var(--serif); font-size:2.6rem; font-weight:300; line-height:1; color:var(--accent); letter-spacing:-.02em; display:block; margin-bottom:.4rem; }
+    .case h3 { font-family:var(--serif); font-weight:400; font-size:clamp(1.5rem,2.6vw,2rem); margin:0 0 .6rem; }
+    .case .prose p { max-width:64ch; }
+    .cmp { display:grid; gap:1.1rem; margin-top:1.4rem; max-width:1112px; align-items:start; }
+    .cmp.two { grid-template-columns:repeat(2,1fr); max-width:820px; }
+    .cmp.three { grid-template-columns:repeat(3,1fr); }
+    .cmp .p { border:1px solid var(--line); border-radius:14px; overflow:hidden; background:#E9E9E8; }
+    .cmp .p img { display:block; width:100%; aspect-ratio:4/5; object-fit:contain; }
+    .cmp .lbl { font-family:var(--sans); font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; font-weight:700; color:var(--ink-faint); padding:.7rem .9rem; border-bottom:1px solid var(--line); background:var(--card); }
+    .cmp .lbl.redesign { color:var(--accent); }
+    .cmp .lbl.step { color:var(--ink-soft); }
+    @media (max-width:640px){ .cmp.two, .cmp.three { grid-template-columns:1fr; max-width:360px; } }
+
+    /* ── before/after slider for the festive post ── */
+    .ba { position:relative; max-width:520px; aspect-ratio:4/5; border:1px solid var(--line); border-radius:14px; overflow:hidden; margin-top:1.4rem; cursor:ew-resize; user-select:none; touch-action:pan-y; background:#E9E9E8; }
+    .ba img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; pointer-events:none; }
+    .ba .top { clip-path: inset(0 calc(100% - var(--x, 50%)) 0 0); }
+    .ba .bar { position:absolute; top:0; bottom:0; left:var(--x, 50%); width:2px; background:#fff; box-shadow:0 0 0 1px rgba(0,0,0,.2); transform:translateX(-1px); pointer-events:none; }
+    .ba .knob { position:absolute; top:50%; left:var(--x, 50%); transform:translate(-50%,-50%); width:44px; height:44px; border-radius:50%; background:#fff; border:1px solid var(--line); box-shadow:0 8px 20px -10px rgba(0,0,0,.5); display:grid; place-items:center; font-family:var(--sans); font-size:.8rem; color:var(--ink); pointer-events:none; }
+    .ba .t { position:absolute; top:.8rem; font-family:var(--sans); font-size:.68rem; letter-spacing:.12em; text-transform:uppercase; font-weight:700; padding:.3rem .6rem; border-radius:100px; pointer-events:none; }
+    .ba .t.l { left:.8rem; background:rgba(22,21,16,.7); color:#fff; }
+    .ba .t.r { right:.8rem; background:var(--accent); color:#fff; }
+    .ba-hint { font-family:var(--sans); font-size:.76rem; color:var(--ink-faint); margin-top:.6rem; }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -42,18 +118,25 @@
 
   <main>
     <section class="article-hero wrap photo" style="--hero-img:url('../assets/images/work/orbitworks-satellite.jpg')">
-      <nav class="crumb" aria-label="Breadcrumb"><a href="../index.html#work">Work</a><span class="sep">/</span><span>Case Study</span></nav>
+      <nav class="crumb" aria-label="Breadcrumb"><a href="../index.html#work">Work</a><span class="sep">/</span><span>Speculative redesign</span></nav>
       <h1>Orbit<em>works</em></h1>
-      <p class="lead" style="max-width:60ch;">A speculative social redesign, rebuilding a set of brand creatives against a single, disciplined visual system.</p>
+      <p class="lead" style="max-width:60ch;">A speculative social redesign: three of the brand's own posts rebuilt against one disciplined visual system, to show what a consistent, ownable presence could look like.</p>
+      <div class="ob-stats" aria-label="At a glance">
+        <div class="s"><div class="n">3</div><div class="l">Posts rebuilt</div></div>
+        <div class="s"><div class="n">1</div><div class="l">Visual system</div></div>
+        <div class="s"><div class="n">0</div><div class="l">New assets needed</div></div>
+      </div>
       <div class="article-meta">
-        <div class="item"><div class="k">Role</div><div class="v">Brand &amp; Social Redesign</div></div>
-        <div class="item"><div class="k">Sector</div><div class="v">Space Tech</div></div>
-        <div class="item"><div class="k">Focus</div><div class="v">Visual consistency &amp; ownable identity</div></div>
+        <div class="item"><div class="k">Role</div><div class="v">Brand &amp; social redesign</div></div>
+        <div class="item"><div class="k">Sector</div><div class="v">Space tech, Abu Dhabi</div></div>
+        <div class="item"><div class="k">Type</div><div class="v">Speculative, unsolicited</div></div>
       </div>
     </section>
 
     <section class="section wrap">
+
       <div class="prose">
+        <h2>The challenge</h2>
         <p>
           <span class="drop">O</span>rbitworks is doing something the region has never done before. It is
           manufacturing satellites in Abu Dhabi, building sovereign space capability for the UAE and
@@ -66,101 +149,101 @@
         </p>
         <p>
           So I asked a simple question: <em>what if these posts actually looked like they came from the
-          same brand?</em> I rebuilt a set of their creatives against a single, disciplined visual system of one palette, one type pairing, and similar logo treatment, to show what consistent, ownable brand
-          presence could look like.
+          same brand?</em> I rebuilt three of their creatives against a single visual system, one palette, one type pairing, one logo treatment, to show what a consistent, ownable presence could look like.
         </p>
       </div>
 
-      <div class="prose">
-        <h2>1. Eurosatory 2026 Speaker Reveal</h2>
-        <p>
-          The original wasn't an Orbitworks asset at all. It was the event organiser's panel template, with five headshots dropped in and Orbitworks inaccurately represented in the design. A speaking
-          slot at a global defence exhibition is a milestone. It deserves an asset that the brand
-          actually owns. So I built one.
-        </p>
+      <div class="prose block">
+        <span class="eyebrow">The feed</span>
+        <h2>Three posts, one switch</h2>
+        <p>The originals as they ran, and the same three posts rebuilt. Flip between them.</p>
       </div>
-
-      <figure class="figure wide wrap">
-        <div class="compare">
-          <div>
-            <div class="lbl">Original</div>
-            <img src="../assets/images/work/orbitworks-eurosatory-before.jpg" alt="Original Eurosatory panel slide, a generic event-organiser template with five headshots, not Orbitworks branded." loading="lazy" />
-          </div>
-          <div>
-            <div class="lbl redesign">Redesign</div>
-            <img src="../assets/images/work/orbitworks-eurosatory-after.jpg" alt="Redesigned Orbitworks speaker reveal, the CEO against a satellite-over-Earth still, name and title in a clean chevron, with the Eurosatory logo kept in frame." loading="lazy" />
-          </div>
+      <div class="feed" id="feed">
+        <div class="seg" role="tablist" aria-label="Original or redesign">
+          <button type="button" class="is-on" data-v="before" role="tab" aria-selected="true">Original</button>
+          <button type="button" data-v="after" role="tab" aria-selected="false">Redesign</button>
         </div>
-      </figure>
-
-      <div class="prose">
-        <p>
-          The CEO against a satellite-over-Earth still, fitting the company, with the name and title
-          locked into a clean chevron in deep black and Orbitworks teal. Crucially, I kept the Eurosatory
-          logo in the frame. Co-branding with the exhibition borrows its credibility and signals scale,
-          while the brand's own colour, type and logo keep the moment firmly Orbitworks. It turns a shared
-          panel slide into a milestone the brand can own.
-        </p>
-
-        <h2>2. Radio Interview Announcement</h2>
-        <p>
-          The same principle applied to an on-air appearance: an announcement rebuilt so it reads instantly
-          as Orbitworks, from a distance and in the feed, rather than as a generic media graphic. This one
-          went through two passes: a first iteration that established the on-brand direction, then a refined
-          second iteration that tightened the hierarchy, type, and chevron detailing.
-        </p>
-      </div>
-
-      <figure class="figure wide wrap">
-        <div class="compare three">
-          <div>
-            <div class="lbl">Original</div>
-            <img src="../assets/images/work/orbitworks-radio-before.jpg" alt="Original radio interview announcement, an off-brand red-and-navy graphic with a misspelled company name." loading="lazy" />
-          </div>
-          <div>
-            <div class="lbl step">First iteration</div>
-            <img src="../assets/images/work/orbitworks-radio-after-v1.jpg" alt="First redesign iteration of the radio announcement, on-brand navy and teal with a studio microphone." loading="lazy" />
-          </div>
-          <div>
-            <div class="lbl redesign">Refined</div>
-            <img src="../assets/images/work/orbitworks-radio-after.jpg" alt="Refined second iteration of the radio announcement, tighter hierarchy, cleaner type, and chevron detailing." loading="lazy" />
-          </div>
+        <div class="row">
+          <div class="tile"><img class="before" src="../assets/images/work/orbitworks-eurosatory-before.jpg" alt="Original Eurosatory panel slide, the organiser's template with five headshots" loading="lazy" /><img class="after" src="../assets/images/work/orbitworks-eurosatory-after.jpg" alt="Redesigned Orbitworks speaker reveal for Eurosatory 2026" loading="lazy" /><span class="tag">Speaker reveal</span></div>
+          <div class="tile"><img class="before" src="../assets/images/work/orbitworks-radio-before.jpg" alt="Original radio interview announcement, off-brand red and navy" loading="lazy" /><img class="after" src="../assets/images/work/orbitworks-radio-after.jpg" alt="Redesigned radio interview announcement in Orbitworks navy and teal" loading="lazy" /><span class="tag">Radio interview</span></div>
+          <div class="tile"><img class="before" src="../assets/images/work/orbitworks-wishes-before.jpg" alt="Original festive wishes post, ornate and heavily decorated" loading="lazy" /><img class="after" src="../assets/images/work/orbitworks-wishes-after.jpg" alt="Redesigned festive wishes post, a single-focus teal greeting" loading="lazy" /><span class="tag">Festive wishes</span></div>
         </div>
-        <figcaption>Original → first iteration → refined. The redesign direction, then tightened.</figcaption>
-      </figure>
-
-      <div class="prose">
-        <h2>3. Festive Wishes</h2>
-        <p>
-          Festival greetings are easy to over-decorate, and easy to treat as throwaway one-offs, which is
-          exactly why they so often drift off-brand. The original leaned on dense, ornate embellishment, with
-          layered elements competing for attention. The redesign takes the opposite approach: a clean,
-          single-focus layout with clear hierarchy and room to breathe, so the message reads instantly in the
-          feed. The same warmth, far less noise.
-        </p>
+        <div class="cap"><span><b>Original:</b> three posts, three different companies.</span><span><b>Redesign:</b> the same three, one brand.</span></div>
       </div>
 
-      <figure class="figure wide wrap">
-        <div class="compare">
-          <div>
-            <div class="lbl">Original</div>
-            <img src="../assets/images/work/orbitworks-wishes-before.jpg" alt="Original festive wishes post, an ornate, heavily decorated greeting with layered embellishment." loading="lazy" />
-          </div>
-          <div>
-            <div class="lbl redesign">Redesign</div>
-            <img src="../assets/images/work/orbitworks-wishes-after.jpg" alt="Redesigned festive wishes post, a clean, minimal greeting with a single focus, clear hierarchy, and generous space." loading="lazy" />
-          </div>
+      <div class="prose block">
+        <span class="eyebrow">The system</span>
+        <h2>Four rules, applied every time</h2>
+        <p>Nothing here was invented. The palette, the type and the logo already existed; the redesign only holds every post to them.</p>
+      </div>
+      <div class="sys">
+        <div class="c"><span class="k">Palette</span><span class="n">Black, navy, teal</span><p>One dark ground, one accent. No reds, no gradients, no borrowed event colours.</p><div class="sw"><i style="background:#0E0E0E"></i><i style="background:#1B2740"></i><i style="background:#1BBE95"></i><i style="background:#FFFFFF"></i></div></div>
+        <div class="c"><span class="k">Type</span><span class="n">One family, two weights</span><p>A geometric sans, bold for the one line that matters, regular for everything else.</p><div class="type"><b>Live On</b><span>Business Breakfast, Dubai Eye 103.8</span></div></div>
+        <div class="c"><span class="k">Motif</span><span class="n">The chevron</span><p>Names, titles and times sit in an angled tag. It is the one shape the brand can own across every post.</p><span class="chev">HAMDULLAH MOHIB<small>CEO of Orbitworks</small></span></div>
+        <div class="c"><span class="k">Logo</span><span class="n">Same lockup, same corner</span><p>The white wordmark with the orbit mark, bottom left, on every post. Partners sit opposite, never on top.</p><span class="lock"><i></i>Orbitworks</span></div>
+      </div>
+
+      <div class="case">
+        <span class="num">01</span>
+        <h3>Eurosatory 2026 speaker reveal</h3>
+        <div class="prose">
+          <p>
+            The original wasn't an Orbitworks asset at all. It was the event organiser's panel template, with five headshots dropped in and the company inaccurately represented. A speaking
+            slot at a global defence exhibition is a milestone; it deserves an asset the brand actually owns.
+          </p>
+          <p>
+            The CEO against a satellite-over-Earth still, with the name and title locked into a chevron in deep black and Orbitworks teal. The Eurosatory logo stays in frame: co-branding borrows the exhibition's credibility and signals scale, while the brand's own colour, type and logo keep the moment Orbitworks.
+          </p>
         </div>
-      </figure>
-
-      <div class="prose">
-        <h3>The takeaway</h3>
-        <p>
-          A visual system only works when it's applied. By holding every asset to the same palette, type,
-          and logo treatment, individual posts stop looking like scattered one-offs and start compounding
-          into a recognisable, ownable brand presence.
-        </p>
+        <div class="cmp two">
+          <div class="p"><div class="lbl">Original</div><img src="../assets/images/work/orbitworks-eurosatory-before.jpg" alt="Original Eurosatory panel slide" loading="lazy" /></div>
+          <div class="p"><div class="lbl redesign">Redesign</div><img src="../assets/images/work/orbitworks-eurosatory-after.jpg" alt="Redesigned Orbitworks speaker reveal" loading="lazy" /></div>
+        </div>
       </div>
+
+      <div class="case">
+        <span class="num">02</span>
+        <h3>Radio interview announcement</h3>
+        <div class="prose">
+          <p>
+            The same principle applied to an on-air appearance: an announcement rebuilt so it reads as Orbitworks from a distance and in the feed, rather than as a generic media graphic. Two passes: a first iteration that set the on-brand direction, then a second that tightened the hierarchy, the type and the chevron detailing.
+          </p>
+        </div>
+        <div class="cmp three">
+          <div class="p"><div class="lbl">Original</div><img src="../assets/images/work/orbitworks-radio-before.jpg" alt="Original radio interview announcement" loading="lazy" /></div>
+          <div class="p"><div class="lbl step">First iteration</div><img src="../assets/images/work/orbitworks-radio-after-v1.jpg" alt="First redesign iteration of the radio announcement" loading="lazy" /></div>
+          <div class="p"><div class="lbl redesign">Refined</div><img src="../assets/images/work/orbitworks-radio-after.jpg" alt="Refined radio announcement" loading="lazy" /></div>
+        </div>
+      </div>
+
+      <div class="case">
+        <span class="num">03</span>
+        <h3>Festive wishes</h3>
+        <div class="prose">
+          <p>
+            Festival greetings are easy to over-decorate and easy to treat as throwaway one-offs, which is
+            exactly why they drift off-brand. The original leaned on dense, ornate embellishment. The redesign takes the opposite approach: one focus, clear hierarchy, room to breathe, so the message reads instantly in the feed. The same warmth, far less noise. Drag the handle.
+          </p>
+        </div>
+        <div class="ba" id="ba" style="--x:50%" aria-label="Before and after slider, drag to compare">
+          <img class="bot" src="../assets/images/work/orbitworks-wishes-after.jpg" alt="Redesigned festive wishes post" loading="lazy" />
+          <img class="top" src="../assets/images/work/orbitworks-wishes-before.jpg" alt="Original festive wishes post" loading="lazy" />
+          <span class="bar"></span><span class="knob" aria-hidden="true">⇔</span>
+          <span class="t l">Original</span><span class="t r">Redesign</span>
+        </div>
+        <p class="ba-hint">Drag left and right to compare.</p>
+      </div>
+
+      <div class="prose block">
+        <span class="eyebrow">The insights</span>
+        <h2>What the rebuild showed</h2>
+        <ul class="bullets">
+          <li>A visual system only works when it is applied. The brand already had a palette, a typeface and a logo; the feed just wasn't using them.</li>
+          <li>Held to the same rules, posts stop being scattered one-offs and start compounding into something people recognise before they read the name.</li>
+          <li>Co-branding is fine when the host stays the host. Keep the partner's logo, keep your colour, type and corner.</li>
+        </ul>
+      </div>
+
     </section>
 
     <nav class="next-proj">
@@ -184,5 +267,27 @@
   </footer>
 
   <script src="../js/main.js"></script>
+  <script>
+    /* Feed switch: Original / Redesign crossfade */
+    (function () {
+      var feed = document.getElementById('feed'); if (!feed) return;
+      var btns = feed.querySelectorAll('.seg button');
+      btns.forEach(function (b) { b.addEventListener('click', function () {
+        btns.forEach(function (x) { x.classList.toggle('is-on', x === b); x.setAttribute('aria-selected', x === b ? 'true' : 'false'); });
+        feed.classList.toggle('show-after', b.dataset.v === 'after');
+      }); });
+    })();
+    /* Before/after slider: drag or touch moves the divide */
+    (function () {
+      var ba = document.getElementById('ba'); if (!ba) return;
+      var down = false;
+      function set(x) { var r = ba.getBoundingClientRect(); var p = Math.max(0, Math.min(100, (x - r.left) / r.width * 100)); ba.style.setProperty('--x', p + '%'); }
+      ba.addEventListener('mousedown', function (e) { down = true; set(e.clientX); });
+      window.addEventListener('mousemove', function (e) { if (down) set(e.clientX); });
+      window.addEventListener('mouseup', function () { down = false; });
+      ba.addEventListener('touchstart', function (e) { set(e.touches[0].clientX); }, { passive: true });
+      ba.addEventListener('touchmove', function (e) { set(e.touches[0].clientX); }, { passive: true });
+    })();
+  </script>
 </body>
 </html>
