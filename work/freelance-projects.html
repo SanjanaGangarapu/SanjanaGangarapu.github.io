@@ -4,19 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Freelance Projects · Editorial &amp; Content Writing · Sanjana Gangarapu</title>
-  <meta name="description" content="Freelance content writing for agencies, publications, and independent companies: editorial features, blogs, newsletters, and long-form articles." />
+  <meta name="description" content="Freelance content writing for agencies, publications, and independent companies: editorial features, blogs, newsletters, campaign content and long-form articles." />
   <link rel="canonical" href="https://sanjanagangarapu.com/work/freelance-projects.html" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Sanjana Gangarapu" />
   <meta property="og:title" content="Freelance Projects · Editorial &amp; Content Writing · Sanjana Gangarapu" />
-  <meta property="og:description" content="Freelance content writing for agencies, publications, and independent companies: editorial features, blogs, newsletters, and long-form articles." />
+  <meta property="og:description" content="Freelance content writing for agencies, publications, and independent companies: editorial features, blogs, newsletters, campaign content and long-form articles." />
   <meta property="og:url" content="https://sanjanagangarapu.com/work/freelance-projects.html" />
   <meta property="og:image" content="https://sanjanagangarapu.com/assets/og-cover.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Freelance Projects · Editorial &amp; Content Writing · Sanjana Gangarapu" />
-  <meta name="twitter:description" content="Freelance content writing for agencies, publications, and independent companies: editorial features, blogs, newsletters, and long-form articles." />
+  <meta name="twitter:description" content="Freelance content writing for agencies, publications, and independent companies: editorial features, blogs, newsletters, campaign content and long-form articles." />
   <meta name="twitter:image" content="https://sanjanagangarapu.com/assets/og-cover.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,6 +25,67 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    /* one left edge for the whole page */
+    .section .prose { margin-inline: 0; }
+    .article-hero.photo { padding-bottom: clamp(2rem, 4vw, 3rem); }
+    .article-hero + .section { padding-top: clamp(2rem, 3.5vw, 2.8rem); }
+    /* hero figures */
+    .fl-stats { display:flex; flex-wrap:wrap; gap:clamp(1.2rem,4vw,3rem); margin-top:2rem; }
+    .fl-stats .s .n { font-family:var(--serif); font-size:clamp(1.8rem,4.5vw,2.8rem); line-height:1; color:var(--ink); }
+    .fl-stats .s .n em { color:var(--accent); font-style:normal; }
+    .fl-stats .s .l { font-size:.74rem; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-faint); margin-top:.5rem; }
+    .client-logos { margin-top: 2.2rem; }
+    /* client blocks */
+    .client { margin-top: clamp(2.6rem, 6vw, 4.2rem); }
+    .client:first-child { margin-top: 0; }
+    .client .eyebrow + h2 { margin-top: .6rem; }
+    .client p:last-child { margin-bottom: 0; }
+    .client .links { display:flex; flex-wrap:wrap; gap:.5rem .9rem; margin:0; padding:0; list-style:none; }
+    .client .links li { color: var(--ink-soft); }
+    /* Saga: fanned magazine stack beside the text; click opens the reader */
+    .saga-feature { display:grid; grid-template-columns: minmax(240px, 320px) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4rem); align-items:center; margin-top: clamp(1.6rem, 3vw, 2.4rem); max-width: 1112px; }
+    .saga-stack { position:relative; display:block; width:100%; aspect-ratio:706/1000; padding:0; margin:0 0 0 clamp(.6rem,2vw,1.4rem); border:0; background:transparent; cursor:zoom-in; }
+    .saga-stack img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; border-radius:4px; border:1px solid var(--line); box-shadow:0 18px 40px -22px rgba(0,0,0,.55); transform-origin:50% 100%; transition:transform .6s cubic-bezier(.2,.7,.2,1); background:#fff; }
+    .saga-stack img:nth-child(1) { transform: rotate(-9deg) translateX(-10%); }
+    .saga-stack img:nth-child(2) { transform: rotate(-4deg) translateX(-4%); }
+    .saga-stack img:nth-child(3) { transform: rotate(3deg) translateX(3%); }
+    .saga-stack img:nth-child(4) { transform: rotate(0deg); }
+    .saga-stack:hover img:nth-child(1), .saga-stack:focus-visible img:nth-child(1) { transform: rotate(-17deg) translateX(-26%) translateY(-2%); }
+    .saga-stack:hover img:nth-child(2), .saga-stack:focus-visible img:nth-child(2) { transform: rotate(-9deg) translateX(-13%) translateY(-1%); }
+    .saga-stack:hover img:nth-child(3), .saga-stack:focus-visible img:nth-child(3) { transform: rotate(8deg) translateX(14%) translateY(-1%); }
+    .saga-stack:hover img:nth-child(4), .saga-stack:focus-visible img:nth-child(4) { transform: translateY(-3%); }
+    .saga-stack .hint { position:absolute; left:50%; bottom:-2.2rem; transform:translateX(-50%); font-family:var(--sans); font-size:.76rem; letter-spacing:.06em; color:var(--ink-faint); white-space:nowrap; }
+    .saga-copy .meta-row { display:flex; flex-wrap:wrap; gap:.4rem 1.2rem; margin:0 0 1.2rem; padding:0; list-style:none; font-family:var(--sans); font-size:.8rem; letter-spacing:.04em; color:var(--ink-faint); }
+    .saga-copy .meta-row b { color: var(--ink); font-weight: 600; }
+    @media (max-width: 720px) {
+      .saga-feature { grid-template-columns: 1fr; gap: 3.2rem; }
+      .saga-stack { width: min(70%, 260px); margin: 0 auto; }
+    }
+    @media (prefers-reduced-motion: reduce) { .saga-stack img { transition: none; } }
+    /* reader */
+    .dpdp-lb { position:fixed; inset:0; z-index:200; background:rgba(18,18,18,.9); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); display:flex; align-items:center; justify-content:center; padding:2rem; }
+    .dpdp-lb[hidden] { display:none; }
+    .dpdp-lb-stage { max-width:min(92vw,900px); max-height:84vh; display:flex; align-items:center; justify-content:center; }
+    .dpdp-lb-stage img { max-width:100%; max-height:84vh; border-radius:6px; box-shadow:0 30px 80px -30px rgba(0,0,0,.8); background:#fff; }
+    .dpdp-lb-cap { position:absolute; bottom:1.4rem; left:50%; transform:translateX(-50%); color:rgba(239,240,239,.85); font-family:var(--sans); font-size:.82rem; letter-spacing:.04em; text-align:center; white-space:nowrap; }
+    .dpdp-lb-close, .dpdp-lb-nav { position:absolute; width:44px; height:44px; border-radius:50%; border:1px solid rgba(255,255,255,.35); background:rgba(255,255,255,.08); color:#fff; cursor:pointer; display:grid; place-items:center; font-size:1.1rem; transition:background .2s; }
+    .dpdp-lb-close { top:1.2rem; right:1.2rem; }
+    .dpdp-lb-nav.prev { left:1.2rem; top:50%; transform:translateY(-50%); }
+    .dpdp-lb-nav.next { right:1.2rem; top:50%; transform:translateY(-50%); }
+    .dpdp-lb-close:hover, .dpdp-lb-nav:hover { background:rgba(255,255,255,.2); }
+    @media (max-width:560px){ .dpdp-lb { padding:1rem; } .dpdp-lb-nav { display:none; } .dpdp-lb-cap { white-space:normal; width:90vw; } }
+    body.dpdp-lb-open { overflow:hidden; }
+    /* testimonial people, name bars on one line */
+    .tst-person { display:flex; align-items:center; gap:.9rem; }
+    .tst-avatar { width:54px; height:54px; border-radius:50%; object-fit:cover; flex:none; border:1px solid var(--line); }
+    .tst-meta { display:flex; flex-direction:column; gap:.15rem; }
+    @media (min-width:721px){
+      .tst-grid { grid-template-rows:auto auto auto; }
+      .tst-card { display:grid; grid-template-rows:subgrid; grid-row:span 3; align-content:start; }
+      .tst-card figcaption { margin-top:0; align-self:start; }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -44,11 +105,15 @@
     <section class="article-hero wrap photo" style="--hero-img:url('../assets/images/work/freelance-origami.jpg');--hero-pos:center 42%;--hero-op:0.42;--hero-contrast:1.12">
       <nav class="crumb" aria-label="Breadcrumb"><a href="../index.html#work">Work</a><span class="sep">/</span><span>Editorial &amp; Content Writing</span></nav>
       <h1>Freelance <em>Projects</em></h1>
-      <p class="lead" style="max-width:64ch;">
-        Collaborating with digital marketing agencies, publications, and independent companies as a
-        freelance content writer, translating ideas, brands, and projects into clear, engaging
-        narratives through blogs, long-form articles, newsletters, and digital content.
+      <p class="lead" style="max-width:60ch;">
+        Blogs, long-form features, newsletters and campaign content for agencies, publications and
+        independent companies, each piece written in the brand's own voice.
       </p>
+      <div class="fl-stats" aria-label="At a glance">
+        <div class="s"><div class="n">10<em>+</em></div><div class="l">Clients</div></div>
+        <div class="s"><div class="n">100<em>+</em></div><div class="l">Pieces published</div></div>
+        <div class="s"><div class="n">6<em>+</em></div><div class="l">Years</div></div>
+      </div>
       <div class="client-logos" aria-label="Selected clients">
         <span class="chip"><img src="../assets/images/logos/cmr.png" alt="CMR University" loading="lazy" /></span>
         <span class="chip"><img src="../assets/images/logos/merak.webp" alt="Meraak Studio" loading="lazy" /></span>
@@ -62,36 +127,56 @@
     </section>
 
     <section class="section wrap">
+
       <!-- Saga Magazine -->
-      <div class="prose">
+      <div class="prose client">
+        <span class="eyebrow">Editorial feature</span>
         <h2>Saga Magazine</h2>
-        <p>
-          <span class="drop">F</span>or Saga Magazine, I contributed long-form editorial writing developed
-          around the theme of <em>Navarasa</em>, exploring how emotions shape fashion, food, and lifestyle.
-          My work focused on interpreting cultural aesthetics and everyday practices through storytelling,
-          connecting traditional Indian philosophies with contemporary expressions, translating abstract
-          emotional states into accessible, reflective narratives for a lifestyle readership.
-        </p>
-        <p>
-          <a class="inline" href="https://acrobat.adobe.com/id/urn:aaid:sc:AP:eaab1151-ea14-4160-a1fa-58c35527a913" target="_blank" rel="noopener">View the full magazine →</a>
-        </p>
       </div>
-      <figure class="figure wide wrap">
-        <div class="saga-grid">
-          <img src="../assets/images/work/freelance-saga-1.jpg" alt="Saga Magazine, cover, Embracing Navarasa issue." loading="lazy" />
-          <img src="../assets/images/work/freelance-saga-2.jpg" alt="Saga Magazine, editorial spread." loading="lazy" />
-          <img src="../assets/images/work/freelance-saga-3.jpg" alt="Saga Magazine, editorial spread." loading="lazy" />
-          <img src="../assets/images/work/freelance-saga-4.jpg" alt="Saga Magazine, editorial spread." loading="lazy" />
+      <div class="saga-feature">
+        <button class="saga-stack" type="button" id="sagaopen" aria-label="Open Saga Magazine, 16 pages">
+          <img src="../assets/images/work/saga/13.jpg" alt="" loading="lazy" />
+          <img src="../assets/images/work/saga/07.jpg" alt="" loading="lazy" />
+          <img src="../assets/images/work/saga/02.jpg" alt="" loading="lazy" />
+          <img src="../assets/images/work/saga/01.jpg" alt="Saga Magazine cover, Embracing Navarasa issue, June 2023" />
+          <span class="hint" aria-hidden="true">Click to read all 16 pages</span>
+        </button>
+        <div class="prose saga-copy">
+          <ul class="meta-row">
+            <li><b>June 2023</b></li><li>Issue 1, Volume 1</li><li>Fashion, Food &amp; Lifestyle</li><li>16 pages</li>
+          </ul>
+          <p>
+            <span class="drop">F</span>or Saga Magazine, I wrote long-form editorial pieces built around
+            <em>Navarasa</em>, the nine emotions, following them through fashion, food and lifestyle.
+            The writing reads cultural aesthetics and everyday practices as stories, connecting traditional
+            Indian philosophy with contemporary expression and turning abstract emotional states into
+            reflective, readable narratives for a lifestyle audience.
+          </p>
+          <p>
+            <a class="inline" href="https://acrobat.adobe.com/id/urn:aaid:sc:AP:eaab1151-ea14-4160-a1fa-58c35527a913" target="_blank" rel="noopener">View the full magazine →</a>
+          </p>
         </div>
-        <figcaption>Saga Magazine. Long-form editorial writing on the theme of Navarasa.</figcaption>
-      </figure>
+      </div>
+
+      <!-- DPDP Zone -->
+      <div class="prose client">
+        <span class="eyebrow">LinkedIn campaign</span>
+        <h2>DPDP Zone</h2>
+        <p>
+          A two-month LinkedIn campaign for Privacy by Design 2026, a founders' summit on India's data
+          protection law: <strong>78 posts</strong> on one content system, 112,163 impressions, and the
+          only page in its set that grew during the campaign.
+        </p>
+        <p><a class="inline" href="dpdp-zone.html">Read the case study →</a></p>
+      </div>
 
       <!-- CMR University -->
-      <div class="prose">
+      <div class="prose client">
+        <span class="eyebrow">Education blogs</span>
         <h2>CMR University</h2>
         <p>
-          I created educational blog articles for CMR University that translated academic programs,
-          technology integration, and career pathways into accessible, student-focused narratives.
+          Educational blog articles for CMR University that turned academic programmes, technology
+          integration and career pathways into accessible, student-focused reads.
         </p>
         <ul class="bullets">
           <li><a class="inline" href="https://cmr.edu.in/blog/the-importance-of-research-in-m-tech-in-data-science-programs/" target="_blank" rel="noopener">The Importance of Research in M.Tech in Data Science Programs ↗</a></li>
@@ -101,12 +186,13 @@
       </div>
 
       <!-- Meraak Studio -->
-      <div class="prose">
+      <div class="prose client">
+        <span class="eyebrow">Architecture stories</span>
         <h2>Meraak Studio</h2>
         <p>
-          Meraak Studio is led by Architect Rajan. I worked closely on translating architectural projects
-          into narrative-driven articles, focusing on design intent, process, and project context, writing
-          the work as stories to make complex design concepts accessible and engaging.
+          For Meraak Studio, an architecture practice led by Architect Rajan, I wrote project stories
+          that follow each building from intent to finish: the design thinking, the process and the
+          context, told so that complex design ideas stay accessible and engaging.
         </p>
         <p><strong>Projects:</strong>
           <a class="inline" href="https://merak-studio.com/offices/varthana-2/" target="_blank" rel="noopener">Varthana ↗</a> ·
@@ -116,11 +202,12 @@
       </div>
 
       <!-- Phoenix One -->
-      <div class="prose">
+      <div class="prose client">
+        <span class="eyebrow">Lifestyle &amp; real estate blogs</span>
         <h2>Phoenix One Bangalore West</h2>
         <p>
-          For Phoenix One Bangalore West, I developed lifestyle and real estate blog content focused on
-          interiors, home décor, and rental insights.
+          Lifestyle and real estate blog content for Phoenix One Bangalore West, covering interiors,
+          home décor and rental insights for a premium residential audience.
         </p>
         <ul class="bullets">
           <li><a class="inline" href="https://www.onebangalorewest.in/blog/modern-wardrobe-designs-for-your-bedroom/" target="_blank" rel="noopener">Modern Wardrobe Designs for Your Bedroom ↗</a></li>
@@ -130,11 +217,13 @@
       </div>
 
       <!-- Brigade Hospitality -->
-      <div class="prose">
+      <div class="prose client">
+        <span class="eyebrow">Hospitality blogs</span>
         <h2>Brigade Hospitality</h2>
         <p>
-          I curated monthly blog content for Brigade Hospitality that captured the experiences offered
-          across its resorts and clubs. The writing focused on weddings, wellness, and lifestyle, presenting each space as a setting for meaningful moments.
+          Monthly blog posts for Brigade Hospitality on the experiences across its resorts and clubs.
+          The writing centred on weddings, wellness and lifestyle, presenting each space as a setting
+          for meaningful moments.
         </p>
         <ul class="bullets">
           <li><a class="inline" href="https://brigadehospitality.com/a-perfect-wedding-day-timeline-at-signature-club/" target="_blank" rel="noopener">A Perfect Wedding Day Timeline at Signature Club ↗</a></li>
@@ -157,12 +246,22 @@
           <figure class="tst-card">
             <div class="tst-logo"><img src="../assets/images/logos/grocat.png" alt="GroCat" loading="lazy" /></div>
             <blockquote>One of Sanjana's standout qualities is her dependability. She consistently meets deadlines and has been a tremendous asset in times of urgency, always willing to go the extra mile to ensure timely delivery.</blockquote>
-            <figcaption><span class="n">Kruthika Durairaj</span><span class="r">Co-founder, GroCat</span></figcaption>
+            <figcaption>
+              <div class="tst-person">
+                <img class="tst-avatar" src="../assets/images/people/kruthika-durairaj.jpg" alt="Kruthika Durairaj" />
+                <span class="tst-meta"><span class="n">Kruthika Durairaj</span><span class="r">Co-founder, GroCat</span></span>
+              </div>
+            </figcaption>
           </figure>
           <figure class="tst-card">
             <div class="tst-logo"><img src="../assets/images/logos/ralecon.png" alt="Ralecon" loading="lazy" /></div>
             <blockquote>Sanjana's writing has always been accurate and completely meets all of the client's requirements. She is a highly professional, dependable, and self-assured writer, and I would recommend her for any type of content requirement.</blockquote>
-            <figcaption><span class="n">Joicy Anjalin</span><span class="r">Content Co-ordinator, Ralecon</span></figcaption>
+            <figcaption>
+              <div class="tst-person">
+                <img class="tst-avatar" src="../assets/images/people/joicy-anjalin.jpg" alt="Joicy Anjalin" />
+                <span class="tst-meta"><span class="n">Joicy Anjalin</span><span class="r">Content Co-ordinator, Ralecon</span></span>
+              </div>
+            </figcaption>
           </figure>
         </div>
         <div class="tst-hint" aria-hidden="true">Swipe <span>→</span></div>
@@ -175,6 +274,14 @@
         <a href="ekya-schools.html">Ekya Schools →</a>
       </div>
     </nav>
+
+    <div class="dpdp-lb" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Saga Magazine reader">
+      <button class="dpdp-lb-close" type="button" aria-label="Close">×</button>
+      <button class="dpdp-lb-nav prev" type="button" aria-label="Previous page">←</button>
+      <div class="dpdp-lb-stage"></div>
+      <button class="dpdp-lb-nav next" type="button" aria-label="Next page">→</button>
+      <div class="dpdp-lb-cap"></div>
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -190,5 +297,37 @@
   </footer>
 
   <script src="../js/main.js"></script>
+  <script>
+    /* Saga reader: the stack opens a page-by-page lightbox; arrows or keys turn pages, Esc or backdrop closes */
+    (function () {
+      var lb = document.getElementById('lightbox'), open = document.getElementById('sagaopen');
+      if (!lb || !open) return;
+      var stage = lb.querySelector('.dpdp-lb-stage'), cap = lb.querySelector('.dpdp-lb-cap');
+      var total = 16, cur = 0;
+      function src(i) { return '../assets/images/work/saga/' + (i < 9 ? '0' : '') + (i + 1) + '.jpg'; }
+      function render() {
+        stage.innerHTML = '';
+        var img = document.createElement('img');
+        img.src = src(cur); img.alt = 'Saga Magazine, page ' + (cur + 1);
+        stage.appendChild(img);
+        cap.textContent = 'Saga Magazine  ·  page ' + (cur + 1) + ' / ' + total;
+        var pre = new Image(); pre.src = src((cur + 1) % total);
+      }
+      function show() { lb.hidden = false; document.body.classList.add('dpdp-lb-open'); render(); lb.querySelector('.dpdp-lb-close').focus(); }
+      function close() { lb.hidden = true; document.body.classList.remove('dpdp-lb-open'); stage.innerHTML = ''; open.focus(); }
+      function step(d) { cur = (cur + d + total) % total; render(); }
+      open.addEventListener('click', function () { cur = 0; show(); });
+      lb.querySelector('.dpdp-lb-close').addEventListener('click', close);
+      lb.querySelector('.prev').addEventListener('click', function (e) { e.stopPropagation(); step(-1); });
+      lb.querySelector('.next').addEventListener('click', function (e) { e.stopPropagation(); step(1); });
+      lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
+      document.addEventListener('keydown', function (e) {
+        if (lb.hidden) return;
+        if (e.key === 'Escape') close();
+        if (e.key === 'ArrowRight') step(1);
+        if (e.key === 'ArrowLeft') step(-1);
+      });
+    })();
+  </script>
 </body>
 </html>
