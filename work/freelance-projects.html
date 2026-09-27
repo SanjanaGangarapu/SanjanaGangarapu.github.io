@@ -69,15 +69,16 @@
     .band { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,2fr); align-items:stretch; border:1px solid var(--line); border-radius:14px; overflow:hidden; background:var(--card); min-height:280px; }
     .band .txt { padding:clamp(1.2rem,3vw,2rem); display:flex; flex-direction:column; justify-content:space-between; gap:1.2rem; }
     .band .txt .k { font-family:var(--sans); font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); font-weight:700; }
-    .band .txt h3 { font-family:var(--serif); font-weight:400; font-size:clamp(1.35rem,2vw,1.7rem); line-height:1.2; margin:.45rem 0 .55rem; }
+    .band .txt h3 { font-family:var(--serif); font-weight:400; font-style:italic; font-size:clamp(1.2rem,1.8vw,1.5rem); line-height:1.3; margin:.45rem 0 .55rem; color:var(--ink); }
+    .band .txt h3::before { content:"\201C"; } .band .txt h3::after { content:"\201D"; }
     .band .txt .d { font-family:var(--sans); font-size:.76rem; letter-spacing:.03em; color:var(--ink-faint); margin:0 0 .8rem; }
     .band .txt p { color:var(--ink-soft); font-size:.95rem; line-height:1.55; margin:0; max-width:36ch; }
     .band .txt a.inline { font-family:var(--sans); font-size:.82rem; color:var(--accent); text-decoration:underline; text-underline-offset:3px; }
     .band .pics { position:relative; overflow:hidden; padding:0; margin:0; border:0; background:var(--paper-2); cursor:zoom-in; display:block; width:100%; }
     .band .pics img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .9s cubic-bezier(.2,.7,.2,1), opacity .9s ease; }
     .band .pics img.b { opacity:0; transform:translateX(6%) scale(1.04); }
-    .band:hover .pics img.a, .band:focus-within .pics img.a { transform:translateX(-6%) scale(1.04); opacity:0; }
-    .band:hover .pics img.b, .band:focus-within .pics img.b { transform:none; opacity:1; }
+    .band:hover .pics img.a { transform:translateX(-6%) scale(1.04); opacity:0; }
+    .band:hover .pics img.b { transform:none; opacity:1; }
     .band .pics .cnt { position:absolute; right:.9rem; bottom:.8rem; font-family:var(--sans); font-size:.72rem; letter-spacing:.08em; color:#fff; background:rgba(0,0,0,.45); padding:.3rem .6rem; border-radius:100px; pointer-events:none; }
     @media (max-width:720px){ .band { grid-template-columns:1fr; min-height:0; } .band .pics { aspect-ratio:3/2; } .band .txt p { max-width:none; } }
     @media (prefers-reduced-motion:reduce){ .band .pics img { transition:none; } }
@@ -219,7 +220,7 @@
           <div class="txt">
             <div>
               <span class="k">Varthana</span>
-              <h3>A bare shell, read as an opportunity</h3>
+              <h3>Rather than seeing the atypical structural layout as an obstacle, the architect viewed it as an opportunity.</h3>
               <p class="d">10,500 sq ft · Hennur, Bengaluru · Completed 2025</p>
               <p>The architects met a bare-shell space: beams across the expanse, floors tracing the raw framework of the building. Rather than an obstacle, the beams became subtle focal points, and an earthy palette of oak and walnut turned the office into an enclave of collaboration and calm.</p>
             </div>
@@ -236,7 +237,7 @@
           <div class="txt">
             <div>
               <span class="k">Equiniti</span>
-              <h3>A workspace that breathes</h3>
+              <h3>These spaces offer employees a chance to step away from their desks without leaving the flow of work.</h3>
               <p class="d">35,500 sq ft · DLF IT Park, Chennai · Completed 2024</p>
               <p>A sprawling floor turned into a series of intimate, purpose-driven spaces. Natural light floods the reception past a marble desk, planter-lined storage breaks up the rows of desks, and phone booths, a café-style commons and breakout corners let people step away without leaving the flow of work.</p>
             </div>
@@ -253,9 +254,9 @@
           <div class="txt">
             <div>
               <span class="k">DIAGEO</span>
-              <h3>Conference rooms that wear the brands</h3>
+              <h3>With rustic brick walls reminiscent of European beer cellars and ceiling accents inspired by barrel caps, the room feels like a journey back to the origins of the iconic stout.</h3>
               <p class="d">20,750 sq ft · Manyata Tech Park, Bengaluru · Completed 2024</p>
-              <p>Each meeting room takes on one of Diageo's labels: the main boardroom under a wooden grid ceiling with premium spirits displayed against raw concrete, the Cîroc Room in bold blue, the Guinness Room in rustic brick, the Singleton Room in whisky gold, and a café where cascading greenery slows the workday down.</p>
+              <p>Each meeting room takes on one of Diageo's labels: the main boardroom under a wooden grid ceiling, the Cîroc Room in bold blue, the Guinness Room in rustic brick, the Singleton Room in whisky gold.</p>
             </div>
             <a class="inline" href="https://merak-studio.com/offices/diageo/" target="_blank" rel="noopener">Read the story ↗</a>
           </div>
