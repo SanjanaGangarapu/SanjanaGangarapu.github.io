@@ -133,7 +133,7 @@
     /* ── social posts: auto-scrolling strip, pauses on hover ── */
     .dpdp-marquee { position:relative; width:100%; overflow:hidden; margin-top:clamp(1.4rem,3vw,2rem);
       -webkit-mask-image:linear-gradient(90deg,transparent,#000 2%,#000 98%,transparent); mask-image:linear-gradient(90deg,transparent,#000 2%,#000 98%,transparent); }
-    .dpdp-track { display:flex; gap:1rem; width:max-content; animation:dpdp-scroll 70s linear infinite; }
+    .dpdp-track { display:flex; gap:1rem; width:max-content; animation:dpdp-scroll 95s linear infinite; }
     .dpdp-marquee:hover .dpdp-track { animation-play-state:paused; }
     .dpdp-slide { flex:0 0 auto; width:clamp(200px,24vw,280px); border:1px solid var(--line); border-radius:12px; overflow:hidden; background:var(--card); }
     .dpdp-slide img { display:block; width:100%; aspect-ratio:1/1; object-fit:cover; transition:transform .5s ease; }
@@ -169,6 +169,38 @@
     .direct .n { display:block; font-family:var(--serif); font-size:1.2rem; color:var(--ink); margin-bottom:.5rem; }
     .direct p { color:var(--ink-soft); font-size:.92rem; line-height:1.55; margin:0; }
     @media (max-width:820px){ .direct { grid-template-columns:1fr; } }
+    /* ── website audits: text beside a small grid of screenshots ── */
+    .audit { display:grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap:clamp(1.5rem,4vw,3rem); align-items:start; margin-top:1.6rem; max-width:1112px; }
+    .audit .txt p { color:var(--ink-soft); margin:0 0 1rem; }
+    .audit .txt ul.bullets { margin:0 0 0 1.1rem; }
+    .audit .txt ul.bullets li { position:relative; padding-left:1.2rem; margin-bottom:.5rem; color:var(--ink-soft); font-size:.95rem; }
+    .audit .txt ul.bullets li::before { content:"→"; position:absolute; left:0; color:var(--accent); }
+    .audit .shots { display:grid; grid-template-columns:1fr 1fr; gap:.9rem; }
+    .audit .shot { display:block; text-decoration:none; color:inherit; border:1px solid var(--line); border-radius:10px; overflow:hidden; background:var(--card); transition:transform .25s ease, box-shadow .25s ease; }
+    .audit .shot:hover { transform:translateY(-2px); box-shadow:0 14px 28px -20px rgba(0,0,0,.45); }
+    .audit .shot img { display:block; width:100%; aspect-ratio:16/10; object-fit:cover; object-position:top; }
+    .audit .shot.tall img { aspect-ratio:16/10; object-position:top; }
+    .audit .shot span { display:block; font-family:var(--sans); font-size:.74rem; color:var(--ink-faint); padding:.5rem .7rem; }
+    @media (max-width:820px){ .audit { grid-template-columns:1fr; } }
+    @media (max-width:480px){ .audit .shots { grid-template-columns:1fr; } }
+    /* ── press: the placed story set as a newspaper page ── */
+    .paper { display:block; text-decoration:none; color:inherit; margin-top:1.6rem; max-width:1112px; background:#F8F5EE; border:1px solid #DDD6C8; border-radius:6px; padding:clamp(1.2rem,3vw,2rem) clamp(1.2rem,3.5vw,2.4rem); box-shadow:0 20px 44px -30px rgba(0,0,0,.45); transition:transform .25s ease, box-shadow .25s ease; }
+    .paper:hover { transform:translateY(-2px); box-shadow:0 26px 50px -30px rgba(0,0,0,.5); }
+    .paper .mast { display:flex; justify-content:space-between; align-items:baseline; gap:1rem; border-top:3px double #2A2620; border-bottom:1px solid #2A2620; padding:.5rem 0 .45rem; margin-bottom:1.2rem; }
+    .paper .mast .name { font-family:var(--serif); font-weight:600; font-size:clamp(1.1rem,2.2vw,1.6rem); letter-spacing:.01em; color:#2A2620; }
+    .paper .mast .edn { font-family:var(--sans); font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; color:#6B655B; white-space:nowrap; }
+    .paper .body { display:grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap:clamp(1.2rem,3vw,2.4rem); align-items:start; }
+    .paper h3 { font-family:var(--serif); font-weight:600; font-size:clamp(1.7rem,3.4vw,2.6rem); line-height:1.05; letter-spacing:-.01em; color:#2A2620; margin:0 0 .6rem; }
+    .paper .stand { font-family:var(--serif); font-size:1.05rem; line-height:1.4; color:#3D3830; margin:0 0 .8rem; }
+    .paper .by { font-family:var(--sans); font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:#6B655B; margin:0 0 .8rem; border-bottom:1px solid #DDD6C8; padding-bottom:.5rem; }
+    .paper .col p:not(.stand):not(.by) { font-family:var(--serif); font-size:.92rem; line-height:1.5; color:#3D3830; margin:0 0 .7rem; text-align:justify; hyphens:auto; }
+    .paper .dl { font-family:var(--sans); font-weight:700; font-size:.78rem; letter-spacing:.04em; color:#2A2620; }
+    .paper .pic { margin:0; }
+    .paper .pic img { display:block; width:100%; height:auto; border:1px solid #DDD6C8; filter:grayscale(.15) contrast(1.02); }
+    .paper .pic figcaption { font-family:var(--sans); font-size:.72rem; color:#6B655B; margin-top:.4rem; line-height:1.35; }
+    .paper .foot { display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap; border-top:1px solid #2A2620; margin-top:1.2rem; padding-top:.6rem; font-family:var(--sans); font-size:.76rem; color:#6B655B; }
+    .paper .foot .go { color:var(--accent); text-decoration:underline; text-underline-offset:3px; }
+    @media (max-width:720px){ .paper .body { grid-template-columns:1fr; } .paper .pic { order:-1; } .paper .mast { flex-wrap:wrap; } .paper .mast .edn { white-space:normal; } }
     /* ── press ── */
     .press { margin-top:1.6rem; max-width:1112px; }
     .press img { width:100%; height:auto; display:block; border:1px solid var(--line); border-radius:10px; background:#fff; }
@@ -283,6 +315,11 @@
           <div class="dpdp-slide"><img src="../assets/images/work/ekya/social-09.jpg" alt="Instagram post, a student beside a light aircraft" loading="lazy" /></div>
           <div class="dpdp-slide"><img src="../assets/images/work/ekya/social-10.jpg" alt="Instagram post, students looking at an aircraft engine" loading="lazy" /></div>
           <div class="dpdp-slide"><img src="../assets/images/work/ekya/social-11.jpg" alt="Instagram post, a student in the cockpit" loading="lazy" /></div>
+          <div class="dpdp-slide"><img src="../assets/images/work/ekya/social-12.jpg" alt="Instagram post, Ekya School BTM Layout, two children reading together" loading="lazy" /></div>
+          <div class="dpdp-slide"><img src="../assets/images/work/ekya/social-13.jpg" alt="Instagram post, Join our community, admissions open for 2023-24" loading="lazy" /></div>
+          <div class="dpdp-slide"><img src="../assets/images/work/ekya/social-14.jpg" alt="Facebook cover, admissions open for 2023-24" loading="lazy" /></div>
+          <div class="dpdp-slide"><img src="../assets/images/work/ekya/social-15.jpg" alt="Instagram post, Ekya School JP Nagar virtual open house, December 2022" loading="lazy" /></div>
+          <div class="dpdp-slide"><img src="../assets/images/work/ekya/social-16.jpg" alt="Post, CMR National Public School open house, November 2022" loading="lazy" /></div>
           <div class="dpdp-slide" aria-hidden="true"><img src="../assets/images/work/ekya/social-01.jpg" alt="" loading="lazy" /></div>
           <div class="dpdp-slide" aria-hidden="true"><img src="../assets/images/work/ekya/social-02.jpg" alt="" loading="lazy" /></div>
           <div class="dpdp-slide" aria-hidden="true"><img src="../assets/images/work/ekya/social-03.jpg" alt="" loading="lazy" /></div>
@@ -294,9 +331,14 @@
           <div class="dpdp-slide" aria-hidden="true"><img src="../assets/images/work/ekya/social-09.jpg" alt="" loading="lazy" /></div>
           <div class="dpdp-slide" aria-hidden="true"><img src="../assets/images/work/ekya/social-10.jpg" alt="" loading="lazy" /></div>
           <div class="dpdp-slide" aria-hidden="true"><img src="../assets/images/work/ekya/social-11.jpg" alt="" loading="lazy" /></div>
+          <div class="dpdp-slide" aria-hidden="true"><img src="../assets/images/work/ekya/social-12.jpg" alt="" loading="lazy" /></div>
+          <div class="dpdp-slide" aria-hidden="true"><img src="../assets/images/work/ekya/social-13.jpg" alt="" loading="lazy" /></div>
+          <div class="dpdp-slide" aria-hidden="true"><img src="../assets/images/work/ekya/social-14.jpg" alt="" loading="lazy" /></div>
+          <div class="dpdp-slide" aria-hidden="true"><img src="../assets/images/work/ekya/social-15.jpg" alt="" loading="lazy" /></div>
+          <div class="dpdp-slide" aria-hidden="true"><img src="../assets/images/work/ekya/social-16.jpg" alt="" loading="lazy" /></div>
         </div>
       </div>
-      <p class="note">Two Instagram carousels from ITPL: Roshni, the service learning stalls where students raised ₹2.5 lakh for cataract surgeries, and a visit to an aircraft hangar.</p>
+      <p class="note">Two Instagram carousels from ITPL (Roshni, the service learning stalls where students raised ₹2.5 lakh for cataract surgeries, and a visit to an aircraft hangar), campus posts, the 2023–24 admissions creative, and open house invitations for Ekya JP Nagar and CMR National Public School.</p>
       <div class="ek-films">
         <figure class="ek-shot">
           <video controls preload="metadata" playsinline poster="../assets/images/work/ekya/film-open-house.jpg">
@@ -430,6 +472,27 @@
       </div>
 
       <div class="sub">
+        <h3>Website audits</h3>
+        <p>Three sites, reviewed page by page on desktop and mobile, with every issue logged as a ticket for the agency.</p>
+      </div>
+      <div class="audit">
+        <div class="txt">
+          <p>For ekyaschools.com, nps.cmr.ac.in and npuc.cmr.ac.in I worked through each page as a parent would: copy that contradicted itself (a pre-university college "spread across 5 different locations", written for the wrong institution), text laid over photographs, a missing campus address, a broken logo, an enquiry form that had to be replaced with a single call to action. Each one went into a shared tracker with a screenshot, a deadline and a status, and the landing pages were rebuilt around the enquiry.</p>
+          <ul class="bullets">
+            <li>Issue tickets with date, platform, screenshot, description, deadline and status, per site</li>
+            <li>Content tracker for the blog pipeline: drafts, reviews, priorities and sign-off</li>
+            <li>Landing-page and staging reviews before anything went live</li>
+          </ul>
+        </div>
+        <div class="shots">
+          <a href="../assets/images/work/ekya/audit-tickets.jpg" target="_blank" rel="noopener" class="shot wide"><img src="../assets/images/work/ekya/audit-tickets.jpg" alt="Issue tracker for the Ekya Schools website: text blocking image, missing space, missing campus contact, with deadlines and status" loading="lazy" /><span>Issue tracker, Ekya Schools site</span></a>
+          <a href="../assets/images/work/ekya/audit-landing.jpg" target="_blank" rel="noopener" class="shot wide"><img src="../assets/images/work/ekya/audit-landing.jpg" alt="CMR National Public School landing page review with the enquiry form" loading="lazy" /><span>Landing page review, CMR NPS</span></a>
+          <a href="../assets/images/work/ekya/audit-mobile.jpg" target="_blank" rel="noopener" class="shot tall"><img src="../assets/images/work/ekya/audit-mobile.jpg" alt="CMR National PU College site on mobile with the enquiry banner marked up" loading="lazy" /><span>Mobile review, CMR NPUC</span></a>
+          <a href="../assets/images/work/ekya/audit-staging.jpg" target="_blank" rel="noopener" class="shot tall"><img src="../assets/images/work/ekya/audit-staging.jpg" alt="Staging site with a copy error circled: the wrong institution named on the campuses page" loading="lazy" /><span>Staging copy check</span></a>
+        </div>
+      </div>
+
+      <div class="sub">
         <h3>The house style</h3>
         <p>Before the blog could take guest writers, it needed rules. I wrote them.</p>
       </div>
@@ -451,12 +514,22 @@
 
       <div class="sub">
         <h3>Press</h3>
-        <p>Press releases and external communications, drafted, edited and placed.</p>
+        <p>Press releases and external communications, drafted, edited and placed. One of the stories that ran.</p>
       </div>
-      <figure class="press">
-        <img src="../assets/images/work/ekya/press-tnie.jpg" alt="The New Indian Express clipping: Government must expand access to education, tech in rural areas, with a quote from Dr Trishta, founder of Ekya Schools and Provost of CMR University" loading="lazy" />
-        <figcaption>The New Indian Express, run-up to the Karnataka Budget 2023–24: Ekya's founder and CMR University's Provost quoted on teacher training, in the state's education coverage.</figcaption>
-      </figure>
+      <a class="paper" href="https://www.newindianexpress.com/cities/bengaluru/2022/Oct/29/appus-lasting-impression-2512682.html" target="_blank" rel="noopener" aria-label="Read the story on The New Indian Express">
+        <div class="mast"><span class="name">The New Indian Express</span><span class="edn">Bengaluru · Saturday, 29 October 2022</span></div>
+        <div class="body">
+          <div class="col">
+            <h3>Appu’s Lasting Impression</h3>
+            <p class="stand">A fourth grader from the city has paid a unique tribute to Sandalwood actor Puneeth Rajkumar ahead of his death anniversary: a portrait of the late actor made entirely of Rubik’s cubes.</p>
+            <p class="by">Express News Service</p>
+            <p><span class="dl">BENGALURU:</span> Shresht Prabhu, a nine-year-old, has created a portrait of the late actor from over 370 individual Rubik’s cubes, paying homage to one of his favourite actors in the Kannada film industry. His father, Guruprasad Prabhu, says he has been solving puzzles since a young age and has always been a quick learner. He started with the smaller 3×3 cubes, learned to solve them within 15 seconds, and has progressed to 4×4, megaminx and pyramid cubes.</p>
+            <p>So far, Shresht has created portraits of Virat Kohli, Ratan Tata, Dr Rajkumar and Rishab Shetty, among others. He plans to make live portraits of celebrities using Rubik’s cubes, and one day to represent India in speedcubing competitions.</p>
+          </div>
+          <figure class="pic"><img src="../assets/images/work/ekya/press-appu.jpg" alt="Shresht Prabhu beside his Rubik's cube portrait of Puneeth Rajkumar" loading="lazy" /><figcaption>Shresht Prabhu with the portrait, built from more than 370 cubes.</figcaption></figure>
+        </div>
+        <div class="foot"><span>Student story pitched and placed for Ekya Schools</span><span class="go">Read on newindianexpress.com ↗</span></div>
+      </a>
 
       <div class="sub">
         <h3>Email, WhatsApp and newsletters</h3>
