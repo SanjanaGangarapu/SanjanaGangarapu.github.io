@@ -130,6 +130,43 @@
     @media (max-width:820px){ .booth-wrap { grid-template-columns:1fr; } .booth-stage { --u: clamp(150px, 42vw, 220px); } .booth-copy p { max-width:none; } }
     @media (prefers-reduced-motion:reduce){ .booth { transition:none; } }
 
+    /* ── social posts: auto-scrolling strip, pauses on hover ── */
+    .dpdp-marquee { position:relative; width:100%; overflow:hidden; margin-top:clamp(1.4rem,3vw,2rem);
+      -webkit-mask-image:linear-gradient(90deg,transparent,#000 2%,#000 98%,transparent); mask-image:linear-gradient(90deg,transparent,#000 2%,#000 98%,transparent); }
+    .dpdp-track { display:flex; gap:1rem; width:max-content; animation:dpdp-scroll 70s linear infinite; }
+    .dpdp-marquee:hover .dpdp-track { animation-play-state:paused; }
+    .dpdp-slide { flex:0 0 auto; width:clamp(200px,24vw,280px); border:1px solid var(--line); border-radius:12px; overflow:hidden; background:var(--card); }
+    .dpdp-slide img { display:block; width:100%; aspect-ratio:1/1; object-fit:cover; transition:transform .5s ease; }
+    .dpdp-slide:hover img { transform:scale(1.06); }
+    @keyframes dpdp-scroll { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+    @media (prefers-reduced-motion:reduce) { .dpdp-track { animation:none; } .dpdp-marquee { overflow-x:auto; } }
+    /* ── ARYAMAN: film still that becomes the YouTube player on click ── */
+    .ary { display:grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap:clamp(1.5rem,4vw,3rem); align-items:center; margin-top:1.6rem; max-width:1112px; }
+    .ary .film { position:relative; aspect-ratio:16/9; border-radius:14px; overflow:hidden; border:1px solid var(--line); background:#000; cursor:pointer; padding:0; width:100%; display:block; }
+    .ary .film img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .8s ease; }
+    .ary .film:hover img { transform:scale(1.03); }
+    .ary .film .play { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:64px; height:64px; border-radius:50%; background:rgba(0,0,0,.55); border:1px solid rgba(255,255,255,.6); color:#fff; display:grid; place-items:center; font-size:1.3rem; padding-left:4px; pointer-events:none; }
+    .ary .film iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+    .ary .txt .k { font-family:var(--sans); font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); font-weight:700; }
+    .ary .txt h3 { font-family:var(--serif); font-weight:400; font-size:clamp(1.4rem,2.2vw,1.8rem); line-height:1.2; margin:.5rem 0 .7rem; }
+    .ary .txt p { color:var(--ink-soft); margin:0 0 .9rem; max-width:44ch; }
+    .ary .links { display:flex; flex-wrap:wrap; gap:.5rem 1.2rem; font-family:var(--sans); font-size:.82rem; }
+    .ary .links a { color:var(--accent); text-decoration:underline; text-underline-offset:3px; }
+    @media (max-width:820px){ .ary { grid-template-columns:1fr; } .ary .txt p { max-width:none; } }
+    /* ── the house style guide ── */
+    .guide { margin-top:1.6rem; max-width:1112px; display:grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap:clamp(1.5rem,4vw,3rem); align-items:start; border:1px solid var(--line); border-radius:14px; background:var(--card); padding:clamp(1.3rem,3vw,2rem); }
+    .guide .k { font-family:var(--sans); font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); font-weight:700; }
+    .guide h3 { font-family:var(--serif); font-weight:400; font-size:1.5rem; margin:.5rem 0 .6rem; }
+    .guide p { color:var(--ink-soft); margin:0; max-width:40ch; }
+    .guide ol { margin:0; padding:0; list-style:none; counter-reset:g; display:grid; gap:.55rem; }
+    .guide li { counter-increment:g; display:grid; grid-template-columns:2rem 1fr; gap:.6rem; align-items:baseline; font-size:.95rem; color:var(--ink); padding-bottom:.55rem; border-bottom:1px solid var(--line); }
+    .guide li:last-child { border-bottom:0; }
+    .guide li::before { content:counter(g, decimal-leading-zero); font-family:var(--serif); color:var(--accent); font-size:1.05rem; }
+    @media (max-width:720px){ .guide { grid-template-columns:1fr; } .guide p { max-width:none; } }
+    /* ── press ── */
+    .press { margin-top:1.6rem; max-width:1112px; }
+    .press img { width:100%; height:auto; display:block; border:1px solid var(--line); border-radius:10px; background:#fff; }
+    .press figcaption { font-family:var(--sans); font-size:.8rem; color:var(--ink-faint); margin-top:.7rem; }
     /* ── social films side by side ── */
     .ek-films { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:clamp(1.2rem,3vw,2rem); margin-top:1.6rem; max-width:1112px; }
     .ek-films video { width:100%; aspect-ratio:16/9; object-fit:cover; border:1px solid var(--line); border-radius:12px; background:#000; display:block; box-shadow:0 18px 40px -28px rgba(0,0,0,.5); }
@@ -224,8 +261,35 @@
 
       <div class="sub">
         <h3>Social</h3>
-        <p>Facebook, Instagram, LinkedIn and Twitter for five campuses: monthly strategy and content calendars, the posts themselves, briefs to the designers, and the comments and messages answered in the brand's voice. WhatsApp Business API campaigns ran alongside. The year's set pieces were a city marathon campaign, a Christmas festival campaign and the run-up to FIND Festival '23.</p>
+        <p>Facebook, Instagram, LinkedIn and Twitter for five campuses: monthly strategy and content calendars, the posts themselves, briefs to the designers, and the comments and messages answered in the brand's voice. WhatsApp Business API campaigns ran alongside. The year's set pieces were ARYAMAN, the school's run for Bengaluru, a Christmas festival campaign and the run-up to FIND Festival '23.</p>
       </div>
+      <div class="dpdp-marquee" aria-label="Instagram posts">
+        <div class="dpdp-track">
+          <div class="dpdp-slide"><img src="../assets/images/work/ekya/social-01.jpg" alt="Instagram post, Roshni, a ray of hope: the ITPL campus service learning stalls" loading="lazy" /></div>
+          <div class="dpdp-slide"><img src="../assets/images/work/ekya/social-02.jpg" alt="Instagram post, the Service Learning Program explained" loading="lazy" /></div>
+          <div class="dpdp-slide"><img src="../assets/images/work/ekya/social-03.jpg" alt="Instagram post, children raised 2.5 lakh rupees for cataract surgeries" loading="lazy" /></div>
+          <div class="dpdp-slide"><img src="../assets/images/work/ekya/social-04.jpg" alt="Instagram post, breakfast cooked and served by students" loading="lazy" /></div>
+          <div class="dpdp-slide"><img src="../assets/images/work/ekya/social-05.jpg" alt="Instagram post, students at their stall" loading="lazy" /></div>
+          <div class="dpdp-slide"><img src="../assets/images/work/ekya/social-06.jpg" alt="Instagram post, parents joining in" loading="lazy" /></div>
+          <div class="dpdp-slide"><img src="../assets/images/work/ekya/social-07.jpg" alt="Instagram post, thanks to teachers and students" loading="lazy" /></div>
+          <div class="dpdp-slide"><img src="../assets/images/work/ekya/social-08.jpg" alt="Instagram post, students at an aircraft hangar" loading="lazy" /></div>
+          <div class="dpdp-slide"><img src="../assets/images/work/ekya/social-09.jpg" alt="Instagram post, a student beside a light aircraft" loading="lazy" /></div>
+          <div class="dpdp-slide"><img src="../assets/images/work/ekya/social-10.jpg" alt="Instagram post, students looking at an aircraft engine" loading="lazy" /></div>
+          <div class="dpdp-slide"><img src="../assets/images/work/ekya/social-11.jpg" alt="Instagram post, a student in the cockpit" loading="lazy" /></div>
+          <div class="dpdp-slide" aria-hidden="true"><img src="../assets/images/work/ekya/social-01.jpg" alt="" loading="lazy" /></div>
+          <div class="dpdp-slide" aria-hidden="true"><img src="../assets/images/work/ekya/social-02.jpg" alt="" loading="lazy" /></div>
+          <div class="dpdp-slide" aria-hidden="true"><img src="../assets/images/work/ekya/social-03.jpg" alt="" loading="lazy" /></div>
+          <div class="dpdp-slide" aria-hidden="true"><img src="../assets/images/work/ekya/social-04.jpg" alt="" loading="lazy" /></div>
+          <div class="dpdp-slide" aria-hidden="true"><img src="../assets/images/work/ekya/social-05.jpg" alt="" loading="lazy" /></div>
+          <div class="dpdp-slide" aria-hidden="true"><img src="../assets/images/work/ekya/social-06.jpg" alt="" loading="lazy" /></div>
+          <div class="dpdp-slide" aria-hidden="true"><img src="../assets/images/work/ekya/social-07.jpg" alt="" loading="lazy" /></div>
+          <div class="dpdp-slide" aria-hidden="true"><img src="../assets/images/work/ekya/social-08.jpg" alt="" loading="lazy" /></div>
+          <div class="dpdp-slide" aria-hidden="true"><img src="../assets/images/work/ekya/social-09.jpg" alt="" loading="lazy" /></div>
+          <div class="dpdp-slide" aria-hidden="true"><img src="../assets/images/work/ekya/social-10.jpg" alt="" loading="lazy" /></div>
+          <div class="dpdp-slide" aria-hidden="true"><img src="../assets/images/work/ekya/social-11.jpg" alt="" loading="lazy" /></div>
+        </div>
+      </div>
+      <p class="note">Two Instagram carousels from ITPL: Roshni, the service learning stalls where students raised ₹2.5 lakh for cataract surgeries, and a visit to an aircraft hangar.</p>
       <div class="ek-films">
         <figure class="ek-shot">
           <video controls preload="metadata" playsinline poster="../assets/images/work/ekya/film-open-house.jpg">
@@ -239,6 +303,28 @@
           </video>
           <figcaption>“Buckle up, it’s game time!” Social reel.</figcaption>
         </figure>
+      </div>
+
+      <div class="sub">
+        <h3>ARYAMAN 2022</h3>
+        <p>The school's annual run for a better Bengaluru, and the year's biggest campaign.</p>
+      </div>
+      <div class="ary">
+        <button class="film" type="button" id="aryfilm" aria-label="Play the ARYAMAN 2022 film">
+          <img src="../assets/images/work/ekya/aryaman-film.jpg" alt="ARYAMAN 2022 run, film still" loading="lazy" />
+          <span class="play" aria-hidden="true">▶</span>
+        </button>
+        <div class="txt">
+          <span class="k">Campaign · September 2022</span>
+          <h3>Ekya for a better Bengaluru</h3>
+          <p>A 1K, 3K and 5K Sunday run through Madiwala Lake, BTM Layout and JP Nagar, open to families, alumni and neighbours, raising support for lake revival in South Bengaluru under Ekya's Service Learning Program. Across five campuses and four platforms: the announcement and countdown posts, the teasers and trailer, the event microsite copy, the registration push, and the fellowship film afterwards.</p>
+          <div class="links">
+            <a href="https://sites.google.com/ekyaschools.com/aryaman-2022/home" target="_blank" rel="noopener">Event microsite ↗</a>
+            <a href="http://linkedin.com/posts/ekyaschools-aryaman-school-ugcPost-6976142317728526336-7qrO/" target="_blank" rel="noopener">LinkedIn post ↗</a>
+            <a href="https://www.facebook.com/watch/?v=1131262297474085" target="_blank" rel="noopener">Teaser ↗</a>
+            <a href="https://www.facebook.com/watch/?v=1250762399082926" target="_blank" rel="noopener">Trailer ↗</a>
+          </div>
+        </div>
       </div>
 
       <div class="sub">
@@ -332,9 +418,38 @@
           <span class="k">Articles for the school blog</span>
           <a class="art" href="https://www.ekyaschools.com/blog/communicating-education/" target="_blank" rel="noopener"><span class="t">Communicating Education</span><span class="d">Why a school should be transparent about how it teaches, and what that does for trust. February 2023.</span><span class="go">Read ↗</span></a>
           <a class="art" href="https://www.ekyaschools.com/blog/chatgpt-and-beyond-how-to-handle-ai-in-school/" target="_blank" rel="noopener"><span class="t">ChatGPT and Beyond: How to Handle AI in School</span><span class="d">A parent's guide to the first year of AI in the classroom.</span><span class="go">Read ↗</span></a>
-          <div class="art"><span class="t">Quick Ways to Boost Your Child's Attention Span</span><span class="d">Practical routines for younger learners.</span></div>
+          <a class="art" href="http://ekyaschools.com/blog/a-quick-guide-on-ways-to-boost-your-childs-attention-span/" target="_blank" rel="noopener"><span class="t">A Quick Guide on Ways to Boost Your Child's Attention Span</span><span class="d">Practical routines for younger learners.</span><span class="go">Read ↗</span></a>
         </div>
       </div>
+
+      <div class="sub">
+        <h3>The house style</h3>
+        <p>Before the blog could take guest writers, it needed rules. I wrote them.</p>
+      </div>
+      <div class="guide">
+        <div>
+          <span class="k">Blog content style, form and tone guide</span>
+          <h3>One voice, many writers</h3>
+          <p>A working document for everyone writing under the school's name: how to pick a topic, research it, structure it and keep it sounding like Ekya. A few of the rules, as written.</p>
+        </div>
+        <ol>
+          <li>Know your target audience: storytelling, a few visuals, short sentences, blockquotes, simple yet effective vocabulary and active voice.</li>
+          <li>Never use ‘&amp;’, use ‘and’ instead. Always follow UK English. No italics; they are not part of the brand guidelines.</li>
+          <li>Always be factual. The content has to be sourced from authentic websites, and the resources go at the end of the blog.</li>
+          <li>Feature one or two ideas per paragraph. Break up content with compelling headlines and mini-headlines. Hyperlinks are compulsory.</li>
+          <li>Your examples have to be trending, thought-provoking and inspiring. Do not give basic information.</li>
+          <li>Each blog post should reflect our “beyond boundaries” idea. Do not copy-paste the USPs; make them fit the ideas in the article.</li>
+        </ol>
+      </div>
+
+      <div class="sub">
+        <h3>Press</h3>
+        <p>Press releases and external communications, drafted, edited and placed.</p>
+      </div>
+      <figure class="press">
+        <img src="../assets/images/work/ekya/press-tnie.jpg" alt="The New Indian Express clipping: Government must expand access to education, tech in rural areas, with a quote from Dr Trishta, founder of Ekya Schools and Provost of CMR University" loading="lazy" />
+        <figcaption>The New Indian Express, run-up to the Karnataka Budget 2023–24: Ekya's founder and CMR University's Provost quoted on teacher training, in the state's education coverage.</figcaption>
+      </figure>
 
       <div class="prose block">
         <span class="eyebrow">The insights</span>
@@ -430,6 +545,16 @@
       });
     })();
 
+    /* ARYAMAN: the still becomes the YouTube player on click */
+    (function () {
+      var b = document.getElementById('aryfilm'); if (!b) return;
+      b.addEventListener('click', function () {
+        var f = document.createElement('iframe');
+        f.src = 'https://www.youtube-nocookie.com/embed/Eyknakr5Vqc?autoplay=1&rel=0';
+        f.title = 'ARYAMAN 2022, Ekya for a better Bangalore'; f.allow = 'autoplay; encrypted-media; picture-in-picture'; f.allowFullscreen = true;
+        b.innerHTML = ''; b.appendChild(f); b.style.cursor = 'default';
+      }, { once: true });
+    })();
     /* The booth: slow auto-rotation, drag (mouse or touch) to turn it, resumes a moment after you let go */
     (function () {
       var stage = document.getElementById('stage'), booth = document.getElementById('booth');
